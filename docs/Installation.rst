@@ -1,4 +1,4 @@
-Installation:
+Download and Installation
 ============
 You need an intel compiler, ifort
 

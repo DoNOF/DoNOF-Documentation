@@ -1,4 +1,12 @@
-License:
+License and Citing DoNOF
 =======
-this software...
+The use of this software is restricted solely to academic
+institutions and for academic purposes. The author reserve the
+exclusive right to determine what purposes and institutions are
+eligible for using it.
+
+This software may not be sold or any other commercial use made of
+it without the express written permission of the author.
+
+The following articles should be cited:
 
