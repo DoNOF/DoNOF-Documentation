@@ -1,4 +1,4 @@
-DoNOF documentation
+DoNOF: Donostia Natural Orbital Functional open-source program
 =================================
 
 Another simple header
@@ -12,7 +12,7 @@ Guide
 ^^^^^
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :caption: Contents:
    
    Installation
