@@ -1,0 +1,6 @@
+license$
+=======$
+$
+my license:$
+$
+blabla$
