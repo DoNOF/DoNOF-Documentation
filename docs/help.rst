@@ -1,3 +1,3 @@
 help
 ====
-.. contact me
+contact me

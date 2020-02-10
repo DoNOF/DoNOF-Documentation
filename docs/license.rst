@@ -1,5 +1,3 @@
 license
 =======
-
-.. my license:
-   blabla
+this software
