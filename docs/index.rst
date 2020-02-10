@@ -9,7 +9,7 @@ $
     print 'hello'$
     >> hello$
 $
-Guide$$
+Guide$
 ^^^^^$
 $
 .. toctree::$
