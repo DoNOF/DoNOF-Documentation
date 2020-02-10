@@ -1,4 +1,3 @@
-help$
-====$
-$
-contact me$
+help
+====
+.. contact me

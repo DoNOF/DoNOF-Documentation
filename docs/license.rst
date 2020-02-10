@@ -1,6 +1,5 @@
-license$
-=======$
-$
-my license:$
-$
-blabla$
+license
+=======
+
+.. my license:
+   blabla
