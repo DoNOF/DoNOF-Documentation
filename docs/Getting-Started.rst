@@ -1,11 +1,8 @@
 Getting Started
 =====
-The simplest input.:
+The simplest input.::
 
     $nofinp
 
-generates files like.:
-
-    input.out
-    input.gcf
+generates files like input.out input.gcf
 
