@@ -1,11 +1,12 @@
 DoNOF documentation
 =================================
 
-..  Another simple header
+Another simple header
 
-..  Explaining stuff.::
-    print 'hello'$
-    >> hello$
+Explaining stuff.::
+    
+    print 'hello'
+    >> hello
 
 Guide
 ^^^^^
@@ -14,8 +15,9 @@ Guide
    :maxdepth: 2
    :caption: Contents:
    
-   license
-   help
+   Installation
+   License
+   Help
 
 .. Indices and tables
 .. ==================
