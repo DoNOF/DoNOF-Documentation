@@ -6,7 +6,7 @@ Natural Orbital Functional Theory ...
 Program to compute the ground state properties of a molecule
 in the gas phase using PNOF5 - PNOF7 + perturbation corrections
 
-Explaining stuff.:
+Explaining stuff.::
     
     print 'hello'
     >> hello
