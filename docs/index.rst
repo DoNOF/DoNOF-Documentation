@@ -3,7 +3,7 @@ DoNOF documentation
 
 Another simple header
 
-Explaining stuff.::
+Explaining stuff.:
     
     print 'hello'
     >> hello

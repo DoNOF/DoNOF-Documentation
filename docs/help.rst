@@ -1,3 +1,0 @@
-help
-====
-contact me
