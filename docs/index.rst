@@ -21,6 +21,7 @@ in the gas phase using PNOF5 - PNOF7 + perturbation corrections
    Getting-Started
    PNOF57
    NOF-MP2
+   input
 
 .. Indices and tables
 .. ==================
