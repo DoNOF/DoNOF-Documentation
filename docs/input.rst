@@ -10,11 +10,11 @@ are controlled by the following keywords:
 
 RUNTYP:  specifies the run calculation
 
-    ENERGY   1) single-point energy calculation (Default)
+    = ENERGY  1) single-point energy calculation (Default)
 
-    GRAD     2) energy + gradients with respect to nuclear coord.
+    = GRAD   2) energy + gradients with respect to nuclear coord.
 
-    OPTGEO   3) optimize the molecular geometry
+    = OPTGEO 3) optimize the molecular geometry
     
 MULT:    Multiplicity of the electronic state
 
@@ -36,19 +36,19 @@ IEMOM:   Electrostatic moments calculation
 
     = 3      also calculate octopole moments
 
-UNITS:     Distance units (Any angles must be in degrees)
+UNITS:   Distance units (Any angles must be in degrees)
 
     = ANGS   Angstroms (Default)
 
     = BOHR   Bohr atomic units
 
-EVEC:     An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*bohr = 5.1422082(15)d+11 V/m)
+EVEC:    An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*bohr = 5.1422082(15)d+11 V/m)
 
     = ZERO   (Default)
 
-DONTW:    Do not write 2e- integrals on the disk (Unit=1)
+DONTW:   Do not write 2e- integrals on the disk (Unit=1)
 
-    = F   (Default)
+    = F      (Default)
     
     = T
     
@@ -112,18 +112,13 @@ are controlled by the following keywords:
                                NVIR: Number of HF virtual  MOs (OCC=0)
                                NDOC: Number of strongly occupied MOs
 
-....... INTERSIGNPI            Sing of the PI matrix elements in PNOF7
-                               (IPNOF=7) for the interpair interactions
-                               above the Fermi level
-                      = -1     (DEFAULT)
-                      = +1     Note: Use for CMP2
-
 .......... Ista                Use Static version of PNOF7 
                       = 0      PNOF7 ((DEFAULT)
                       = 1      PNOF7s
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Convergence Criteria in NOF calculation
+ Fore more info see section X in [1]
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .......... NTHRESHL            CONVERGENCE OF THE LAGRANGE MULTIPLIERS
@@ -143,17 +138,18 @@ are controlled by the following keywords:
                       = 16     (DEFAULT)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-ION
  Options for the Occupation (GAMMA) Optimization Program
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .......... USENAG              Use NAG Library Routine: DUMCGG
                       = T      (DEFAULT)
-                      = F      use instead a LBFGS method
-ION
+                      = F      use instead a LBFGS method (see note
+                               in "Additional notes" section)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Options for the Orbital Optimization Program (ID Method)
+ For more info see [2, i.e. JCC 2009]
+ For computational details see section X in [1]
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .......... NOPTORB             Number of the optimized orbitals
@@ -193,16 +189,6 @@ ION
 .......... ITZITER             Number of Iterations for constant scaling
                       = 10     (DEFAULT)
 
-
-.......... GCTHEOREM           The Gershgorin Circle Theorem is used to 
-                               bound the spectrum of matrix Fki
-                      = F      (DEFAULT)
-
-.......... GCTSCALING          GCTHEOREM + SCALING to bound matrix Fki
-                               GCTHEOREM is used firstly up to IT=20
-                               then SCALING is used with NZEROS=3
-                      = F      (DEFAULT)
-
 .......... DIIS                Direct Inversion in the Iterative 
                                Subspace in the orbital optimization if 
                                DUMEL < THDIIS every NDIIS loops
@@ -219,26 +205,10 @@ ION
                       = T      Apply DIIS every NDIIS (DEFAULT)
                       = F      DIIS is always applied after NDIIS
 
-.......... EXTRAH
-                      = T      (DEFAULT)
-.......... DAMPH
-                      = F      (DEFAULT)
-.......... VSHIFT
-                      = F      (DEFAULT)
-.......... DODIIS
-                      = F      (DEFAULT)
-.......... CONVHF
-                      = 10D-05 (DEFAULT)                                                  
-
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Options for pertubative calculations
+ For more info see [3, i.e. PRA 2019]
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-.......... MP2HF               MP2 restricted closed Energy after RHF
-                     = F       (DEFAULT)
-
-.......... CMP2                Correlated MP2 = NOF - cMP2
-                     = F       (DEFAULT)
 
 .......... CLMP2               Correlated local MP2 = NOF - oiMP2
                      = F       (DEFAULT)
@@ -259,15 +229,8 @@ ION
                       = 0      All NOs are included (DEFAULT)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- Input Options for Gamma (Occ), C and Diagonal F
+ Restart Options for Gamma (Occ), C, Diagonal F, and nuclei
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-.......... LOCALORB            READ LOCALIZED ORBITALS
-                               Note: Read MOs from other code since RHF
-                               doesn't include localization option here
-                      = F      (DEFAULT)
-
-                     --- Restart Options ---
 
 .......... RESTART             RESTART FROM GCF FILE (DEFAULT=F)
                       = F      INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0
@@ -283,6 +246,10 @@ ION
 
 .......... INPUTFMIUG          GUESS FOR DIAGONAL ELEMENTS (FMIUG0)
                       = 0      NO INPUT (DEFAULT)
+                      = 1      INPUT FROM FILE GCF
+
+.......... INPUTCXYZ           READ NUCLEAR COORDINATES (Cxyz)
+                      = 0      INPUT FROM FILE INP
                       = 1      INPUT FROM FILE GCF
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -366,12 +333,6 @@ ION
 
 .......... IGVB                GVB orbitals connection to PNOFi(1) NOS
                       = 0      (DEFAULT)
-ION
-.......... NOUTPQG             PRINT OPTION FOR PQG conditions
-                      = 0      NO OUTPUT (DEFAULT)
-                      = 1      PRINT violations in .out, and 2RDM spin
-                               blocks in 'SPIN-2RDM' file
-ION
        
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Optional Options
@@ -397,14 +358,20 @@ ION
                                atom 5 and "x" coor of atom 1 to freeze.
                                MAXIMUM of frozen coordinates = 10
                       = 0      (DEFAULT)
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
- Options related to Hessian and Vibrational analysis
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.......... PROJECT             Project Hessian to eliminate rot/vib
-                               contaminants JCP 72, 99-112(1980)
-                      = F      (DEFAULT)
 
+Additional Notes
+^^^
+LBFGS: good for large, but lacks precision
+
+GCF: contains geometry just if optgeo stops
+
+NZEROSr should be zero if IRUNTYP==3
+
+HESSIAN and FREQS: only qualitative meaning
+
+For optgeo only print intermediate info if NPRINT=2,
+and forget GCFe if it ends badly
 
 
 Examples
