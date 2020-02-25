@@ -57,10 +57,10 @@ The &NOFINP namelist specifies the type of PNOF calculation, options
 for the iterative diagonalization method, perturbative corrections,
 input and output, and similar fundamental job options. These options
 are controlled by the following keywords:
-    
------------------------------------------------------------------------
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
                      --- NAMELIST VARIABLES ---
------------------------------------------------------------------------
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 .......... MAXIT               Maximum number of OCC-SCF iterations 
                       = 1000   (DEFAULT)
