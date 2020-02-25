@@ -8,13 +8,13 @@ The &INPRUN namelist specifies the run type, use of core potentials,
 the atomic basis, and similar fundamental job options. These options
 are controlled by the following keywords:
 
-RUNTYP:  specifies the run calculation
+RUNTYP  specifies the run calculation
 
-    = ENERGY  1) single-point energy calculation (Default)
+     ENERGY  1) single-point energy calculation (Default)
 
-    = GRAD   2) energy + gradients with respect to nuclear coord.
+     GRAD   2) energy + gradients with respect to nuclear coord.
 
-    = OPTGEO 3) optimize the molecular geometry
+     OPTGEO 3) optimize the molecular geometry
     
 MULT:    Multiplicity of the electronic state
 
@@ -58,12 +58,8 @@ for the iterative diagonalization method, perturbative corrections,
 input and output, and similar fundamental job options. These options
 are controlled by the following keywords:
 
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-                     --- NAMELIST VARIABLES ---
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-.......... MAXIT               Maximum number of OCC-SCF iterations 
-                      = 1000   (DEFAULT)
+MAXIT               Maximum number of OCC-SCF iterations 
+    = 1000   (DEFAULT)
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
  Type of Calculation
