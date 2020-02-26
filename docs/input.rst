@@ -20,6 +20,7 @@ RUNTYP  specifies the run calculation
 
 Additional Notes
 ^^^
+
 LBFGS: good for large, but lacks precision
 
 GCF: contains geometry just if optgeo stops
