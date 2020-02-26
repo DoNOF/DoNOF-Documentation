@@ -15,7 +15,7 @@ In practical applications of NOFT we approximate the 2RDM in terms of the natura
     
 DoNOF contains three approximations that give up to the NOFs named as PNOF5, PNOF6, and PNOF7. Corresponding formulas are given below
 
-PNOF5 (JCP 134, 164102 (2011)):
+PNOF5 (JCP 134, 164102 (2011))
 
 .. math::
 
@@ -29,22 +29,35 @@ PNOF5 (JCP 134, 164102 (2011)):
     
     E_{g}={\displaystyle \sum\limits _{p\in\Omega_{g}}}n_{p}\left(2\mathcal{H}_{pp}+\mathcal{J}_{pp}\right)+{\displaystyle \sum\limits _{q,p\in\Omega_{g},q\neq p}}\Pi_{qp}^{g}\mathcal{L}_{pq}
 
-PNOF7 (PRL 119, 063002 (2017); EPJB 91, 109 (2018)):
+PNOF7 (PRL 119, 063002 (2017); EPJB 91, 109 (2018))
     
 .. math::
 
 E_{el}^{pnof7}=E_{el}^{pnof5}+\sum\limits _{f\neq g}^{\mathrm{N}/2}\sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}\Pi_{qp}^{\Phi}\mathcal{L}_{pq}
+
 .. math::
-    \left|\Pi_{qp}\right|\leq\Phi_{q}\Phi_{p}
+\left|\Pi_{qp}\right|\leq\Phi_{q}\Phi_{p}
+
 .. math::
     \Phi_{q}=\sqrt{n_{q}h_{q}}
-
     
-PNOF6 (JCP 141, 044107 (2014)):
+PNOF6 (JCP 141, 044107 (2014))
 
 .. math::
 
+E_{pq}^{int}=\left(n_{q}n_{p}-\Delta_{qp}\right)\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)+\Pi_{qp}\mathcal{L}_{pq}
 
+where
 
-n_{\mathrm{offset}} = \sum_{k=0}^{N-1} s_k n_k
+.. math::
+
+\begin{array}{cc|cc|cc}
+\Delta_{qp} &  & \Pi_{qp} &  &  & Orbitals\\
+\hline e^{-2S}h_{q}h_{p} &  & -e^{-S}\left(h_{q}h_{p}\right)^{\frac{1}{2}} &  &  & q\leq F,p\leq F\\
+{\frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}} &  & -\Pi_{qp}^{\gamma} &  &  & \begin{array}{c}
+q\leq F,p>F\\
+q>F,p\leq F
+\end{array}\\
+e^{-2S}n_{q}n_{p} &  & e^{-S}\left(n_{q}n_{p}\right)^{\frac{1}{2}} &  &  & q>F,p>F
+\end{array}
 
