@@ -1,9 +1,9 @@
 Input Options
 =============
 
-#######
+*******
 &INPRUN
-#######
+*******
 
 The &INPRUN namelist specifies the run type, the atomic basis, and similar fundamental job options. These options are controlled by the following keywords:
 
@@ -63,7 +63,8 @@ are controlled by the following keywords:
 NUMBER OF TOTAL ITERATIONS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-MAXIT               Maximum number of OCC-SCF iterations 
+MAXIT
+Maximum number of OCC-SCF iterations 
     = 1000   (DEFAULT)
 
 
