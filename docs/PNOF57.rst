@@ -33,7 +33,7 @@ PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it c
     
 .. math::
 
-    \begin{array}{c}\Delta_{qp}=n_{p}^{2}\delta_{qp}+n_{q}n_{p}\left(1-\delta_{qp}\right)\delta_{q\Omega_{g}}\delta_{p\Omega_{g}}\\\Pi_{qp}=n_{p}\delta_{qp}+\Pi_{qp}^{g}\left(1-\delta_{qp}\right)\delta_{q\Omega_{g}}\delta_{p\Omega_{g}}\\\Pi_{qp}^{g}=\left\{ \begin{array}{cc}-\sqrt{n_{q}n_{p}}\,, & p=g\textrm{ or }q=g\\+\sqrt{n_{q}n_{p}}\,, & p,q>\mathrm{N}/2\end{array}\right.\;,\qquad\delta_{q\Omega_{g}}=\begin{cases}1, & q\in\Omega_{g}\\0, & q\notin\Omega_{g}\end{cases}\end{array}
+    \begin{array}{c}\\\Pi_{qp}^{g}=\left\{ \begin{array}{cc}-\sqrt{n_{q}n_{p}}\,, & p=g\textrm{ or }q=g\\+\sqrt{n_{q}n_{p}}\,, & p,q>\mathrm{N}/2\end{array}\right.\;,\qquad\delta_{q\Omega_{g}}=\begin{cases}1, & q\in\Omega_{g}\\0, & q\notin\Omega_{g}\end{cases}\end{array}
 
 PNOF7 (PRL 119, 063002 (2017); EPJB 91, 109 (2018))
 

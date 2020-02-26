@@ -53,12 +53,15 @@ for the iterative diagonalization method, perturbative corrections,
 input and output, and similar fundamental job options. These options
 are controlled by the following keywords:
 
+NUMBER OF TOTAL ITERATIONS
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 MAXIT               Maximum number of OCC-SCF iterations 
     = 1000   (DEFAULT)
 
 
-
-TYPE OF CALCULATION:
+TYPE OF CALCULATION
+^^^^^^^^^^^^^^^^^^^
 
 ICOEF               Coefficient Optimization 
                       = 0      Optimize Energy only by the occupations
@@ -76,14 +79,16 @@ NO1                 MAX. index of NOs with Occupation equal to 1.0
                       = Value  User specifies how many NOs have OCC equal to 1.0
 
 
-    HARTREE-FOCK
+HARTREE-FOCK
+^^^^^^^^^^^^
 
 HFID               Use the Iterative Diagonalization Method to generate the HF Orbitals
                       = F      HF MO (DEFAULT)
                       = T      HF MO are obtained using the ID (HFIDr)
 
 
-    PNOF SELECTION
+PNOF SELECTION
+^^^^^^^^^^^^^^
 
 IPNOF               Type of Natural Orbital Functional (see section "NOF approximations")
                       = 5      PNOF5
@@ -102,8 +107,10 @@ Ista                Use Static version of PNOF7
                       = 1      PNOF7s
                       
 
-    CONVERGENCE CRITERIA IN NOF CALCULATION
-    Fore more info see section X in [CPC ...]
+CONVERGENCE CRITERIA IN NOF CALCULATION
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Fore more info see section X in [CPC ...]
 
 NTHRESHL            CONVERGENCE OF THE LAGRANGE MULTIPLIERS THRESHL=10.0**(-NTHRESHL)
                       = 4      (DEFAULT)
@@ -118,16 +125,19 @@ NTHRESHEN           CONVERGENCE OF THE TOTAL ENERGY (OCCOPT) THRESHEN=10.0**(-NT
                       = 16     (DEFAULT)
 
 
-    OPTIONS FOR THE OCCUPATION (GAMMA) OPTIMIZATION PROGRAM
+OPTIONS FOR THE OCCUPATION (GAMMA) OPTIMIZATION PROGRAM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 USENAG              Use NAG Library Routine: DUMCGG
                       = T      (DEFAULT)
                       = F      use instead a LBFGS method (see note in "Additional notes" section)
 
 
-    OPTIONS FOR THE ORBITAL OPTIMIZATION PROGRAM (ID METHOD)
-    For more info see [2, i.e. JCC 2009]
-    For computational details see section X in [1]
+OPTIONS FOR THE ORBITAL OPTIMIZATION PROGRAM (ID METHOD)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more info see [2, i.e. JCC 2009]
+For computational details see section X in [1]
 
 NOPTORB             Number of the optimized orbitals
                       = NBF    (DEFAULT)
@@ -166,8 +176,10 @@ PERDIIS             Periodic DIIS
                       = F      DIIS is always applied after NDIIS
 
 
-    OPTIONS FOR PERTURBATIVE CALCULATIONS
-    For more info see [3, i.e. PRA 2019]
+OPTIONS FOR PERTURBATIVE CALCULATIONS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more info see [PRA 98, 022504 (2018)]
 
 CLMP2               Correlated local MP2 = NOF - oiMP2
                      = F       (DEFAULT)
@@ -184,7 +196,8 @@ NEX                 Number of excluded coupled orbitals in the PNOF5-PT2 calcula
                       = 0      All NOs are included (DEFAULT)
 
 
-    RESTART OPTIONS FOR GAMMA, C, Diagonal F, and NUCLEAR COORDINATES:
+RESTART OPTIONS FOR GAMMA, C, Diagonal F, and NUCLEAR COORDINATES
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 RESTART             RESTART FROM GCF FILE (DEFAULT=F)
                       = F      INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0
@@ -207,7 +220,8 @@ INPUTCXYZ           READ NUCLEAR COORDINATES (Cxyz)
                       = 1      INPUT FROM FILE GCF
 
 
-    OUTPUT OPTIONS:
+OUTPUT OPTIONS
+^^^^^^^^^^^^^^
 
 NPRINT              OUTPUT OPTION (DEFAULT VALUE: 0)
                       = 0      Short Printing
@@ -280,7 +294,8 @@ IGVB                GVB orbitals connection to PNOFi(1) NOS
                       = 0      (DEFAULT)
        
 
-    OPTIONS RELATED TO ORTHONORMALITY OF NATURAL ORBITALS:
+OPTIONS RELATED TO ORTHONORMALITY OF NATURAL ORBITALS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ORTHO               Orthogonalize the initial orbitals
                       = F      No 
@@ -291,7 +306,9 @@ CHKORTHO            CHECK THE ORTHONORMALITY OF THE MOs
                       = T      Yes
 
 
-    OPTIONS RELATED TO FROZEN COORDINATES IN GRADIENT COMPUTATION:
+    
+OPTIONS RELATED TO FROZEN COORDINATES IN GRADIENT COMPUTATION
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 FROZEN              Is there any fixed coordinate
@@ -302,7 +319,7 @@ IFROZEN             By pairs, what coordinate of which atom, e.g. 2,5,1,1 means 
 
 
 Additional Notes
-^^^^
+^^^^^^^^^^^^^^^^
 
 LBFGS: good for large, but lacks precision
 
