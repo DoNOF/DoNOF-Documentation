@@ -1,6 +1,10 @@
 Input Options
 =============
 
+#######
+&INPRUN
+#######
+
 The &INPRUN namelist specifies the run type, the atomic basis, and similar fundamental job options. These options are controlled by the following keywords:
 
 RUNTYP    specifies the run calculation
@@ -46,9 +50,10 @@ DONTW     Do not write 2e- integrals on the disk (Unit=1)
     = F      (Default)
     
     = T
-    
+
+*******
 &NOFINP
-^^^^^^^
+*******
 
 The &NOFINP namelist specifies the type of PNOF calculation, options
 for the iterative diagonalization method, perturbative corrections,
@@ -56,7 +61,6 @@ input and output, and similar fundamental job options. These options
 are controlled by the following keywords:
 
 NUMBER OF TOTAL ITERATIONS
-^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MAXIT               Maximum number of OCC-SCF iterations 
