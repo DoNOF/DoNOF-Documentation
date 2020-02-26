@@ -47,13 +47,16 @@ DONTW     Do not write 2e- integrals on the disk (Unit=1)
     
     = T
     
-    
+&NOFINP
+^^^^^^^
+
 The &NOFINP namelist specifies the type of PNOF calculation, options
 for the iterative diagonalization method, perturbative corrections,
 input and output, and similar fundamental job options. These options
 are controlled by the following keywords:
 
 NUMBER OF TOTAL ITERATIONS
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MAXIT               Maximum number of OCC-SCF iterations 
@@ -253,27 +256,26 @@ DIAGLAG             DIAGONALIZE LAGRANGE MULTIPLIERS PRINT CANONICAL VECTORS and
                       = F      (DEFAULT)
 
 IAIMPAC             WRITE INFORMATION INTO A WFN FILE (UNIT 7) FOR THE AIMPAC PROGRAM
-                      = 0      DO NOT DO 
+                      = 0      DO NOT DO
                       = 1      WRITE INTO WFN FILE (DEFAULT)
 
 IEKT                Use the EKT (DEFAULT VALUE = 0)
                       = 1      Calculate ionization potentials 
 
 ICATION             (DEFAULT VALUE = 0)
-                      = 1      Calculate the Cation Energy 
-                               (Eelec+EN+IonPotential)
+                      = 1      Calculate the Cation Energy (Eelec+EN+IonPotential)
 
 ICHEMPOT            (DEFAULT VALUE = 0)
                       = 1      Calculate the Chemical Potential
 
 NOUTRDM             PRINT OPTION FOR ATOMIC RDMs 
                       = 0      NO OUTPUT (DEFAULT)
-                      = 1      PRINT ATOMIC RDMs IN 1DM and 2DM FILES
+                      = 1      PRINT ATOMIC RDMs IN 1RDM and 2RDM FILES
 
 NTHRESHDM           THRESHDM=10.0**(-NTHRESHDM)
                       = 6      (DEFAULT)
 
-NSQT                Use an unformatted 2DM file.
+NSQT                Use an unformatted 2RDM file.
                       = 1      (DEFAULT)
 
 NOUTCJK             PRINT OPTION FOR CJ12 and CK12
