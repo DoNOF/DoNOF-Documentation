@@ -121,11 +121,9 @@ NCWO:                Number of coupled weakly occupied MOs per strongly occupied
 
                       = 1      NCWO = 1 (DEFAULT)
                       
-                      = 2,3,...
+                      = 2,3,etc.
                       
-                      =-1      NCWO = NVIR/NDOC
-                               NVIR: Number of HF virtual  MOs (OCC=0)
-                               NDOC: Number of strongly occupied MOs
+                      =-1      NCWO = NVIR/NDOC where NVIR: Number of HF virtual MOs (OCC=0) and NDOC: Number of strongly occupied MOs
 
 Ista:                Use Static version of PNOF7
 
@@ -170,7 +168,8 @@ OPTIONS FOR THE ORBITAL OPTIMIZATION PROGRAM (ID METHOD)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For more info see [JCC 30, 2078 (2009)]
-For computational details see section X in [1]
+
+For computational details see section X in [CPC ...]
 
 NOPTORB:             Number of the optimized orbitals
 
@@ -276,9 +275,9 @@ INPUTFMIUG:          GUESS FOR DIAGONAL ELEMENTS (FMIUG0)
 
 INPUTCXYZ:           READ NUCLEAR COORDINATES (Cxyz)
 
-                      = 0      INPUT FROM FILE INP
+                      = 0      FROM FILE INP
                       
-                      = 1      INPUT FROM FILE GCF
+                      = 1      FROM FILE GCF
 
 
 OUTPUT OPTIONS
@@ -355,7 +354,7 @@ NTHRESHDM:           THRESHDM=10.0**(-NTHRESHDM)
 
                       = 6      (DEFAULT)
 
-NSQT:                Use an unformatted 2RDM file.
+NSQT:                Use an unformatted 2RDM file
 
                       = 1      (DEFAULT)
 
@@ -403,6 +402,8 @@ CHKORTHO:            CHECK THE ORTHONORMALITY OF THE MOs
 OPTIONS RELATED TO FROZEN COORDINATES IN GRADIENT COMPUTATION
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+See also "Additional notes" section
+
 FROZEN:              Is there any fixed coordinate
 
                       = F      (DEFAULT)
@@ -420,7 +421,7 @@ Additional Notes
 Dependencies
 ^^^^^^^^^^^^
 
-You may notice above that setting USENAG=T in the input file DoNOF will use the conjugate gradient algorithm for the optimization of natural occupancies, as well as nuclear coordinates (if RUNTYP=OPTGEO). However, since the license of NAG is restricted (see https://www.nag.co.uk/content/nag-library), these routines are not provided by DoNOF and the user must include them to the code.
+You may notice above that setting USENAG=T in the input file DoNOF will use the conjugate gradient algorithm for the optimization of natural occupancies, as well as nuclear coordinates (if RUNTYP=OPTGEO). However, since the license of NAG is restricted (see https://www.nag.co.uk/content/nag-library), these routines are not provided by DoNOF and the user must include them to the code. Namely, the following routines are called by DoNOF if USENAG=T: E04DGF, E04UEF, E04UCF, and SparseSymLinearSystem. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
 
 Alternatively, we have implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html, and cite references therein if USENAG=F) for the occupation and geometry optimizations. This method is activated by setting USENAG=F). In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization as detailed below.
 
