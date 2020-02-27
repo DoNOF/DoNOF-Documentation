@@ -1,5 +1,14 @@
+#############
 Input Options
-=============
+#############
+
+*********
+BASIS SET
+*********
+
+For the moment DoNOF requires to read the basis set for any calculation from the input file. Regarding the format, for historical reasons we employ the format used in GAMESS US. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/.
+
+Many examples are shown in the section "Examples".
 
 *******
 &INPRUN
@@ -440,6 +449,8 @@ GCF: All information required to restart any calculation is printed in a file ca
 Regarding number of initial zeroes at Fij matrix, NZEROSr, it is convenient to set NZEROSr=0 if RUNTYP=OPTGEO. In fact, the solution can change significantly after a displacement of nuclei, then we must let free the ID procedure. On the contrary, whenever we restart a calculation that is almost converged, we can save some extra iterations by setting some initial value for NZEROSr, e.g. NZEROSr=2 or NZEROSr=3 depending on the system and how close from the solution is out starting point (in the GCF file).
 
 In geometry optimization calculations (RUNTYP=OPTGEO), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo". This file contains information about the geometry optimization procedure carried out by using the conjugate gradient or LBFGS method (set in the input file by USENAG=T or USENAG=F, respectively), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
+
+You may notice in the $NOFINP section that a keyword FROZEN is used to fix nuclear coordinates during geometry optimization. This is done in cartesians, though it is recommended, for obvious reasons, doing it by using internal coordinates. For the moment this has not been implemented in DoNOF yet. Therefore, we recommend the user to employ FROZEN carefully.
 
 
 Dissociation
