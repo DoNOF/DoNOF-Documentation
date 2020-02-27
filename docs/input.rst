@@ -393,6 +393,8 @@ NAG
 Geometry Optimization
 ---------------------
 
+Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set USENAG=T and thereby use the conjugate gradient algorithm to find the equilibrium geometry. In fact, the latter has proven to be much more accurate than LBFGS for this task. 
+
 LBFGS: good for large, but lacks precision
 
 Only information about the initial and final points is printed in the output file ("name-of-the-molecule.out") in geometry optimization calculations (RUNTYP=OPTGEO). For more printing in this file ($NOFINP namelist section) set NPRINT=2 in the input file before runing DoNOF.
