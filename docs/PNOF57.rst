@@ -1,5 +1,6 @@
+##################
 NOF Approximations
-==================
+##################
 
 The non-relativistic electronic energy can be written as an explicit functional of the 1- and 2-order reduced density matrices (RDM)
 
@@ -15,7 +16,10 @@ In practical applications of NOFT we approximate the 2RDM in terms of the natura
     
 DoNOF contains three approximations that give up to the NOFs named as PNOF5, PNOF7, and PNOF6 (in the input file we choose one or another by setting ICOEF=5, ICOEF=7, and ICOEF=6, respectively). For more info see the refs. cited for each approximation.
 
-PNOF5 (JCP 134, 164102 (2011))
+PNOF5
+-----
+
+(JCP 134, 164102 (2011))
 
 PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it corresponds to an APSG wavefunction with fixed phases (see JCP 139, 234109 (2013)).
 
@@ -35,7 +39,10 @@ PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it c
 
     \begin{array}{c}\\\Pi_{qp}^{g}=\left\{ \begin{array}{cc}-\sqrt{n_{q}n_{p}}\,, & p=g\textrm{ or }q=g\\+\sqrt{n_{q}n_{p}}\,, & p,q>\mathrm{N}/2\end{array}\right.\;,\qquad\delta_{q\Omega_{g}}=\begin{cases}1, & q\in\Omega_{g}\\0, & q\notin\Omega_{g}\end{cases}\end{array}
 
-PNOF7 (PRL 119, 063002 (2017); EPJB 91, 109 (2018))
+PNOF7 
+-----
+
+(PRL 119, 063002 (2017); EPJB 91, 109 (2018))
 
 PNOF7 introduces correlation between pairs of electrons through a term that explicitly contains particle-hole symmetry.
 
@@ -51,7 +58,10 @@ PNOF7 introduces correlation between pairs of electrons through a term that expl
 
     \Phi_{q}=\sqrt{n_{q}h_{q}}
     
-PNOF6 (JCP 141, 044107 (2014))
+PNOF6
+-----
+
+(JCP 141, 044107 (2014))
 
 In the case of PNOF6, the only difference with respect to PNOF5 relies on the interaction between electrons that belong to different electron pairs. For PNOF6 this interaction is defined as
 
