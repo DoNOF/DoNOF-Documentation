@@ -395,13 +395,9 @@ Geometry Optimization
 
 LBFGS: good for large, but lacks precision
 
-and forget GCFe if it ends badly
+Only information about the initial and final points is printed in the output file ("name-of-the-molecule.out") in geometry optimization calculations (RUNTYP=OPTGEO). For more printing in this file ($NOFINP namelist section) set NPRINT=2 in the input file before runing DoNOF.
 
-
-
-Only information about the initial and final points is printed in the output file ("name-of-the-molecule.out") in geometry optimization calculations (RUNTYP=OPTGEO). For more printing in this file set NPRINT=2 in the input file before runing DoNOF.
-
-GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf". It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP=OPTGEO). If that is the case, run a new calculation setting RUNTYP=ENERGY, RESTART=F, and INPUTCXYZ=1 to converge the energy at the last geometry obtained during the geometry optimization. Then you can just set regular geometry optimization calculation, i.e. RUNTYP=OPTGEO, RESTART=T, and INPUTCXYZ=0.
+GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf". It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP=OPTGEO). If that is the case, run a new calculation setting RUNTYP=ENERGY, RESTART=F, and INPUTCXYZ=1 to converge the energy at the last geometry obtained during the geometry optimization. Then you can just set regular geometry optimization calculation, i.e. RUNTYP=OPTGEO, RESTART=T, and INPUTCXYZ=0. In this vein, the GCFe file (that contains the minimal energy obtained during each single-point calculation) can be ignored for RUNTYP=OPTGEO.
 
 Regarding number of initial zeroes at Fij matrix, NZEROSr, it is convenient to set NZEROSr=0 if RUNTYP=OPTGEO. In fact, the solution can change significantly after a displacement of nuclei, then we must let free the ID procedure. On the contrary, whenever we restart a calculation that is almost converged, we can save some extra iterations by setting some initial value for NZEROSr, e.g. NZEROSr=2 or NZEROSr=3 depending on the system and how close from the solution is out starting point (in the GCF file).
 
