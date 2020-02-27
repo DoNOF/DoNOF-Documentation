@@ -52,7 +52,7 @@ PNOF7 introduces correlation between pairs of electrons through a term that expl
 
 .. math::
 
-    \Pi_{qp}=-\Phi_{q}\Phi_{p}
+    \Pi_{qp}^{\Phi}=-\Phi_{q}\Phi_{p}
 
 .. math::
 

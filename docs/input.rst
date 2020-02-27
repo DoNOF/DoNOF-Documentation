@@ -384,18 +384,21 @@ IFROZEN             By pairs, what coordinate of which atom, e.g. 2,5,1,1 means 
 Additional Notes
 ****************
 
-Dependencies
-------------
 
-NAG
+Dependencies
+^^^^^^^^^^^^
+
+You may notice above that setting USENAG=T in the input file DoNOF will use the conjugate gradient algorithm for the optimization of natural occupancies, as well as nuclear coordinates (if RUNTYP=OPTGEO). However, since the license of NAG is restricted (see https://www.nag.co.uk/content/nag-library), these routines are not provided by DoNOF and the user must include them to the code.
+
+Alternatively, we have implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html, and cite references therein if USENAG=F) for the occupation and geometry optimizations. This method is activated by setting USENAG=F). In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization as detailed below.
+
+New algorithms and numerical methods for carrying out these optimizations are welcome, so we encourage new collaborations to work on this task.
 
 
 Geometry Optimization
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
-Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set USENAG=T and thereby use the conjugate gradient algorithm to find the equilibrium geometry. In fact, the latter has proven to be much more accurate than LBFGS for this task. 
-
-LBFGS: good for large, but lacks precision
+Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set USENAG=T and thereby use the conjugate gradient algorithm to find the equilibrium geometry. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in our system.
 
 Only information about the initial and final points is printed in the output file ("name-of-the-molecule.out") in geometry optimization calculations (RUNTYP=OPTGEO). For more printing in this file ($NOFINP namelist section) set NPRINT=2 in the input file before runing DoNOF.
 
@@ -407,8 +410,8 @@ In geometry optimization calculations (RUNTYP=OPTGEO), you will note that a file
 
 
 Dissociation
-------------
+^^^^^^^^^^^^
 
-RESTART=F, ORTHO=T and INPUTFMIUG=T for dissociations
+Molecular dissociation is considered the main still unresolved problem of DFT, but of fundamental interest for quantum chemistry. PNOF methods are able to reproduce benchmark potential energy curves of molecular bond dissociation. Nevertheless, this calculation is tricky and must be carried out carefully. In fact, different solutions may arise during the dissociation process depending on the electron correlation present in our system. Computationaly it is convenient to converge a single-point calculation to NTHRESHL=5, and then start the dissociation process manually by setting: RESTART=F, ORTHO=T, and INPUTFMIUG=T. The latter allows to use the natural occupancies from the previous point but not the natural orbitals, since the latter may change significantly after the displacement of nuclear coordinates. ORTHO=T ensures the orthonormality of the orbitals along the dissociation procedure.
 
 
