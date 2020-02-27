@@ -1,5 +1,6 @@
+########################
 License and Citing DoNOF
-========================
+########################
 
 The use of this software is restricted solely to academic
 institutions and for academic purposes. The author reserve the
@@ -9,7 +10,7 @@ eligible for using it.
 This software may not be sold or any other commercial use made of
 it without the express written permission of the author.
 
-By citing DoNOF you are encouraging development and expoosing the software package.
+By citing DoNOF you are encouraging development and exposing the software package.
 
 The following article should be cited.::
 
