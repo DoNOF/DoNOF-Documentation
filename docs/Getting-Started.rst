@@ -6,14 +6,9 @@ The simplest input.::
 
 generates files like input.out input.gcf
 
-Examples
-^^^^
+Running script
+^^^^^^^^^^^^^^
 
-Single-point
+bash
 
-Hartree-Fock
-
-Geometry Optimization
-
-Convergence
 
