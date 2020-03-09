@@ -24,7 +24,7 @@ In practical applications of NOFT we approximate the 2RDM in terms of the natura
 
     E_{el}[\left\{ n_{i},\phi_{i}\right\}]=\sum\limits _{i}n_{i}\mathcal{H}_{ii}+\sum\limits _{ijkl}D[n_{i},n_{j},n_{k},n_{l}]\left\langle kl|ij\right\rangle
 
-In our electron-pair-based NOF the orbital space is divided into disjoint orbital subspaces. See details at PRA 100, 032508 (2019). Then the energy can be written as
+In our electron-pair-based NOF the orbital space is divided into disjoint orbital subspaces. This allows us to conserve correct spin symmetry, both total spin and spin projection. Also, since the spin-restricted formalism can be employed even for S>0, the formula to compute energy gradients holds. Then it is straighforward to compute equilibrium geometries of spin uncompensated systems. See details at PRA 100, 032508 (2019). The energy can be written as
 
 .. math::
 
