@@ -1,6 +1,6 @@
-##################
-NOF Approximations
-##################
+#########################################
+Electron-pairing-based NOF for Multiplets
+#########################################
 
 The non-relativistic electronic energy can be written as an explicit functional of the 1- and 2-order reduced density matrices (RDM)
 
@@ -8,12 +8,36 @@ The non-relativistic electronic energy can be written as an explicit functional 
 
     E_{el}[\Gamma,D]=\sum_{ik}\Gamma_{ki}h_{ki}+\sum_{ijkl}D_{kl,ij}\langle kl|ij\rangle
     
+where
+
+.. math::
+
+    \Gamma_{ki}={\displaystyle \dfrac{1}{2S+1}{\textstyle {\displaystyle \sum_{M_{s}=-S}^{S}}}}\left\langle SM_{s}\right|\hat{a}_{k}^{\dagger}\hat{a}_{i}\left|SM_{s}\right\rangle
+
+.. math::
+
+    D_{kl,ij}={\displaystyle {\textstyle {\displaystyle \dfrac{1}{2\left(2S+1\right)}\sum_{M_{s}=-S}^{S}}}}\left\langle SM_{s}\right|\hat{a}_{k}^{\dagger}\hat{a}_{l}^{\dagger}\hat{a}_{j}\hat{a}_{i}\left|SM_{s}\right\rangle
+    
 In practical applications of NOFT we approximate the 2RDM in terms of the natural occupation numbers
 
 .. math::
 
     E_{el}[\left\{ n_{i},\phi_{i}\right\}]=\sum\limits _{i}n_{i}\mathcal{H}_{ii}+\sum\limits _{ijkl}D[n_{i},n_{j},n_{k},n_{l}]\left\langle kl|ij\right\rangle
-    
+
+In our electron-pair-based NOF the orbital space is divided into disjoint orbital subspaces. See details at PRA 100, 032508 (2019). Then the energy can be written as
+
+.. math::
+
+    E=\sum\limits _{g=1}^{\frac{\mathrm{N_{II}}}{2}}E_{g}+\sum_{g=\frac{\mathrm{N_{II}}}{2}+1}^{\mathrm{N}_{\Omega}}\mathcal{H}_{gg}+\sum\limits _{f,g=1;f\neq g}^{\mathrm{N}_{\Omega}}E_{fg}
+
+.. math::
+
+    E_{g}=2\sum\limits _{p\in\Omega_{g}}n_{p}\mathcal{H}_{pp}+\sum\limits _{q,p\in\Omega_{g}}\Pi_{qp}\mathcal{K}_{pq}\,,\;\Omega{}_{g}\in\Omega_{\mathrm{II}}
+
+.. math::
+
+    E_{fg}=\sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}\left[n_{q}n_{p}\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)-\Phi_{q}\Phi_{p}\mathcal{K}_{pq}\right]
+
 DoNOF contains three approximations that give up to the NOFs named as PNOF5, PNOF7, and PNOF6 (in the input file we choose one or another by setting ICOEF=5, ICOEF=7, and ICOEF=6, respectively). For more info see the refs. cited for each approximation.
 
 PNOF5
