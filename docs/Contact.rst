@@ -1,6 +1,6 @@
-#######
-Contact
-#######
+########################
+Contributing and Contact
+########################
 
 The DoNOF code is open-source, and thus we appreciate any contribution to the code, such as
 
