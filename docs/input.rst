@@ -463,3 +463,15 @@ Dissociation
 Molecular dissociation is considered the main still unresolved problem of DFT, but of fundamental interest for quantum chemistry. PNOF methods are able to reproduce benchmark potential energy curves of molecular bond dissociation. Nevertheless, this calculation is tricky and must be carried out carefully. In fact, different solutions may arise during the dissociation process depending on the electron correlation present in our system. Computationaly it is convenient to converge a single-point calculation to NTHRESHL=5, and then start the dissociation process manually by setting: RESTART=F, ORTHO=T, and INPUTFMIUG=T. The latter allows to use the natural occupancies from the previous point but not the natural orbitals, since the latter may change significantly after the displacement of nuclear coordinates. ORTHO=T ensures the orthonormality of the orbitals along the dissociation procedure.
 
 
+WFN file
+^^^^^^^^
+
+The WFN file contains the necessary info to study the output data by using external programs, such as AIMPAC. Note that in this WFN file the energy is referred to as "HF energy", but it really corresponds to the PNOF energy.
+
+
+Numerical Precision
+^^^^^^^^^^^^^^^^^^^
+
+You may notice that different numerical precision is shown for each quantity (orbitals, energy, occupancies, etc) in the output file. The latter is done according to the trustworthy precision inherent to NOF methods. On the contrary, for other purposes such as restarting a calculation is more convenient to employ as much digits as possible. Accordingly, you should use data from the GCF file.
+
+

@@ -7,6 +7,8 @@ institutions and for academic purposes. The author reserve the
 exclusive right to determine what purposes and institutions are
 eligible for using it.
 
+GPL (version 2) is applied to DoNOF. For more info check https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+
 This software may not be sold or any other commercial use made of
 it without the express written permission of the author.
 

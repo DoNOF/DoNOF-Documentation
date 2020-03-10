@@ -1,10 +1,15 @@
+##############################################################
 DoNOF: Donostia Natural Orbital Functional open-source program
-=================================
+##############################################################
 
-Natural Orbital Functional Theory ...
+DoNOF is an open-source implementation of natural-orbital-functional-based methods for quantum chemistry.
 
-Program to compute the ground state properties of a molecule
-in the gas phase using PNOF5 - PNOF7 + perturbation corrections
+The DoNOF computer program is designed to solve the energy
+minimization problem of a NOF that describes the ground-state of an N-electron
+system at absolute zero temperature. The program includes the NOFs developed
+in the Donostia quantum chemistry group, namely PNOF5 and PNOF7. The so-
+lution is established by optimizing the energy functional with respect to the ONs
+and to the NOs, separately.
 
 .. toctree::
    :maxdepth: 3
