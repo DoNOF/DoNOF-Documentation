@@ -8,7 +8,7 @@ The non-relativistic electronic energy can be written as an explicit functional 
 
     E_{el}[\Gamma,D]=\sum_{ik}\Gamma_{ki}h_{ki}+\sum_{ijkl}D_{kl,ij}\langle kl|ij\rangle
     
-where
+where, if there is no any dependence on spin coordinates, then RDMs correspond to a mixed quantum state (ensemble) that allows all possible spin projections for a given total spin quantum number S.
 
 .. math::
 
@@ -18,7 +18,7 @@ where
 
     D_{kl,ij}={\displaystyle {\textstyle {\displaystyle \dfrac{1}{2\left(2S+1\right)}\sum_{M_{s}=-S}^{S}}}}\left\langle SM_{s}\right|\hat{a}_{k}^{\dagger}\hat{a}_{l}^{\dagger}\hat{a}_{j}\hat{a}_{i}\left|SM_{s}\right\rangle
     
-In practical applications of NOFT we approximate the 2RDM in terms of the natural occupation numbers
+In practical applications of NOFT we approximate the 2RDM in terms of the natural occupation numbers, so this leads to a NOF, namely
 
 .. math::
 
@@ -38,7 +38,7 @@ In our electron-pair-based NOF the orbital space is divided into disjoint orbita
 
     E_{fg}=\sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}\left[n_{q}n_{p}\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)-\Phi_{q}\Phi_{p}\mathcal{K}_{pq}\right]
 
-DoNOF contains three approximations that give up to the NOFs named as PNOF5, PNOF7, and PNOF6 (in the input file we choose one or another by setting ICOEF=5, ICOEF=7, and ICOEF=6, respectively). For more info see the refs. cited for each approximation.
+DoNOF contains many approximations that give up to the NOFs named as PNOFi [i=3-7] (in the input file we choose one or another by setting IPNOF=i). For more info see IJQC 113, 620 (2013), and also the references given below.
 
 PNOF5
 -----
