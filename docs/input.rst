@@ -6,7 +6,7 @@ Input Options
 BASIS SET
 *********
 
-For the moment DoNOF requires to read the basis set for any calculation from the input file. Regarding the format, for historical reasons we employ the format used in GAMESS US. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/.
+For the moment DoNOF requires to read the basis set for any calculation from the input file. Regarding the format, for historical reasons we employ the format used in GAMESS US. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. Note that you must use the "Advanced" option from the "Download basis set" box, and there choose the "GAMESS US" format, Version 1, and click the button to activate the "Optimize General Contractions". This will automatically give you the information to put in the input file.
 
 Many examples are shown in the section "Examples".
 
@@ -89,8 +89,6 @@ ICOEF:               Coefficient Optimization
                       = 2      Optimize Energy only by the orbitals
                       
                       = 3      Optimize Energy by all occupations and only core-fragment orbitals, the rest of fragment orbitals remain frozen
-                      
-                      = 4      use a HF-like Fockian
 
 IEINI:               Calculate only the initial energy
 
@@ -119,6 +117,10 @@ PNOF SELECTION
 ^^^^^^^^^^^^^^
 
 IPNOF:               Type of Natural Orbital Functional (see section "NOF approximations")
+
+                      = 3      PNOF3
+
+                      = 4      PNOF4
 
                       = 5      PNOF5
                       
@@ -430,9 +432,32 @@ Additional Notes
 Dependencies
 ^^^^^^^^^^^^
 
-You may notice above that setting USENAG=T in the input file DoNOF will use the conjugate gradient algorithm for the optimization of natural occupancies, as well as nuclear coordinates (if RUNTYP=OPTGEO). However, since the license of NAG is restricted (see https://www.nag.co.uk/content/nag-library), these routines are not provided by DoNOF and the user must include them to the code. Namely, the following routines are called by DoNOF if USENAG=T: E04DGF, E04UEF, E04UCF, and F11JEF. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
+You may notice above that setting ICGMETHOD=2 in the input file DoNOF will use the conjugate gradient algorithm coded in NAG for the optimization of natural occupancies, as well as nuclear coordinates (if RUNTYP=OPTGEO). However, since the license of NAG is restricted (see https://www.nag.co.uk/content/nag-library), these routines are not provided by DoNOF and the user must include them to the code. Namely, the following routines are called by DoNOF if ICGMETHOD=2: E04DGF, E04UEF, E04UCF, and F11JEF. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
 
-Alternatively, we have implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html, and cite references therein if USENAG=F) for the occupation and geometry optimizations. This method is activated by setting USENAG=F). In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization as detailed below.
+That is why by default DoNOF employs the "SUMSL" routine to minimize a general unconstrained objective function.For more details see the next references:
+
+!    J E Dennis, David Gay, and R E Welsch,                            !
+!    An Adaptive Nonlinear Least-squares Algorithm,                    !
+!    ACM Transactions on Mathematical Software,                        !
+!    Volume 7, Number 3, 1981.                                         !
+!                                                                      !
+!    J E Dennis, H H W Mei,                                            !
+!    Two New Unconstrained Optimization Algorithms Which Use           !
+!    Function and Gradient Values,                                     !
+!    Journal of Optimization Theory and Applications,                  !
+!    Volume 28, pages 453-482, 1979.                                   !
+!                                                                      !
+!    J E Dennis, Jorge More,                                           !
+!    Quasi-Newton Methods, Motivation and Theory,                      !
+!    SIAM Review,                                                      !
+!    Volume 19, pages 46-89, 1977.                                     !
+!                                                                      !
+!    D Goldfarb,                                                       !
+!    Factorized Variable Metric Methods for Unconstrained Optimization,!
+!    Mathematics of Computation,                                       !
+!    Volume 30, pages 796-811, 1976.
+
+Alternatively, we have also implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html, and cite references therein if ICGMETHOD=3) for the occupation and geometry optimizations. This method is activated by setting ICGMETHOD=3). In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization as detailed below.
 
 New algorithms and numerical methods for carrying out these optimizations are welcome, so we encourage new collaborations to work on this task.
 
@@ -440,9 +465,9 @@ New algorithms and numerical methods for carrying out these optimizations are we
 Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^
 
-Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set USENAG=T and thereby use the conjugate gradient algorithm to find the equilibrium geometry. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in our system.
+Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in our system.
 
-RUNTYP=OPTGEO may be a computationally demanding task for any USENAG option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP=OPTGEO is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are two weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=2 in the RUNTYP=OPTGEO calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
+RUNTYP=OPTGEO may be a computationally demanding task for any ICGMETHOD option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP=OPTGEO is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are two weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=2 in the RUNTYP=OPTGEO calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
 
 Recall that if HFID=T and RESTART=F must to be set at the input file of any RUNTYP=OPTGEO calculation, otherwise DoNOF will automatically stop the calculation.
 
