@@ -168,11 +168,19 @@ NTHRESHEN:           CONVERGENCE OF THE TOTAL ENERGY (OCCOPT) THRESHEN=10.0**(-N
 OPTIONS FOR THE OCCUPATION (GAMMA) OPTIMIZATION PROGRAM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-USENAG:              Use NAG Library Routine: DUMCGG
+ICGMETHOD:           Define the congate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
 
-                      = T      (DEFAULT)
-                      
-                      = F      use instead a LBFGS method (see note in "Additional notes" section)
+                      = 1      (DEFAULT)
+                               SUMSL: CGOCUPSUMSLr,OPTSUMSL
+                               SparseSymLinearSystem_CG
+
+                      = 2      Use NAG routines:
+                               E04DGF: OPTCGNAG,CGOCUPNAGr
+                               F11JEF: SparseSymLinearSystem_NAG         
+
+                      = 3      LBFGS: OPTLBFGS,LBFGSOCUPr
+
+See more details at "Additional notes" section
 
 
 OPTIONS FOR THE ORBITAL OPTIMIZATION PROGRAM (ID METHOD)
