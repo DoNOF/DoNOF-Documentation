@@ -1,10 +1,17 @@
 Getting Started
 =====
-The simplest input.::
+
+All PNOF options have default values (see "Input Options" section),
+so for a given system defined in the $INPRUN part of the input,
+it only remains necessary to put.::
 
     $nofinp
 
-generates files like input.out input.gcf
+In each calculation many files are generated. Imagine the input corresponds to water.inp,
+then we will obtain after a single-point calculation:
+water.out --> file containing general output data corresponding to the NOF calculation
+water.gcf --> file containing info needed to restart any calculation from the output of this one
+water.wfn --> file containing wave-function info for AIMPAC program, among others.
 
 Running script
 ^^^^^^^^^^^^^^
