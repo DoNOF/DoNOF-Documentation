@@ -3,9 +3,7 @@ License and Citing DoNOF
 ########################
 
 The use of this software is restricted solely to academic
-institutions and for academic purposes. The author reserve the
-exclusive right to determine what purposes and institutions are
-eligible for using it.
+institutions and for academic purposes.
 
 GPL (version 2) is applied to DoNOF. For more info check https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
