@@ -4,7 +4,7 @@ NOF-MP2
 
 In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file).::
 
-    $NOFINP CLMP2=T
+    $NOFINP CLMP2=T Ista=1
 
 Current NOFs based on electron pairing take into account most of the
 non-dynamical effects, and also an important part of the dynamical
