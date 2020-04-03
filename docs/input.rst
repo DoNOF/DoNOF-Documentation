@@ -146,7 +146,7 @@ Ista:                Use Static version of PNOF7
 CONVERGENCE CRITERIA IN NOF CALCULATION
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Fore more info see section X in [CPC ...]
+Fore more info see section 3 in [CPC (2020) by Piris and Mitxelena]
 
 NTHRESHL:            Convergence of the lagrange multipliers THRESHL=10.0**(-NTHRESHL)
 
@@ -188,7 +188,7 @@ OPTIONS FOR THE ORBITAL OPTIMIZATION PROGRAM (ID METHOD)
 
 For more info see [JCC 30, 2078 (2009)]
 
-For computational details see section X in [CPC ...]
+For computational details see section 3 in [CPC (2020) by Piris and Mitxelena]
 
 NOPTORB:             Number of the optimized orbitals
 
