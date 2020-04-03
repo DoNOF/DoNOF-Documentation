@@ -16,19 +16,19 @@ Many examples are shown in the section "Examples".
 
 The &INPRUN namelist specifies the run type, the atomic basis, and similar fundamental job options. These options are controlled by the following keywords:
 
-RUNTYP:    specifies the run calculation
+RUNTYP:    Specifies the run calculation
 
-    = ENERGY  1) single-point energy calculation (Default)
+    = ENERGY   single-point energy calculation (Default)
 
-    = GRAD   2) energy + gradients with respect to nuclear coord.
+    = GRAD   energy + gradients with respect to nuclear coord.
 
-    = OPTGEO 3) optimize the molecular geometry
+    = OPTGEO  optimize the molecular geometry
     
 MULT:      Multiplicity of the electronic state
 
     = 1      singlet (Default)
 
-    = 2,3,...doublet, triplet, and so on
+    = 2,3,... doublet, triplet, and so on
 
 ICHARG:    Molecular charge
 
@@ -148,19 +148,19 @@ CONVERGENCE CRITERIA IN NOF CALCULATION
 
 Fore more info see section X in [CPC ...]
 
-NTHRESHL:            CONVERGENCE OF THE LAGRANGE MULTIPLIERS THRESHL=10.0**(-NTHRESHL)
+NTHRESHL:            Convergence of the lagrange multipliers THRESHL=10.0**(-NTHRESHL)
 
                       = 4      (DEFAULT)
 
-NTHRESHE:            CONVERGENCE OF THE TOTAL ENERGY THRESHE=10.0**(-NTHRESHE)
+NTHRESHE:            Convergence of the total energy THRESHE=10.0**(-NTHRESHE)
 
                       = 6      (DEFAULT)
 
-NTHRESHEC:           CONVERGENCE OF THE TOTAL ENERGY (ORBOPT) THRESHEC=10.0**(-NTHRESHEC)
+NTHRESHEC:           Convergence of the total energy (ORBOPT) THRESHEC=10.0**(-NTHRESHEC)
 
                       = 12     (DEFAULT)
 
-NTHRESHEN:           CONVERGENCE OF THE TOTAL ENERGY (OCCOPT) THRESHEN=10.0**(-NTHRESHEN)
+NTHRESHEN:           Convergence of the total energy (OCCOPT) THRESHEN=10.0**(-NTHRESHEN)
 
                       = 16     (DEFAULT)
 
@@ -268,41 +268,41 @@ NEX:                 Number of excluded coupled orbitals in the PNOF5-PT2 calcul
 RESTART OPTIONS FOR GAMMA, C, Diagonal F, and NUCLEAR COORDINATES
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-RESTART:             RESTART FROM GCF FILE (DEFAULT=F)
+RESTART:             Restart from GCF file (DEFAULT=F)
 
                       = F      INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0
                       
                       = T      INPUTGAMMA=1,INPUTC=1,INPUTFMIUG=1
 
-INPUTGAMMA:          GUESS FOR GAMMA MATRIX IN NOF
+INPUTGAMMA:          Guess for gamma matrix in NOF
 
-                      = 0      NO INPUT (DEFAULT)
+                      = 0      No input (DEFAULT)
                       
-                      = 1      INPUT FROM FILE GCF
+                      = 1      Input from GCF file
 
-INPUTC:              GUESS FOR COEFFICIENT MATRIX IN NOF
+INPUTC:              Guess for coefficient matrix in NOF
 
-                      = 0      NO INPUT, USE HF (DEFAULT)
+                      = 0      No input, use HF (DEFAULT)
                       
-                      = 1      INPUT FROM FILE GCF
+                      = 1      Input from GCF file
 
-INPUTFMIUG:          GUESS FOR DIAGONAL ELEMENTS (FMIUG0)
+INPUTFMIUG:          Guess for diagonal elements (FMIUG0)
 
-                      = 0      NO INPUT (DEFAULT)
+                      = 0      No input (DEFAULT)
                       
-                      = 1      INPUT FROM FILE GCF
+                      = 1      Input from GCF file
 
-INPUTCXYZ:           READ NUCLEAR COORDINATES (Cxyz)
+INPUTCXYZ:           Read nuclear coordinates (Cxyz)
 
-                      = 0      FROM FILE INP
+                      = 0      From file INP
                       
-                      = 1      FROM FILE GCF
+                      = 1      From file GCF
 
 
 OUTPUT OPTIONS
 ^^^^^^^^^^^^^^
 
-NPRINT:              OUTPUT OPTION (DEFAULT VALUE: 0)
+NPRINT:              Output option (DEFAULT VALUE: 0)
 
                       = 0      Short Printing
                       
@@ -310,7 +310,7 @@ NPRINT:              OUTPUT OPTION (DEFAULT VALUE: 0)
                       
                       = 2      Output at each iteration
 
-IWRITEC:             OUTPUT OPTION FOR THE COEFFICIENT MATRIX
+IWRITEC:             Output option for the coefficient matrix
 
                       = 0      NO OUTPUT (DEFAULT)
                       
@@ -322,34 +322,34 @@ IWRITEE:             Output option for one-particle energies
                       
                       = 1      Output EiHF, Elag
 
-IMULPOP:             MULLIKEN POPULATION ANALYSIS
+IMULPOP:             Mulliken population analysis
 
                       = 0      DO NOT DO (DEFAULT)
                       
                       = 1      DO A MULLIKEN POP. ANALYSIS 
 
-APSG:                OPEN AN APSG FILE FOR OUTPUT THE COEFFICIENT MATRIX ($VEC-$END) AND THE EXPANSION COEFFICIENTS OF THE APSG GENERATING WAVEFUNCTION.
+APSG:                Open an APSG file for output the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction
 
 
-                      = F      OUTPUT (DEFAULT)
+                      = F      Output (DEFAULT)
 
-NTHAPSG:             THRESHOLD FOR APSG EXPANSION COEFFICIENTS THAPSG = 10.0**(-NTHAPSG)
+NTHAPSG:             Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
 
                       = 10     (DEFAULT)
 
-PRINTLAG:            OUTPUT OPTION FOR THE LAGRANGE MULTIPLIERS
+PRINTLAG:            Output option for the lagrange multipliers
 
-                      = F      NO OUTPUT (DEFAULT)
+                      = F      No output (DEFAULT)
 
-DIAGLAG:             DIAGONALIZE LAGRANGE MULTIPLIERS PRINT CANONICAL VECTORS and PRINT NEW DIAGONAL ELEMENTS OF 1-RDM
+DIAGLAG:             Diagonalize lagrange multipliers print canonical vectors and print new diagonal elements of 1RDM
 
                       = F      (DEFAULT)
 
-IAIMPAC:             WRITE INFORMATION INTO A WFN FILE (UNIT 7) FOR THE AIMPAC PROGRAM
+IAIMPAC:             Write information into a WFN file  (UNIT 7) for the AIMPAC program
 
-                      = 0      DO NOT DO
+                      = 0      Do not do
                       
-                      = 1      WRITE INTO WFN FILE (DEFAULT)
+                      = 1      Write into a WFN file (DEFAULT)
 
 IEKT:                Use the EKT (DEFAULT VALUE = 0)
 
@@ -363,11 +363,11 @@ ICHEMPOT:            (DEFAULT VALUE = 0)
 
                       = 1      Calculate the Chemical Potential
 
-NOUTRDM:             PRINT OPTION FOR ATOMIC RDMs
+NOUTRDM:             Print option for atomic RDMs
 
-                      = 0      NO OUTPUT (DEFAULT)
+                      = 0      No output (DEFAULT)
                       
-                      = 1      PRINT ATOMIC RDMs IN 1RDM and 2RDM FILES
+                      = 1      Print atomic RDMs in 1RDM and 2RDM files
 
 NTHRESHDM:           THRESHDM=10.0**(-NTHRESHDM)
 
@@ -377,21 +377,21 @@ NSQT:                Use an unformatted 2RDM file
 
                       = 1      (DEFAULT)
 
-NOUTCJK:             PRINT OPTION FOR CJ12 and CK12
+NOUTCJK:             Print option for CJ12 and CK12
 
-                      = 0      NO OUTPUT (DEFAULT)
+                      = 0      No output (DEFAULT)
                       
-                      = 1      PRINT CJ12 and CK12 in FILE 'CJK'
+                      = 1      Print CJ12 and CK12 in file 'CJK'
 
 NTHRESHCJK:          THRESHCJK=10.0**(-NTHRESHCJK)
 
                       = 6      (DEFAULT)
 
-NOUTTijab:           PRINT OPTION FOR Tijab
+NOUTTijab:           Print option for Tijab
 
-                      = 0      NO OUTPUT (DEFAULT)
+                      = 0      No output (DEFAULT)
                       
-                      = 1      PRINT Tijab in FILE 'Tijab'
+                      = 1      Print Tijab in file 'Tijab'
 
 NTHRESHTijab:        THRESHTijab=10.0**(-NTHRESHTijab)
 
@@ -411,7 +411,7 @@ ORTHO:               Orthogonalize the initial orbitals
                       
                       = T      Yes (DEFAULT)
 
-CHKORTHO:            CHECK THE ORTHONORMALITY OF THE MOs
+CHKORTHO:            Check the orthonormality of the MOs
 
                       = F      No (DEFAULT)
                       
