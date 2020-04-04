@@ -2,8 +2,8 @@
 License and Citing DoNOF
 ########################
 
-Copyright by Mario Piris (2009)
-Basque Government Intellectual Property Registry
+Copyright by Mario Piris (2009),
+IPR registered under Basque Government and Spanish Ministry ECD,
 Registration number 01/2020/360.
 
 GPL (version 3) is applied to DoNOF. For more info check https://www.gnu.org/licenses/licenses/gpl-3.0.html
