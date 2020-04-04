@@ -3,7 +3,7 @@ Input Options
 #############
 
 *********
-BASIS SET
+Basis Set
 *********
 
 For the moment DoNOF requires to read the basis set for any calculation from the input file. Regarding the format, for historical reasons we employ the format used in GAMESS US. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. Note that you must use the "Advanced" option from the "Download basis set" box, and there choose the "GAMESS US" format, Version 1, and click the button to activate the "Optimize General Contractions". This will automatically give you the information to put in the input file.
@@ -69,7 +69,7 @@ for the iterative diagonalization method, perturbative corrections,
 input and output, and similar fundamental job options. These options
 are controlled by the following keywords:
 
-NUMBER OF TOTAL ITERATIONS
+Number of total iterations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MAXIT:               Maximum number of OCC-SCF iterations 
@@ -77,7 +77,7 @@ MAXIT:               Maximum number of OCC-SCF iterations
     = 1000   (DEFAULT)
 
 
-TYPE OF CALCULATION
+Type of calculation
 ^^^^^^^^^^^^^^^^^^^
 
 ICOEF:               Coefficient Optimization
@@ -113,7 +113,7 @@ HFID:               Use the Iterative Diagonalization Method to generate the HF 
                       = T      HF MO are obtained using the ID (HFIDr)
 
 
-PNOF SELECTION
+PNOF Selection
 ^^^^^^^^^^^^^^
 
 IPNOF:               Type of Natural Orbital Functional (see section "NOF approximations")
@@ -143,7 +143,7 @@ Ista:                Use Static version of PNOF7
                       = 1      PNOF7s
                       
 
-CONVERGENCE CRITERIA IN NOF CALCULATION
+Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Fore more info see section 3 in [CPC (2020) by Piris and Mitxelena]
@@ -165,7 +165,7 @@ NTHRESHEN:           Convergence of the total energy (OCCOPT) THRESHEN=10.0**(-N
                       = 16     (DEFAULT)
 
 
-OPTIONS FOR THE OCCUPATION (GAMMA) OPTIMIZATION PROGRAM
+Options for the occupation (GAMMA) optimization program
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ICGMETHOD:           Define the congate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
@@ -183,7 +183,7 @@ ICGMETHOD:           Define the congate gradient method in routines OCCOPTr, CAL
 See more details at "Additional notes" section
 
 
-OPTIONS FOR THE ORBITAL OPTIMIZATION PROGRAM (ID METHOD)
+Options for the orbital optimization program (ID method)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For more info see [JCC 30, 2078 (2009)]
@@ -239,7 +239,7 @@ PERDIIS:             Periodic DIIS
                       = F      DIIS is always applied after NDIIS
 
 
-OPTIONS FOR PERTURBATIVE CALCULATIONS
+Options for perturbative calculations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For more info see [PRA 98, 022504 (2018)]
@@ -265,7 +265,7 @@ NEX:                 Number of excluded coupled orbitals in the PNOF5-PT2 calcul
                       = 0      All NOs are included (DEFAULT)
 
 
-RESTART OPTIONS FOR GAMMA, C, Diagonal F, and NUCLEAR COORDINATES
+Restart options for GAMMA, C, diagonal F, and nuclear coordinates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 RESTART:             Restart from GCF file (DEFAULT=F)
@@ -299,7 +299,7 @@ INPUTCXYZ:           Read nuclear coordinates (Cxyz)
                       = 1      From file GCF
 
 
-OUTPUT OPTIONS
+Output options
 ^^^^^^^^^^^^^^
 
 NPRINT:              Output option (DEFAULT VALUE: 0)
@@ -402,7 +402,7 @@ IGVB:                GVB orbitals connection to PNOFi(1) NOS
                       = 0      (DEFAULT)
        
 
-OPTIONS RELATED TO ORTHONORMALITY OF NATURAL ORBITALS
+Options related to orthonormality of Natural Orbitals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ORTHO:               Orthogonalize the initial orbitals
@@ -418,8 +418,8 @@ CHKORTHO:            Check the orthonormality of the MOs
                       = T      Yes
 
 
-OPTIONS RELATED TO FROZEN COORDINATES IN GRADIENT COMPUTATION
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Options related to frozen coordinates in geometry optimization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 See also "Additional notes" section
 
