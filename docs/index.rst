@@ -12,6 +12,8 @@ in the Donostia quantum chemistry group, namely PNOFi [i=3-7]. The
 solution is established by optimizing the energy functional with respect to the
 occupation numbers and to the natural orbitals, separately.
 
+.. image.:: ./DoNOF_logo.jpeg
+
 .. toctree::
    :maxdepth: 3
    :caption: Overview:
