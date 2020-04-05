@@ -148,7 +148,7 @@ NOF-MP2 single-point energy calculation of Oxygen atom at its spin state S=0 wit
 Geometry Optimization
 ---------------------
     
-Geometry Optimization of HF molecule by using cc-pVDZ basis set and conjugate gradient algorithm.::
+Geometry Optimization of HF molecule by using cc-pVDZ basis set and NAG conjugate gradient algorithm.::
 
     &INPRUN RUNTYP=OPTGEO MULT=1 ICHARG=0 DONTW=T /
     $DATA
@@ -194,7 +194,7 @@ Geometry Optimization of HF molecule by using cc-pVDZ basis set and conjugate gr
      1 1.6400000 1.0000000
 
     $END
-    &NOFINP USENAG=T RESTART=T /
+    &NOFINP ICGMETHOD=2 RESTART=T /
 
 
 Convergence
