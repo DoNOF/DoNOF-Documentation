@@ -20,7 +20,7 @@ backup --> It will contain the backups of DoNOF
 
 scripts --> It should contain scripts to run DoNOF in serial and in many cores
 
-doc --> It should contain documentation for DoNOF, indeed you can generate a PDF file from this webpage to dowload and save in this directory
+doc --> It should contain documentation for DoNOF, indeed you can generate a PDF file from this webpage to download and save in this directory
 
 An example of a simple makefile is given below.::
 
@@ -109,6 +109,6 @@ An example of a simple makefile is given below.::
     ###############################################################################
 
 
-There is an example in the git repository too. Note that we are using an INTEL compiler, which can be found in the official webpage https://software.intel.com
+There is an example in the git repository too. Note that we are using an INTEL compiler, which can be found in the official webpage https://software.intel.com.
 
-In the near future, we'd like to open the possibility to use GCC, the GNU compiler collection, so any collaboration to make this real will be appreciated.
+In the near future, we would like to open the possibility to use GCC, the GNU compiler collection, so any collaboration to make this real will be appreciated.

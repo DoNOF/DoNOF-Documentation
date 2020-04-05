@@ -138,7 +138,7 @@ NCWO:                Number of coupled weakly occupied MOs per strongly occupied
 
 Ista:                Use Static version of PNOF7
 
-                      = 0      PNOF7 ((DEFAULT)
+                      = 0      PNOF7 (DEFAULT)
                       
                       = 1      PNOF7s
                       
@@ -180,7 +180,7 @@ ICGMETHOD:           Define the congate gradient method in routines OCCOPTr, CAL
 
                       = 3      LBFGS: OPTLBFGS,LBFGSOCUPr
 
-See more details at "Additional notes" section
+See more details in "Additional notes" section
 
 
 Options for the orbital optimization program (ID method)
@@ -270,9 +270,9 @@ Restart options for GAMMA, C, diagonal F, and nuclear coordinates
 
 RESTART:             Restart from GCF file (DEFAULT=F)
 
-                      = F      INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0
+                      = F      ; corresponds to INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0
                       
-                      = T      INPUTGAMMA=1,INPUTC=1,INPUTFMIUG=1
+                      = T      ; corresponds to INPUTGAMMA=1,INPUTC=1,INPUTFMIUG=1
 
 INPUTGAMMA:          Guess for gamma matrix in NOF
 
@@ -324,9 +324,9 @@ IWRITEE:             Output option for one-particle energies
 
 IMULPOP:             Mulliken population analysis
 
-                      = 0      DO NOT DO (DEFAULT)
+                      = 0      Do not do (DEFAULT)
                       
-                      = 1      DO A MULLIKEN POP. ANALYSIS 
+                      = 1      Do a Mulliken pop. analysis
 
 APSG:                Open an APSG file for output the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction
 
@@ -444,26 +444,26 @@ You may notice above that setting ICGMETHOD=2 in the input file DoNOF will use t
 
 That is why by default DoNOF employs the "SUMSL" routine to minimize a general unconstrained objective function.For more details see the next references:
 
-!    J E Dennis, David Gay, and R E Welsch,                            !
-!    An Adaptive Nonlinear Least-squares Algorithm,                    !
-!    ACM Transactions on Mathematical Software,                        !
-!    Volume 7, Number 3, 1981.                                         !
-!                                                                      !
-!    J E Dennis, H H W Mei,                                            !
-!    Two New Unconstrained Optimization Algorithms Which Use           !
-!    Function and Gradient Values,                                     !
-!    Journal of Optimization Theory and Applications,                  !
-!    Volume 28, pages 453-482, 1979.                                   !
-!                                                                      !
-!    J E Dennis, Jorge More,                                           !
-!    Quasi-Newton Methods, Motivation and Theory,                      !
-!    SIAM Review,                                                      !
-!    Volume 19, pages 46-89, 1977.                                     !
-!                                                                      !
-!    D Goldfarb,                                                       !
-!    Factorized Variable Metric Methods for Unconstrained Optimization,!
-!    Mathematics of Computation,                                       !
-!    Volume 30, pages 796-811, 1976.
+J E Dennis, David Gay, and R E Welsch,
+An Adaptive Nonlinear Least-squares Algorithm,
+ACM Transactions on Mathematical Software,
+Volume 7, Number 3, 1981.
+
+J E Dennis, H H W Mei,                                            
+Two New Unconstrained Optimization Algorithms Which Use           
+Function and Gradient Values,                                     
+Journal of Optimization Theory and Applications,                  
+Volume 28, pages 453-482, 1979.
+
+J E Dennis, Jorge More,                                           
+Quasi-Newton Methods, Motivation and Theory,                      
+SIAM Review,                                                      
+Volume 19, pages 46-89, 1977.
+
+D Goldfarb,                                                       
+Factorized Variable Metric Methods for Unconstrained Optimization,
+Mathematics of Computation,                                       
+Volume 30, pages 796-811, 1976.
 
 Alternatively, we have also implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html, and cite references therein if ICGMETHOD=3) for the occupation and geometry optimizations. This method is activated by setting ICGMETHOD=3). In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization as detailed below.
 
@@ -473,19 +473,15 @@ New algorithms and numerical methods for carrying out these optimizations are we
 Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^
 
-Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in our system.
+Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in our system.
 
 RUNTYP=OPTGEO may be a computationally demanding task for any ICGMETHOD option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP=OPTGEO is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are two weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=2 in the RUNTYP=OPTGEO calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
 
-Recall that if HFID=T and RESTART=F must to be set at the input file of any RUNTYP=OPTGEO calculation, otherwise DoNOF will automatically stop the calculation.
-
-Only information about the initial and final points is printed in the output file ("name-of-the-molecule.out") in geometry optimization calculations (RUNTYP=OPTGEO). For more printing in this file ($NOFINP namelist section) set NPRINT=2 in the input file before runing DoNOF.
-
 GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf". It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP=OPTGEO). If that is the case, run a new calculation setting RUNTYP=ENERGY, RESTART=F, and INPUTCXYZ=1 to converge the energy at the last geometry obtained during the geometry optimization. Then you can just set regular geometry optimization calculation, i.e. RUNTYP=OPTGEO, RESTART=T, and INPUTCXYZ=0. In this vein, the GCFe file (that contains the minimal energy obtained during each single-point calculation) can be ignored for RUNTYP=OPTGEO.
 
-Regarding number of initial zeroes at Fij matrix, NZEROSr, it is convenient to set NZEROSr=0 if RUNTYP=OPTGEO. In fact, the solution can change significantly after a displacement of nuclei, then we must let free the ID procedure. On the contrary, whenever we restart a calculation that is almost converged, we can save some extra iterations by setting some initial value for NZEROSr, e.g. NZEROSr=2 or NZEROSr=3 depending on the system and how close from the solution is out starting point (in the GCF file).
+Regarding number of initial zeroes at Fij matrix, NZEROSr, it is convenient to set NZEROSr=0 if RUNTYP=OPTGEO. In fact, the solution can change significantly after a displacement of nuclei, then we must let free the SCF procedure. On the contrary, if we restart a calculation that is almost converged, we can save some extra iterations by setting some initial value for NZEROSr, e.g. NZEROSr=2 or NZEROSr=3 depending on the system and how close from the solution is out starting point (in the GCF file).
 
-In geometry optimization calculations (RUNTYP=OPTGEO), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo". This file contains information about the geometry optimization procedure carried out by using the conjugate gradient or LBFGS method (set in the input file by USENAG=T or USENAG=F, respectively), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
+In geometry optimization calculations (RUNTYP=OPTGEO), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo". This file contains information about the geometry optimization procedure carried out by using the conjugate gradient method (set in the input file by ICGMETHOD), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
 
 You may notice in the $NOFINP section that a keyword FROZEN is used to fix nuclear coordinates during geometry optimization. This is done in cartesians, though it is recommended, for obvious reasons, doing it by using internal coordinates. For the moment this has not been implemented in DoNOF yet. Therefore, we recommend the user to employ FROZEN carefully.
 
@@ -493,8 +489,12 @@ You may notice in the $NOFINP section that a keyword FROZEN is used to fix nucle
 Dissociation
 ^^^^^^^^^^^^
 
-Molecular dissociation is considered the main still unresolved problem of DFT, but of fundamental interest for quantum chemistry. PNOF methods are able to reproduce benchmark potential energy curves of molecular bond dissociation. Nevertheless, this calculation is tricky and must be carried out carefully. In fact, different solutions may arise during the dissociation process depending on the electron correlation present in our system. Computationaly it is convenient to converge a single-point calculation to NTHRESHL=5, and then start the dissociation process manually by setting: RESTART=F, ORTHO=T, and INPUTFMIUG=T. The latter allows to use the natural occupancies from the previous point but not the natural orbitals, since the latter may change significantly after the displacement of nuclear coordinates. ORTHO=T ensures the orthonormality of the orbitals along the dissociation procedure.
+Molecular dissociation is considered the main still unresolved problem of DFT, but of fundamental interest for quantum chemistry. PNOF methods are able to reproduce benchmark potential energy curves of molecular bond dissociation. Nevertheless, this calculation is tricky and must be carried out carefully. In fact, different solutions may arise during the dissociation process depending on the electron correlation present in our system. Computationally it is convenient to converge a single-point calculation to NTHRESHL=5, and then start the dissociation process manually by setting: RESTART=F, ORTHO=T, and INPUTFMIUG=T. The latter allows to use the natural occupancies from the previous point but not the natural orbitals, since the latter may change significantly after the displacement of nuclear coordinates. ORTHO=T ensures the orthonormality of the orbitals along the dissociation procedure.
 
+Symmetry
+^^^^^^^^
+
+In DoNOF point-group symmetry is not employed, so C1 symmetry is assumed for any molecular system.
 
 WFN file
 ^^^^^^^^

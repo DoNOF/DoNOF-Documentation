@@ -25,8 +25,8 @@ The following article should be cited.::
     month = {X},
     number = {X},
     pages = {X--X},
-    title = {{DoNOF: an open-source blablabla}},
-    volume = {x},
+    title = {{DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry}},
+    volume = {X},
     year = {2020}
     }
 

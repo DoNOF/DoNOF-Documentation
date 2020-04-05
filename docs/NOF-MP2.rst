@@ -9,7 +9,7 @@ In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file).:
 Current NOFs based on electron pairing take into account most of the
 non-dynamical effects, and also an important part of the dynamical
 electron correlation corresponding to the intrapair interactions.
-Consquently, electron-pairing-based NOFs produce
+Consequently, electron-pairing-based NOFs produce
 results that are in good agreement with accurate wavefunction-based
 methods for small systems, where electron correlation effects are
 almost entirely intrapair. When the number of pairs increases, NOF
@@ -45,3 +45,7 @@ is then calculated by the expression
 .. math::
 
     A_{g}=\left\{ \begin{array}{c}1\,,\quad1\leq g\leq\frac{\mathrm{N_{II}}}{2}\qquad\\\frac{\mathrm{1}}{2},\:\frac{\mathrm{N_{II}}}{2}<g\leq\mathrm{\frac{\mathrm{N_{II}}}{2}+N_{I}}\end{array}\right.
+
+For more details about the NOF-MP2
+method see PRL 119, 063002 (2017) and PRA 98, 022504 (2018).
+

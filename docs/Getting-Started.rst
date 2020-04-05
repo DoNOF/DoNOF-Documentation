@@ -7,21 +7,34 @@ it only remains necessary to put.::
 
     $nofinp
 
-In each calculation many files are generated. Imagine the input corresponds to water.inp,
+An input for single-point energy calculation of Hydrogen atom with minimal basis set reads as.::
+
+   &INPRUN RUNTYP=ENEGY MULT=1 ICHARG=0 /
+   $DATA
+   H atom: STO-2G basis set calculation
+   H  1.0  0.00 0.00 0.0000
+   S   2
+   1         0.1309756377E+01       0.4301284983E+00
+   2         0.2331359749E+00       0.6789135305E+00
+
+   $END
+   &NOFINP /
+
+In each calculation many files are generated. Imagine the previous input corresponds to hydrogen.inp,
 then we will obtain after a single-point calculation:
 
-water.out --> file containing general output data corresponding to the NOF calculation
+hydrogen.out --> file containing general output data corresponding to the NOF calculation
 
-water.gcf --> file containing info needed to restart any calculation from the output of this one
+hydrogen.gcf --> file containing info needed to restart any calculation from the output of this one
 
-water.wfn --> file containing wave-function info for AIMPAC program, among others.
+hydrogen.wfn --> file containing wave-function info for AIMPAC program, among others.
 
 Running script
 ^^^^^^^^^^^^^^
 
 You can found in DoNOF GitHub repository the scripts we usually employ to run the program.
 
-However, a very simple serial running script could be.::
+A very simple serial running script may read as.::
 
     #!/bin/csh -f
 
