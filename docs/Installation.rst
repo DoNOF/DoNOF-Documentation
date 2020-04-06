@@ -2,7 +2,7 @@
 Download and Installation
 #########################
 
-DoNOF is open-source, so you can download the source files from GitHub: https://github.com/imitxelena003/DoNOF. For trial or simple purposes, an executable of DoNOF can be also download from GitHub.
+DoNOF is open-source, so you can download the source files from GitHub: https://github.com/imitxelena003/DoNOF. For trial or simple purposes, an executable of DoNOF can be also download from GitHub. The specific machine and compiler used to generate the latter are specified in the repo.
 
 In the following, we describe in detail the procedure to install DoNOF in your computer. First download the source files from GitHub, or simply clone this repository in your computer. Then, create the next directories:
 
