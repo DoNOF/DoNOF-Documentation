@@ -50,7 +50,13 @@ A very simple serial running script may read as.::
 
     if (-f 1DM) mv -f 1DM $1.1dm
 
+    if (-f fort.14) mv -f fort.14 $1.1dm
+
     if (-f 2DM) mv -f 2DM $1.2dm
+
+    if (-f fort.15) mv -f fort.15 $1.2dm
+
+    if (-f N2DM) mv -f N2DM $1.n2dm
 
     if (-f CJK) mv -f CJK $1.cjk
 
@@ -68,6 +74,8 @@ A very simple serial running script may read as.::
     endif
 
     if (-f CGGRAD) mv -f CGGRAD $1.cgo
+
+    if (-f CGM) rm -f CGM
 
     if (-f BFST) rm -f BFST
 

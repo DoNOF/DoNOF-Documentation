@@ -27,7 +27,7 @@ An example of a simple makefile is given below.::
     ########################################################################
     # Makefile for DoNOF program (Date: March 2020)
     ########################################################################
-    PROG=$(HOME)/DoNOF/github/DoNOF
+    PROG=../
     SOU=$(PROG)/sources
     OBJ1=$(PROG)/objects/serial
     OBJ2=$(PROG)/objects/mpi

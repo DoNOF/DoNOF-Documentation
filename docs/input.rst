@@ -112,6 +112,14 @@ HFID:               Use the Iterative Diagonalization Method to generate the HF 
                       
                       = T      HF MO are obtained using the ID (HFIDr)
 
+NTHRESHEID          Convergence of the total energy
+                    THRESHEID=10.0**(-NTHRESHEID)
+                     
+                      = 8      (DEFAULT)
+
+MAXITID             Maximum number of external iterations
+                     
+                      = 30     (DEFAULT)
 
 PNOF Selection
 ^^^^^^^^^^^^^^
@@ -142,6 +150,12 @@ Ista:                Use Static version of PNOF7
                       
                       = 1      PNOF7s
                       
+HighSpin             Spin-uncompensated calculation type
+
+                      = F      (DEFAULT) Multiple state (Ms=0)
+
+                      = T      High-spin uncompensated state (Ms=S)
+
 
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -165,8 +179,8 @@ NTHRESHEN:           Convergence of the total energy (OCCOPT) THRESHEN=10.0**(-N
                       = 16     (DEFAULT)
 
 
-Options for the occupation (GAMMA) optimization program
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Options for the occupation (GAMMA) and nuclear geometry optimization program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ICGMETHOD:           Define the congate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
 
@@ -244,7 +258,7 @@ Options for perturbative calculations
 
 For more info see [PRA 98, 022504 (2018)]
 
-CLMP2:               Correlated local MP2 = NOF - oiMP2
+OIMP2:               NOF - Orbital Invariant MP2
 
                      = F       (DEFAULT)
 
@@ -306,36 +320,21 @@ NPRINT:              Output option (DEFAULT VALUE: 0)
 
                       = 0      Short Printing
                       
-                      = 1      Output at initial and final iterations including Ei,Coef,Pop,Occ,Emom
+                      = 1      Output at initial and final iterations including MOs,Pop,APSG,Lag,IPs,DMs,CJK
                       
-                      = 2      Output at each iteration
+                      = 2      Output everything at each iteration
 
 IWRITEC:             Output option for the coefficient matrix
 
-                      = 0      NO OUTPUT (DEFAULT)
+                      = 0      No output (DEFAULT)
                       
-                      = 1      OUTPUT THE COEFFICIENT MATRIX 
-
-IWRITEE:             Output option for one-particle energies
-
-                      = 0      No Output (Default)
-                      
-                      = 1      Output EiHF, Elag
+                      = 1      Output the coefficient matrix
 
 IMULPOP:             Mulliken population analysis
 
                       = 0      Do not do (DEFAULT)
                       
                       = 1      Do a Mulliken pop. analysis
-
-APSG:                Open an APSG file for output the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction
-
-
-                      = F      Output (DEFAULT)
-
-NTHAPSG:             Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
-
-                      = 10     (DEFAULT)
 
 PRINTLAG:            Output option for the lagrange multipliers
 
@@ -345,28 +344,20 @@ DIAGLAG:             Diagonalize lagrange multipliers print canonical vectors an
 
                       = F      (DEFAULT)
 
+IEKT:                Use the EKT (DEFAULT VALUE = 0)
+
+                      = 1      Calculate ionization potentials
+
 IAIMPAC:             Write information into a WFN file  (UNIT 7) for the AIMPAC program
 
                       = 0      Do not do
-                      
+
                       = 1      Write into a WFN file (DEFAULT)
-
-IEKT:                Use the EKT (DEFAULT VALUE = 0)
-
-                      = 1      Calculate ionization potentials 
-
-ICATION:             (DEFAULT VALUE = 0)
-
-                      = 1      Calculate the Cation Energy (Eelec+EN+IonPotential)
-
-ICHEMPOT:            (DEFAULT VALUE = 0)
-
-                      = 1      Calculate the Chemical Potential
 
 NOUTRDM:             Print option for atomic RDMs
 
                       = 0      No output (DEFAULT)
-                      
+
                       = 1      Print atomic RDMs in 1RDM and 2RDM files
 
 NTHRESHDM:           THRESHDM=10.0**(-NTHRESHDM)
@@ -380,7 +371,7 @@ NSQT:                Use an unformatted 2RDM file
 NOUTCJK:             Print option for CJ12 and CK12
 
                       = 0      No output (DEFAULT)
-                      
+
                       = 1      Print CJ12 and CK12 in file 'CJK'
 
 NTHRESHCJK:          THRESHCJK=10.0**(-NTHRESHCJK)
@@ -390,17 +381,21 @@ NTHRESHCJK:          THRESHCJK=10.0**(-NTHRESHCJK)
 NOUTTijab:           Print option for Tijab
 
                       = 0      No output (DEFAULT)
-                      
+
                       = 1      Print Tijab in file 'Tijab'
 
 NTHRESHTijab:        THRESHTijab=10.0**(-NTHRESHTijab)
 
                       = 6      (DEFAULT)
 
-IGVB:                GVB orbitals connection to PNOFi(1) NOS
+APSG                 Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
 
-                      = 0      (DEFAULT)
-       
+                      = F      Output (DEFAULT)
+
+NTHAPSG:             Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
+
+                      = 10     (DEFAULT)
+
 
 Options related to orthonormality of Natural Orbitals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
