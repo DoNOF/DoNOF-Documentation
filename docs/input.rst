@@ -470,7 +470,7 @@ New algorithms and numerical methods for carrying out these optimizations are we
 Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^
 
-If RUNTYP=OPTGEO is set, DoNOF automatically will set RESTART=T, HFID=F, and OIMP2=F at the beginning of the calculation. Thus, it is required to generate a GCF file in a previous RUNTYP=ENERGY or RUNTYP=GRAD calculation.
+If RUNTYP=OPTGEO is set, DoNOF automatically will set HFID=F and OIMP2=F at the beginning of the calculation.
 
 Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in our system.
 
