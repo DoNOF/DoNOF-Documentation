@@ -52,7 +52,8 @@ UNITS:     Distance units (Any angles must be in degrees)
 
     = BOHR   Bohr atomic units
 
-EVEC:      An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*bohr = 5.1422082(15)d+11 V/m)
+EVEC:      An array of the three x,y,z components of the applied electric field, 
+           in a.u. (1 a.u. = 1 Hartree/e*bohr = 5.1422082(15)d+11 V/m)
 
     = ZERO   (Default)
 
@@ -112,8 +113,7 @@ HFID:               Use the Iterative Diagonalization Method to generate the HF 
 
                       = T      (DEFAULT)
 
-NTHRESHEID          Convergence of the total energy
-                    THRESHEID=10.0**(-NTHRESHEID)
+NTHRESHEID          Convergence of the total energy, THRESHEID=10.0**(-NTHRESHEID)
                      
                       = 8      (DEFAULT)
 
@@ -154,62 +154,41 @@ NCWO:                Number of coupled weakly occupied MOs per strongly occupied
                       
                       = 2,3,...
                       
-                      =-1      NCWO = NVIR/NDOC
-                               NVIR: Number of HF virtual MOs (OCC=0) 
+                      =-1      NCWO = NVIR/NDOC where
+                               NVIR: Number of HF virtual MOs (OCC=0), 
                                NDOC: Number of strongly occupied MOs
 
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Fore more info see section 3 in [CPC (2020) by Piris and Mitxelena]
+Fore more info see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
 
-NTHRESHL:            Convergence of the lagrange multipliers THRESHL=10.0**(-NTHRESHL)
+NTHRESHL:            Convergence of the Lagrange multipliers, THRESHL=10.0**(-NTHRESHL)
 
                       = 4      (DEFAULT)
 
-NTHRESHE:            Convergence of the total energy THRESHE=10.0**(-NTHRESHE)
+NTHRESHE:            Convergence of the total energy, THRESHE=10.0**(-NTHRESHE)
 
-                      = 6      (DEFAULT)
+                      = 8      (DEFAULT)
 
-NTHRESHEC:           Convergence of the total energy (ORBOPT) THRESHEC=10.0**(-NTHRESHEC)
+NTHRESHEC:           Convergence of the total energy (ORBOPT), THRESHEC=10.0**(-NTHRESHEC)
 
-                      = 12     (DEFAULT)
+                      = 10     (DEFAULT)
 
-NTHRESHEN:           Convergence of the total energy (OCCOPT) THRESHEN=10.0**(-NTHRESHEN)
+NTHRESHEN:           Convergence of the total energy (OCCOPT), THRESHEN=10.0**(-NTHRESHEN)
 
-                      = 16     (DEFAULT)
-
-
-Options for the occupation (GAMMA) and nuclear geometry optimization program
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-ICGMETHOD:           Define the congate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
-
-                      = 1      (DEFAULT)
-                               SUMSL: CGOCUPSUMSLr,OPTSUMSL
-                               SparseSymLinearSystem_CG
-
-                      = 2      Use NAG routines:
-                               E04DGF: OPTCGNAG,CGOCUPNAGr
-                               F11JEF: SparseSymLinearSystem_NAG         
-
-                      = 3      LBFGS: OPTLBFGS,LBFGSOCUPr
-
-See more details in "Additional notes" section
-
+                      = 10     (DEFAULT)
 
 Options for the orbital optimization program (ID method)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more info see [JCC 30, 2078 (2009)]
-
-For computational details see section 3 in [CPC (2020) by Piris and Mitxelena]
+Fore more info and computational details see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
 
 NOPTORB:             Number of the optimized orbitals
 
                       = NBF    (DEFAULT)
 
-MAXLOOP:             Maximum Iteration Number for the SCF ITERATION cycle in each ITCALLs
+MAXLOOP:             Maximum Iteration Number for the SCF ITERATION cycle in each ITCALL
 
                       = 30     (DEFAULT)
 
@@ -219,7 +198,8 @@ SCALING:             A variable factor scales Fki
 
                       = T      (DEFAULT)
 
-NZEROS:              B = 10.0**(1-NZEROS). Initial number of ZEROS in Fij. The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
+NZEROS:              B = 10.0**(1-NZEROS). Initial number of ZEROS in Fij. 
+                     The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
 
                       = 0      B = 10.0 (DEFAULT)
 
@@ -235,7 +215,8 @@ ITZITER:             Number of Iterations for constant scaling
 
                       = 10     (DEFAULT)
 
-DIIS:                Direct Inversion in the Iterative Subspace in the orbital optimization if DUMEL < THDIIS every NDIIS loops
+DIIS:                Direct Inversion in the Iterative Subspace in the orbital optimization 
+                     if DUMEL < THDIIS every NDIIS loops
 
                       = T      (DEFAULT)
 
@@ -263,7 +244,8 @@ OIMP2:               NOF - Orbital Invariant MP2
 
                      = F       (DEFAULT)
 
-SC2MCPT:             SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. 2 outputs: PNOF5-SC2-MCPT and PNOF5-PT2
+SC2MCPT:             SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. 
+                     Two outputs: PNOF5-SC2-MCPT and PNOF5-PT2
 
                      = F       (DEFAULT)
 
@@ -312,6 +294,7 @@ INPUTCXYZ:           Read nuclear coordinates (Cxyz)
                       = 0      From file INP
                       
                       = 1      From file GCF
+                      
 
 
 Output options
@@ -426,12 +409,25 @@ FROZEN:              Is there any fixed coordinate
 IFROZEN:             By pairs, what coordinate of which atom, e.g. 2,5,1,1 means "y" coordinate of atom 5 and "x" coor of atom 1 to freeze. MAXIMUM of frozen coordinates = 10
 
                       = 0      (DEFAULT)
+                      
+Options for optimization program
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+ICGMETHOD:           Define the conjugate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
+
+                      = 1      (DEFAULT)
+                               SUMSL: CGOCUPSUMSLr,OPTSUMSL
+                               SparseSymLinearSystem_CG
+
+                      = 2      Use NAG routines:
+                               E04DGF: OPTCGNAG,CGOCUPNAGr
+                               F11JEF: SparseSymLinearSystem_NAG         
+
+                      = 3      LBFGS: OPTLBFGS,LBFGSOCUPr
 
 ****************
 Additional Notes
 ****************
-
 
 Dependencies
 ^^^^^^^^^^^^
