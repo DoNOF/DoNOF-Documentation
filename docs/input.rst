@@ -369,7 +369,7 @@ NTHRESHTijab:        THRESHTijab=10.0**(-NTHRESHTijab)
 
                       = 6      (DEFAULT)
 
-APSG                 Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
+APSG:                Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
 
                       = F      No output (DEFAULT)
 
