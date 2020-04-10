@@ -52,8 +52,7 @@ UNITS:     Distance units (Any angles must be in degrees)
 
     = BOHR   Bohr atomic units
 
-EVEC:      An array of the three x,y,z components of the applied electric field, 
-           in a.u. (1 a.u. = 1 Hartree/e*bohr = 5.1422082(15)d+11 V/m)
+EVEC:      An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*bohr = 5.1422082(15)d+11 V/m)
 
     = ZERO   (Default)
 
