@@ -141,7 +141,7 @@ Ista:                Use Static version of PNOF7
                       
                       = 1      PNOF7s
                       
-HighSpin             Spin-uncompensated calculation type
+HighSpin:            Spin-uncompensated calculation type
 
                       = F      (DEFAULT) Multiple state (Ms=0)
 
