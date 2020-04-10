@@ -318,6 +318,7 @@ PRINTLAG:            Output option for the lagrange multipliers
                       = F      Not do it (DEFAULT)
 
 DIAGLAG:             Diagonalize Lagrange multipliers. Print new 1e- Energies, Canonical MOs, and new diagonal elements of the 1RDM
+
                       = F      Not do it (DEFAULT)
 
 IEKT:                Calculate the Ionization Potentials using the Extended Koopmans' Theorem (EKT)
