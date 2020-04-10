@@ -160,7 +160,7 @@ NCWO:                Number of coupled weakly occupied MOs per strongly occupied
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Fore more info see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
+For more info see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
 
 NTHRESHL:            Convergence of the Lagrange multipliers, THRESHL=10.0**(-NTHRESHL)
 
@@ -181,7 +181,7 @@ NTHRESHEN:           Convergence of the total energy (OCCOPT), THRESHEN=10.0**(-
 Options for the orbital optimization program (ID method)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Fore more info and computational details see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
+For more info and computational details see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
 
 NOPTORB:             Number of the optimized orbitals
 
@@ -240,18 +240,18 @@ For more info see [PRA 98, 022504 (2018)]
 OIMP2:               NOF - Orbital Invariant MP2
 
                      = F       (DEFAULT)
-
-SC2MCPT:             SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. Two outputs: PNOF5-SC2-MCPT and PNOF5-PT2
-
-                     = F       (DEFAULT)
-
+                     
 NO1PT2:              Frozen MOs in perturbative calculations. Maximum index of NOs with Occupation = 1
 
                       = -1     = NO1 (DEFAULT)
                       
                       = 0      All NOs are considered
                       
-                      = Value  User specifies how many NOs are frozen
+                      = Value  User specifies how many NOs are frozen                   
+
+SC2MCPT:             SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. Two outputs: PNOF5-SC2-MCPT and PNOF5-PT2
+
+                     = F       (DEFAULT)
 
 NEX:                 Number of excluded coupled orbitals in the PNOF5-PT2 calculation
 
@@ -263,36 +263,34 @@ Restart options for GAMMA, C, diagonal F, and nuclear coordinates
 
 RESTART:             Restart from GCF file (DEFAULT=F)
 
-                      = F      ; corresponds to INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0
+                      = F      ; corresponds to INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0,INPUTCXYZ=0
                       
-                      = T      ; corresponds to INPUTGAMMA=1,INPUTC=1,INPUTFMIUG=1
+                      = T      ; corresponds to INPUTGAMMA=1,INPUTC=1,INPUTFMIUG=1,INPUTCXYZ=1
 
-INPUTGAMMA:          Guess for gamma matrix in NOF
+INPUTGAMMA:          Guess for GAMMA variables (determine the Occupation Numbers)
 
-                      = 0      No input (DEFAULT)
-                      
-                      = 1      Input from GCF file
-
-INPUTC:              Guess for coefficient matrix in NOF
-
-                      = 0      No input, use HF (DEFAULT)
+                      = 0      Close Fermi-Dirac Distribution (DEFAULT)
                       
                       = 1      Input from GCF file
 
-INPUTFMIUG:          Guess for diagonal elements (FMIUG0)
+INPUTC:              Guess for coefficient matrix (Natural Orbitals)
 
-                      = 0      No input (DEFAULT)
+                      = 0      Use HCORE or HF Eigenvectors (DEFAULT)
+                      
+                      = 1      Input from GCF file
+
+INPUTFMIUG:          Guess for diagonal elements of the symmetric F matrix (FMIUG0)
+
+                      = 0      Use single diagonalization of Lagragian (DEFAULT)
                       
                       = 1      Input from GCF file
 
 INPUTCXYZ:           Read nuclear coordinates (Cxyz)
 
-                      = 0      From file INP
+                      = 0      From Input file
                       
-                      = 1      From file GCF
+                      = 1      From GCF file
                       
-
-
 Output options
 ^^^^^^^^^^^^^^
 
@@ -300,53 +298,56 @@ NPRINT:              Output option (DEFAULT VALUE: 0)
 
                       = 0      Short Printing
                       
-                      = 1      Output at initial and final iterations including MOs,Pop,APSG,Lag,IPs,DMs,CJK
+                      = 1      Output at initial and final iterations
                       
                       = 2      Output everything at each iteration
 
 IWRITEC:             Output option for the coefficient matrix
 
-                      = 0      No output (DEFAULT)
+                      = 0      Not do it (DEFAULT)
                       
-                      = 1      Output the coefficient matrix
+                      = 1      Do it
 
 IMULPOP:             Mulliken population analysis
 
-                      = 0      Do not do (DEFAULT)
+                      = 0      Not do it (DEFAULT)
                       
-                      = 1      Do a Mulliken pop. analysis
+                      = 1      Do it
 
 PRINTLAG:            Output option for the lagrange multipliers
 
-                      = F      No output (DEFAULT)
+                      = F      Not do it (DEFAULT)
 
-DIAGLAG:             Diagonalize lagrange multipliers print canonical vectors and print new diagonal elements of 1RDM
+DIAGLAG:             Diagonalize Lagrange multipliers. Print new 1e- Energies, Canonical MOs, and new diagonal elements of the 1RDM
+                      = F      Not do it (DEFAULT)
 
-                      = F      (DEFAULT)
+IEKT:                Calculate the Ionization Potentials using the Extended Koopmans' Theorem (EKT)
 
-IEKT:                Use the EKT (DEFAULT VALUE = 0)
+                      = 0      Not do it (DEFAULT)
 
-                      = 1      Calculate ionization potentials
+                      = 1      Do it
 
-IAIMPAC:             Write information into a WFN file  (UNIT 7) for the AIMPAC program
+IAIMPAC:             Write information into a WFN file (UNIT 7) for the AIMPAC program
 
-                      = 0      Do not do
+                      = 0      Not do it
 
-                      = 1      Write into a WFN file (DEFAULT)
+                      = 1      Do it (DEFAULT)
 
 NOUTRDM:             Print option for atomic RDMs
 
-                      = 0      No output (DEFAULT)
+                      = 0      Not do it (DEFAULT)
 
-                      = 1      Print atomic RDMs in 1RDM and 2RDM files
+                      = 1      Print atomic RDMs in 1DM and 2DM files
 
-NTHRESHDM:           THRESHDM=10.0**(-NTHRESHDM)
+NTHRESHDM:           THRESHDM = 10.0**(-NTHRESHDM)
 
                       = 6      (DEFAULT)
 
-NSQT:                Use an unformatted 2RDM file
+NSQT:                Print OPTION for 2DM file
 
-                      = 1      (DEFAULT)
+                      = 0      Formatted file
+
+                      = 1      Unformatted file (DEFAULT)
 
 NOUTCJK:             Print option for CJ12 and CK12
 
@@ -354,7 +355,7 @@ NOUTCJK:             Print option for CJ12 and CK12
 
                       = 1      Print CJ12 and CK12 in file 'CJK'
 
-NTHRESHCJK:          THRESHCJK=10.0**(-NTHRESHCJK)
+NTHRESHCJK:          THRESHCJK = 10.0**(-NTHRESHCJK)
 
                       = 6      (DEFAULT)
 
@@ -370,7 +371,7 @@ NTHRESHTijab:        THRESHTijab=10.0**(-NTHRESHTijab)
 
 APSG                 Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
 
-                      = F      Output (DEFAULT)
+                      = F      No output (DEFAULT)
 
 NTHAPSG:             Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
 
@@ -425,12 +426,7 @@ ICGMETHOD:           Define the conjugate gradient method in routines OCCOPTr, C
 Additional Notes
 ****************
 
-Dependencies
-^^^^^^^^^^^^
-
-You may notice above that setting ICGMETHOD=2 in the input file DoNOF will use the conjugate gradient algorithm coded in NAG for the optimization of natural occupancies, as well as nuclear coordinates (if RUNTYP=OPTGEO). However, since the license of NAG is restricted (see https://www.nag.co.uk/content/nag-library), these routines are not provided by DoNOF and the user must include them to the code. Namely, the following routines are called by DoNOF if ICGMETHOD=2: E04DGF, E04UEF, E04UCF, and F11JEF. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
-
-That is why by default DoNOF employs the "SUMSL" routine to minimize a general unconstrained objective function.For more details see the next references:
+By default, DoNOF employs the conjugate gradient (CG) method implemented in the "SUMSL" open-source routine to perform the energy optimization with respect to the GAMMA variables (occupation numbers), and the nuclear coordinates if RUNTYP = OPTGEO. For more details on SUMSL, see the following references:
 
 J E Dennis, David Gay, and R E Welsch,
 An Adaptive Nonlinear Least-squares Algorithm,
@@ -453,33 +449,36 @@ Factorized Variable Metric Methods for Unconstrained Optimization,
 Mathematics of Computation,                                       
 Volume 30, pages 796-811, 1976.
 
-Alternatively, we have also implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html, and cite references therein if ICGMETHOD=3) for the occupation and geometry optimizations. This method is activated by setting ICGMETHOD=3). In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization as detailed below.
-
-New algorithms and numerical methods for carrying out these optimizations are welcome, so we encourage new collaborations to work on this task.
-
+Alternatively, we have also implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html). This method is activated by setting ICGMETHOD=3. In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization.
 
 Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^
 
-If RUNTYP=OPTGEO is set, DoNOF automatically will set HFID=F and OIMP2=F at the beginning of the calculation.
+If RUNTYP=OPTGEO is set, DoNOF automatically sets HFID=F and OIMP2=F at the beginning of the calculation.
 
-Related with the previous section, for geometry optimization (RUNTYP=OPTGEO) it is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in our system.
+It is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2 if you possess the NAG library. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in your system.
 
 RUNTYP=OPTGEO may be a computationally demanding task for any ICGMETHOD option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP=OPTGEO is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are two weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=2 in the RUNTYP=OPTGEO calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
 
-GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf". It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 or if RESTART=T in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP=OPTGEO). If that is the case, run a new calculation setting RUNTYP=ENERGY, RESTART=F, and INPUTCXYZ=1 to converge the energy at the last geometry obtained during the geometry optimization. Then you can just set regular geometry optimization calculation, i.e. RUNTYP=OPTGEO, RESTART=T, and INPUTCXYZ=0. In this vein, the GCFe file (that contains the minimal energy obtained during each single-point calculation) can be ignored for RUNTYP=OPTGEO.
+GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf" by our supplied run scripts. It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 or if RESTART=T in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP=OPTGEO). If that is the case, run a new calculation setting INPUTCXYZ=1 to converge the energy from the last obtained geometry.
 
 Regarding number of initial zeroes at Fij matrix, NZEROSr, it is convenient to set NZEROSr=0 if RUNTYP=OPTGEO. In fact, the solution can change significantly after a displacement of nuclei, then we must let free the SCF procedure. On the contrary, if we restart a calculation that is almost converged, we can save some extra iterations by setting some initial value for NZEROSr, e.g. NZEROSr=2 or NZEROSr=3 depending on the system and how close from the solution is out starting point (in the GCF file).
 
-In geometry optimization calculations (RUNTYP=OPTGEO), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo". This file contains information about the geometry optimization procedure carried out by using the conjugate gradient method (set in the input file by ICGMETHOD), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
+In geometry optimization calculations (RUNTYP=OPTGEO), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo" by our supplied run scripts. This file contains information about the geometry optimization procedure carried out by using the conjugate gradient method (set in the input file by ICGMETHOD), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
 
 You may notice in the $NOFINP section that a keyword FROZEN is used to fix nuclear coordinates during geometry optimization. This is done in cartesians, though it is recommended, for obvious reasons, doing it by using internal coordinates. For the moment this has not been implemented in DoNOF yet. Therefore, we recommend the user to employ FROZEN carefully.
 
+New algorithms and numerical methods for carrying out these optimizations are welcome, so we encourage new collaborations to work on this task.
+
+Dependencies
+^^^^^^^^^^^^
+
+By setting ICGMETHOD=2 in the input file, DoNOF uses the Conjugate Gradient (CG) algorithm coded in NAG library for optimization of the GAMMA variables, as well as nuclear coordinates (if RUNTYP=OPTGEO). If the user prefers to use NAG subroutines (https://www.nag.co.uk/content/nag-library), you must uncomment all lines in the code preceded by 'cnag' and link DoNOF code with NAG library. Accordingly, the following routines are called by DoNOF: E04DGF, E04UEF, E04UCF, and F11JEF. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
 
 Dissociation
 ^^^^^^^^^^^^
 
-Molecular dissociation is considered the main still unresolved problem of DFT, but of fundamental interest for quantum chemistry. PNOF methods are able to reproduce benchmark potential energy curves of molecular bond dissociation. Nevertheless, this calculation is tricky and must be carried out carefully. In fact, different solutions may arise during the dissociation process depending on the electron correlation present in our system. Computationally it is convenient to converge a single-point calculation to NTHRESHL=5, and then start the dissociation process manually by setting: RESTART=F, ORTHO=T, and INPUTFMIUG=T. The latter allows to use the natural occupancies from the previous point but not the natural orbitals, since the latter may change significantly after the displacement of nuclear coordinates. ORTHO=T ensures the orthonormality of the orbitals along the dissociation procedure.
+Molecular dissociation is considered the main still unresolved problem of DFT, but of fundamental interest for quantum chemistry. PNOF methods are able to reproduce benchmark potential energy curves of molecular bond dissociation. Nevertheless, this calculation is tricky and must be carried out carefully. In fact, different solutions may arise during the dissociation process depending on the electron correlation present in your system. Computationally it is convenient to converge a single-point calculation, and then start the dissociation process manually by setting: RESTART=T and ORTHO=T. The restart option allows to use the previous solution, whereas ORTHO=T ensures the orthonormality of the orbitals along the dissociation coordinate.
 
 Symmetry
 ^^^^^^^^
@@ -495,6 +494,6 @@ The WFN file contains the necessary info to study the output data by using exter
 Numerical Precision
 ^^^^^^^^^^^^^^^^^^^
 
-You may notice that different numerical precision is shown for each quantity (orbitals, energy, occupancies, etc) in the output file. The latter is done according to the trustworthy precision inherent to NOF methods. On the contrary, for other purposes such as restarting a calculation is more convenient to employ as much digits as possible. Accordingly, you should use data from the GCF file.
+You may notice that different numerical precision is shown for each quantity (orbitals, energy, occupancies, etc) in the output file. The latter is done according to the trustworthy precision inherent to NOF methods. On the contrary, for other purposes is more convenient to employ as much digits as possible.
 
 
