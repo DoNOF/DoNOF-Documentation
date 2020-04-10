@@ -412,15 +412,11 @@ Options for optimization program
 
 ICGMETHOD:           Define the conjugate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
 
-                      = 1      (DEFAULT)
-                               SUMSL: CGOCUPSUMSLr,OPTSUMSL
-                               SparseSymLinearSystem_CG
+                      = 1      Use SUMSL in CGOCUPSUMSLr,OPTSUMSL, SparseSymLinearSystem_CG (DEFAULT)
 
-                      = 2      Use NAG routines:
-                               E04DGF: OPTCGNAG,CGOCUPNAGr
-                               F11JEF: SparseSymLinearSystem_NAG         
+                      = 2      Use NAG routines E04DGF in OPTCGNAG,CGOCUPNAGr; and F11JEF in SparseSymLinearSystem_NAG       
 
-                      = 3      LBFGS: OPTLBFGS,LBFGSOCUPr
+                      = 3      Use LBFGS in OPTLBFGS, LBFGSOCUPr
 
 ****************
 Additional Notes
