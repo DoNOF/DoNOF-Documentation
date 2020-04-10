@@ -215,8 +215,7 @@ ITZITER:             Number of Iterations for constant scaling
 
                       = 10     (DEFAULT)
 
-DIIS:                Direct Inversion in the Iterative Subspace in the orbital optimization 
-                     if DUMEL < THDIIS every NDIIS loops
+DIIS:                Direct Inversion in the Iterative Subspace in the orbital optimization if DUMEL < THDIIS every NDIIS loops
 
                       = T      (DEFAULT)
 
@@ -234,7 +233,6 @@ PERDIIS:             Periodic DIIS
                       
                       = F      DIIS is always applied after NDIIS
 
-
 Options for perturbative calculations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -244,8 +242,7 @@ OIMP2:               NOF - Orbital Invariant MP2
 
                      = F       (DEFAULT)
 
-SC2MCPT:             SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. 
-                     Two outputs: PNOF5-SC2-MCPT and PNOF5-PT2
+SC2MCPT:             SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. Two outputs: PNOF5-SC2-MCPT and PNOF5-PT2
 
                      = F       (DEFAULT)
 
