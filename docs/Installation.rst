@@ -2,7 +2,7 @@
 Download and Installation
 #########################
 
-DoNOF is open-source, so you can download the source files from GitHub: https://github.com/imitxelena003/DoNOF. For trial or simple purposes, an executable of DoNOF can be also download from GitHub. The specific machine and compiler used to generate the latter are specified in the repo.
+DoNOF is open-source, so you can download the source files from GitHub: https://github.com/DoNOF. For trial or simple purposes, an executable of DoNOF can be also download from GitHub. The specific machine and compiler used to generate the latter are specified in the repo.
 
 In the following, we describe in detail the procedure to install DoNOF in your computer. First download the source files from GitHub, or simply clone this repository in your computer. Then, create the next directories:
 
@@ -25,7 +25,7 @@ doc --> It should contain documentation for DoNOF, indeed you can generate a PDF
 An example of a simple makefile is given below.::
 
     ########################################################################
-    # Makefile for DoNOF program (Date: March 2020)
+    # Makefile for DoNOF program (Date: April 2020)
     ########################################################################
     PROG=../
     SOU=$(PROG)/sources
@@ -43,14 +43,14 @@ An example of a simple makefile is given below.::
     SFLAGSb  = -i8 -r8 -fpp -static -O0 -CB
     SFLAGSO3 = -i8 -r8 -fpp -static -O3
     SFLAGSO4 = -i8 -r8 -fpp -static -Ofast
-    F90      = ifort $(SFLAGSO0)
+    F90      = ifort $(SFLAGSO4)
     #
     PFLAGSO0 = -DMPI -i8 -r8 -fpp -O0
     PFLAGSw  = -DMPI -i8 -r8 -fpp -Ofast -warn all,nodeclarations
     PFLAGSb  = -DMPI -i8 -r8 -fpp -Ofast -CB
     PFLAGSO3 = -DMPI -i8 -r8 -fpp -O3
     PFLAGSO4 = -DMPI -i8 -r8 -fpp -Ofast
-    MPIF90   = mpiifort $(PFLAGSO0)
+    MPIF90   = mpiifort $(PFLAGSO4)
     #
     ########################################################################
 
