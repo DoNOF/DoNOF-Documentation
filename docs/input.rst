@@ -1,6 +1,6 @@
 #############
 Input Options
-#############
+############# 
 
 Use only capital letters in the input file, except for specific cases (see below). For instance, "RUNTYP=energy" will not work, but "RUNTYP=ENERGY" yes.
 
