@@ -197,16 +197,15 @@ SCALING:             A variable factor scales Fki
 
                       = T      (DEFAULT)
 
-NZEROS:              B = 10.0**(1-NZEROS). Initial number of ZEROS in Fij. 
-                     The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
+NZEROS:              B = 10.0**(1-NZEROS). Initial number of ZEROS in Fij. The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
 
                       = 0      B = 10.0 (DEFAULT)
 
-NZEROSm:             B = 10.0**(1-NZEROSm) Maximum number of zeros in Fij
+NZEROSm:             B = 10.0**(1-NZEROSm). Maximum number of zeros in Fij
 
                       = 4      B = 10.0 (DEFAULT)
 
-NZEROSr:             B = 10.0**(1-NZEROSr) Number of zeros in Fij to restart automatically the calculation
+NZEROSr:             B = 10.0**(1-NZEROSr). Number of zeros in Fij to restart automatically the calculation
 
                       = 0      B = 10.0 (DEFAULT)
 
