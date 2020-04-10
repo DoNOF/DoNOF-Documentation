@@ -8,7 +8,7 @@ Use only capital letters in the input file, except for specific cases (see below
 Basis Set
 *********
 
-For the moment DoNOF requires to read the basis set for any calculation from the input file. Regarding the format, for historical reasons we employ the format used in GAMESS US. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. Note that you must use the "Advanced" option from the "Download basis set" box, and there choose the "GAMESS US" format, Version 1, and click the button to activate the "Optimize General Contractions". This will automatically give you the information to put in the input file.
+For the moment DoNOF requires to read the basis set for any calculation from the input file. Regarding the format, for historical reasons we employ the format used in GAMESS US. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. Note that you must use the "Advanced" option from the "Download basis set" box, and there choose the "GAMESS US" format, and click the button to activate the "Optimize General Contractions". This will automatically give you the information to put in the input file.
 
 Many examples are shown in the section "Examples".
 
