@@ -4,7 +4,11 @@ NOF-MP2
 
 In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file).::
 
-    $NOFINP CLMP2=T Ista=1
+    $NOFINP CLMP2=T IPNOF=7 Ista=1
+
+Note that static PNOF7 (PNOF7s) is required to carry out NOF-MP2 calculations. The
+latter is specified by the Ista=1 keyword in the input file. More details about
+this procedure in PRA 98, 022504 (2018).
 
 Current NOFs based on electron pairing take into account most of the
 non-dynamical effects, and also an important part of the dynamical
@@ -46,6 +50,5 @@ is then calculated by the expression
 
     A_{g}=\left\{ \begin{array}{c}1\,,\quad1\leq g\leq\frac{\mathrm{N_{II}}}{2}\qquad\\\frac{\mathrm{1}}{2},\:\frac{\mathrm{N_{II}}}{2}<g\leq\mathrm{\frac{\mathrm{N_{II}}}{2}+N_{I}}\end{array}\right.
 
-For more details about the NOF-MP2
-method see PRL 119, 063002 (2017) and PRA 98, 022504 (2018).
+For more details about the NOF-MP2 method see PRL 119, 063002 (2017) and PRA 98, 022504 (2018).
 

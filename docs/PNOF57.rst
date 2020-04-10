@@ -117,6 +117,8 @@ PNOF7s
 
 (PRA 98, 022504 (2018))
 
+In order to choose PNOF7s in DoNOF, you must set IPNOF=7 Ista=1 in the $NOFINP section of your input file.
+
 In the context of NOF-MP2 (see corresponding section), it is convenient to take into account the inter-pair static correction in the reference-used NOF from the outset, thus preventing the ONs and NOs from
 suffering an inter-pair non-dynamic influence, however small, in the dynamic correlation domains. This led us to correlate the motion of electrons with parallel and opposite spins belonging to different subspaces as
 
@@ -132,4 +134,4 @@ So the resulting NOF, called static PNOF7 (PNOF7s), can be formulated analogousl
 
 .. math::
 
-    \Pi_{qp}^{\Phi}=-\Phi^{2}_{q}\Phi^{2}_{p}
+    \Pi_{qp}^{\Phi}=-4\Phi^{2}_{q}\Phi^{2}_{p}
