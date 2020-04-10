@@ -110,9 +110,7 @@ HARTREE-FOCK
 
 HFID:               Use the Iterative Diagonalization Method to generate the HF Orbitals
 
-                      = F      HF MO (DEFAULT)
-                      
-                      = T      HF MO are obtained using the ID (HFIDr)
+                      = T      (DEFAULT)
 
 NTHRESHEID          Convergence of the total energy
                     THRESHEID=10.0**(-NTHRESHEID)
@@ -128,24 +126,16 @@ PNOF Selection
 
 IPNOF:               Type of Natural Orbital Functional (see section "NOF approximations")
 
-                      = 3      PNOF3
+                      = 3      PNOF3 + pairing constraints
 
-                      = 4      PNOF4
+                      = 4      PNOF4 + pairing constraints
 
                       = 5      PNOF5
                       
                       = 6      PNOF6
                       
-                      = 7      PNOF5 + Inter-pair (DEFAULT)
-
-NCWO:                Number of coupled weakly occupied MOs per strongly occupied = Nc -> PNOFi(Nc)
-
-                      = 1      NCWO = 1 (DEFAULT)
+                      = 7      PNOF7 (DEFAULT)
                       
-                      = 2,3,etc.
-                      
-                      =-1      NCWO = NVIR/NDOC where NVIR: Number of HF virtual MOs (OCC=0) and NDOC: Number of strongly occupied MOs
-
 Ista:                Use Static version of PNOF7
 
                       = 0      PNOF7 (DEFAULT)
@@ -156,8 +146,17 @@ HighSpin             Spin-uncompensated calculation type
 
                       = F      (DEFAULT) Multiple state (Ms=0)
 
-                      = T      High-spin uncompensated state (Ms=S)
+                      = T      High-spin uncompensated state (Ms=S)                      
+                      
+NCWO:                Number of coupled weakly occupied MOs per strongly occupied = Nc -> PNOFi(Nc)
 
+                      = 1      (DEFAULT)
+                      
+                      = 2,3,...
+                      
+                      =-1      NCWO = NVIR/NDOC
+                               NVIR: Number of HF virtual MOs (OCC=0) 
+                               NDOC: Number of strongly occupied MOs
 
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
