@@ -63,6 +63,29 @@ PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it c
 
     \begin{array}{c}\\\Pi_{qp}^{g}=\left\{ \begin{array}{cc}-\sqrt{n_{q}n_{p}}\,, & p=g\textrm{ or }q=g\\+\sqrt{n_{q}n_{p}}\,, & p,q>\mathrm{N}/2\end{array}\right.\;,\qquad\delta_{q\Omega_{g}}=\begin{cases}1, & q\in\Omega_{g}\\0, & q\notin\Omega_{g}\end{cases}\end{array}
 
+
+PNOF6
+-----
+
+(JCP 141, 044107 (2014))
+
+In the case of PNOF6, the only difference with respect to PNOF5 relies on the interaction between electrons that belong to different electron pairs. For PNOF6 this interaction is defined as
+
+.. math::
+
+    E_{fg}={\displaystyle \sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}}E_{pq}^{int}={\displaystyle \sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}}\left[\left(n_{q}n_{p}-\Delta_{qp}\right)\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)+\Pi_{qp}\mathcal{L}_{pq}\right]
+
+where
+
+.. math::
+
+    \begin{array}{cc|cc|cc}\Delta_{qp} &  & \Pi_{qp} &  &  & Orbitals\\\hline e^{-2S}h_{q}h_{p} &  & -e^{-S}\left(h_{q}h_{p}\right)^{\frac{1}{2}} &  &  & q\leq F,p\leq F\\{\frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}} &  & -\Pi_{qp}^{\gamma} &  &  &\begin{array}{c}q\leq F,p>F\\q>F,p\leq F\end{array}\\e^{-2S}n_{q}n_{p} &  & e^{-S}\left(n_{q}n_{p}\right)^{\frac{1}{2}} &  &  &q>F,p>F\end{array}
+
+.. math::
+
+    \begin{array}{c}\gamma_{p}=n_{p}h_{p}+\alpha_{p}^{2}-\alpha_{p}S_{\alpha}\\\alpha_{p}=\begin{cases}e^{-S}h_{p}\,, & p\leq F\\e^{-S}n_{p}\,, & p>F\end{cases}\\\Pi_{qp}^{\gamma}=\left(n_{q}h_{p}+{\displaystyle \frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}}\right)^{\frac{1}{2}}\left(h_{q}n_{p}+{\frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}}\right)^{\frac{1}{2}}\\S={\displaystyle\sum_{q=F+1}^{F+FN_{c}}}n_{q},\quad S_{\alpha}={\sum_{q=F+1}^{F+FN_{c}}}\alpha_{q},\quad S_{\gamma}={\sum_{q=F+1}^{F+FN_{c}}}\gamma_{q}\end{array}
+
+
 PNOF7 
 -----
 
@@ -88,23 +111,25 @@ PNOF7 introduces correlation between pairs of electrons through a term that expl
 
 where {n} is the set of natural orbital occupation numbers.
     
-PNOF6
------
 
-(JCP 141, 044107 (2014))
+PNOF7s
+------
 
-In the case of PNOF6, the only difference with respect to PNOF5 relies on the interaction between electrons that belong to different electron pairs. For PNOF6 this interaction is defined as
+(PRA 98, 022504 (2018))
 
-.. math::
-
-    E_{fg}={\displaystyle \sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}}E_{pq}^{int}={\displaystyle \sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}}\left[\left(n_{q}n_{p}-\Delta_{qp}\right)\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)+\Pi_{qp}\mathcal{L}_{pq}\right]
-
-where
+In the context of NOF-MP2 (see corresponding section), it is convenient to take into account the inter-pair static correction in the reference-used NOF from the outset, thus preventing the ONs and NOs from
+suffering an inter-pair non-dynamic influence, however small, in the dynamic correlation domains. This led us to correlate the motion of electrons with parallel and opposite spins belonging to different subspaces as
 
 .. math::
 
-    \begin{array}{cc|cc|cc}\Delta_{qp} &  & \Pi_{qp} &  &  & Orbitals\\\hline e^{-2S}h_{q}h_{p} &  & -e^{-S}\left(h_{q}h_{p}\right)^{\frac{1}{2}} &  &  & q\leq F,p\leq F\\{\frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}} &  & -\Pi_{qp}^{\gamma} &  &  &\begin{array}{c}q\leq F,p>F\\q>F,p\leq F\end{array}\\e^{-2S}n_{q}n_{p} &  & e^{-S}\left(n_{q}n_{p}\right)^{\frac{1}{2}} &  &  &q>F,p>F\end{array}
+    E_{fg}={\displaystyle \sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}}\left[n_{q}n_{p}\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)-4\Phi^{2}_{q}\Phi^{2}_{p}\mathcal{K}_{pq}\right]
+
+So the resulting NOF, called static PNOF7 (PNOF7s), can be formulated analogously to PNOF7
+    
+.. math::
+
+    E_{el}^{pnof7}=E_{el}^{pnof5}+\sum\limits _{f\neq g}^{\mathrm{N}/2}\sum\limits _{p\in\Omega_{f}}\sum\limits_{q\in\Omega_{g}}\Pi_{qp}^{\Phi}\mathcal{L}_{pq}
 
 .. math::
 
-    \begin{array}{c}\gamma_{p}=n_{p}h_{p}+\alpha_{p}^{2}-\alpha_{p}S_{\alpha}\\\alpha_{p}=\begin{cases}e^{-S}h_{p}\,, & p\leq F\\e^{-S}n_{p}\,, & p>F\end{cases}\\\Pi_{qp}^{\gamma}=\left(n_{q}h_{p}+{\displaystyle \frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}}\right)^{\frac{1}{2}}\left(h_{q}n_{p}+{\frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}}\right)^{\frac{1}{2}}\\S={\displaystyle\sum_{q=F+1}^{F+FN_{c}}}n_{q},\quad S_{\alpha}={\sum_{q=F+1}^{F+FN_{c}}}\alpha_{q},\quad S_{\gamma}={\sum_{q=F+1}^{F+FN_{c}}}\gamma_{q}\end{array}
+    \Pi_{qp}^{\Phi}=-\Phi^{2}_{q}\Phi^{2}_{p}
