@@ -3,11 +3,11 @@ Getting Started
 
 All PNOF options have default values (see "Input Options" section),
 so for a given system defined in the $INPRUN part of the input,
-it only remains necessary to put.::
+it only remains necessary to put::
 
     $nofinp
 
-An input for single-point energy calculation of Hydrogen atom with minimal basis set reads as.::
+An input for single-point energy calculation of Hydrogen atom with minimal basis set reads as::
 
    &INPRUN RUNTYP=ENEGY MULT=1 ICHARG=0 /
    $DATA
@@ -34,7 +34,7 @@ Running script
 
 You can found in DoNOF GitHub repository the scripts we usually employ to run the program.
 
-A very simple serial running script may read as.::
+A very simple serial running script may read as::
 
     #!/bin/csh -f
 

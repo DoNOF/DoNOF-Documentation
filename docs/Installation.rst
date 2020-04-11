@@ -22,7 +22,7 @@ scripts --> It should contain scripts to run DoNOF in serial and in many cores
 
 doc --> It should contain documentation for DoNOF, indeed you can generate a PDF file from this webpage to download and save in this directory
 
-An example of a simple makefile is given below.::
+An example of a simple makefile is given below::
 
     ########################################################################
     # Makefile for DoNOF program (Date: April 2020)

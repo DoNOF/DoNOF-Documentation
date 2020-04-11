@@ -135,3 +135,5 @@ So the resulting NOF, called static PNOF7 (PNOF7s), can be formulated analogousl
 .. math::
 
     \Pi_{qp}^{\Phi}=-4\Phi^{2}_{q}\Phi^{2}_{p}
+
+Note real orbitals are assumed, so exchange and time-inversion-exchange integrals are equivalent.

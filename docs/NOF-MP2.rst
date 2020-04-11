@@ -2,7 +2,7 @@
 NOF-MP2
 #######
 
-In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file).::
+In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file)::
 
     $NOFINP CLMP2=T IPNOF=7 Ista=1
 
