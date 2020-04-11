@@ -44,11 +44,11 @@ is then calculated by the expression
     
 .. math::
 
-    E^{dyn}=\sum\limits _{g,f=1}^{\mathrm{\mathrm{N}_{\Omega}}}\;\sum\limits _{p,q>\mathrm{\frac{\mathrm{N_{II}}}{2}+N_{I}}}^{\mathrm{N}_{B}}A_{g}A_{f}\left\langle gf\right|\left.pq\right\rangle \left[2T_{pq}^{gf}\right.\left.-T_{pq}^{fg}\right]
+    E^{dyn}=\sum\limits _{g,f=1}^{\mathrm{\mathrm{N}_{\Omega}}}\;\sum\limits _{p,q>\mathrm{N}_{\Omega}}^{\mathrm{N}_{B}}A_{g}A_{f}\left\langle gf\right|\left.pq\right\rangle \left[2T_{pq}^{gf}\right.\left.-T_{pq}^{fg}\right]
     
 .. math::
 
-    A_{g}=\left\{ \begin{array}{c}1\,,\quad1\leq g\leq\frac{\mathrm{N_{II}}}{2}\qquad\\\frac{\mathrm{1}}{2},\:\frac{\mathrm{N_{II}}}{2}<g\leq\mathrm{\frac{\mathrm{N_{\Omega}}}}\end{array}\right.
+    A_{g}=\left\{ \begin{array}{c}1\,,\quad1\leq g\leq\frac{\mathrm{N_{II}}}{2}\qquad\\\frac{\mathrm{1}}{2},\:\frac{\mathrm{N_{II}}}{2}<g\leq\mathrm{N}_{\Omega}\end{array}\right.
 
 For more details about the NOF-MP2 method see Phys. Rev. Lett. 119, 063002 (2017), Phys. Rev. A 98, 022504 (2018), and Phys. Rev. A 100, 032508 (2019).
 
