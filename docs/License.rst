@@ -15,7 +15,11 @@ it without the express written permission of the author.
 
 By citing DoNOF you are encouraging development and exposing the software package.
 
-The following article should be cited.::
+You will find a preprint corresponding to the publication about DoNOF in.::
+
+    https://arxiv.org/abs/XXXX.XXXXX
+
+The latter should be cited, as well as::
 
     @article{Piris2020,
     author = {Piris, Mario and Mitxelena, Ion},
