@@ -4,7 +4,7 @@ NOF-MP2
 
 In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file)::
 
-    $NOFINP CLMP2=T IPNOF=7 Ista=1
+    $NOFINP OIMP2=T IPNOF=7 Ista=1 /
 
 Note that static PNOF7 (PNOF7s) is required to carry out NOF-MP2 calculations. The
 latter is specified by the Ista=1 keyword in the input file. More details about
