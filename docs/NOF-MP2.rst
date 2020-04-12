@@ -7,8 +7,7 @@ In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file)::
     $NOFINP OIMP2=T IPNOF=7 Ista=1 /
 
 Note that static PNOF7 (PNOF7s) is required to carry out NOF-MP2 calculations. The
-latter is specified by the Ista=1 keyword in the input file. More details about
-this procedure in PRA 98, 022504 (2018).
+latter is specified by the Ista=1 keyword in the input file.
 
 Current NOFs based on electron pairing take into account most of the
 non-dynamical effects, and also an important part of the dynamical
