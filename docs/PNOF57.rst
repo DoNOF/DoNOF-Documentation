@@ -43,9 +43,9 @@ DoNOF contains many approximations that give up to the NOFs named as PNOFi [i=3-
 PNOF5
 -----
 
-(JCP 134, 164102 (2011))
+(JCP 134, 164102, 2011)
 
-PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it corresponds to an APSG wavefunction with fixed phases (see JCP 139, 234109 (2013)).
+PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it corresponds to an APSG wavefunction with fixed phases (see JCP 139, 234109, 2013).
 
 .. math::
 
@@ -67,7 +67,7 @@ PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it c
 PNOF6
 -----
 
-(JCP 141, 044107 (2014))
+(JCP 141, 044107, 2014)
 
 In the case of PNOF6, the only difference with respect to PNOF5 relies on the interaction between electrons that belong to different electron pairs. For PNOF6 this interaction is defined as
 
@@ -89,7 +89,7 @@ where
 PNOF7 
 -----
 
-(PRL 119, 063002 (2017); EPJB 91, 109 (2018))
+(PRL 119, 063002, 2017; EPJB 91, 109, 2018)
 
 PNOF7 introduces correlation between pairs of electrons through a term that explicitly contains particle-hole symmetry.
 
@@ -115,7 +115,7 @@ where {n} is the set of natural orbital occupation numbers.
 PNOF7s
 ------
 
-(PRA 98, 022504 (2018))
+(PRA 98, 022504, 2018)
 
 In order to choose PNOF7s in DoNOF, you must set IPNOF=7 Ista=1 in the $NOFINP section of your input file.
 
