@@ -5,7 +5,7 @@ All PNOF options have default values (see "Input Options" section),
 so for a given system defined in the $INPRUN part of the input,
 it only remains necessary to put::
 
-    $nofinp
+    &NOFINP /
 
 An input for single-point energy calculation of Hydrogen atom with minimal basis set reads as::
 
