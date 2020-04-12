@@ -38,9 +38,7 @@ ICHARG:    Molecular charge
 
     = 0  Neutral Molecule (Default)
 
-IEMOM:     Electrostatic moments calculation
-
-    = 0      skip calculation
+IEMOM:     Calculation of electrostatic moments
 
     = 1      calculate monopole and dipole (Default)
 
