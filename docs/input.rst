@@ -58,9 +58,7 @@ EVEC:      An array of the three x,y,z components of the applied electric field,
 
 DONTW:     Do not write 2e- integrals on the disk (Unit=1)
 
-    = F      (Default)
-    
-    = T
+    = T      (Default)
 
 *******
 &NOFINP
