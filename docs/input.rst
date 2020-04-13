@@ -40,7 +40,7 @@ ICHARG:    Molecular charge
 
 IEMOM:     Calculation of electrostatic moments
 
-    = 1      calculate monopole and dipole (Default)
+    = 1      calculate dipole moments (Default)
 
     = 2      also calculate quadrupole moments
 
@@ -80,15 +80,15 @@ MAXIT:               Maximum number of OCC-SCF iterations
 Type of calculation
 ^^^^^^^^^^^^^^^^^^^
 
-ICOEF:               Coefficient Optimization
+ICOEF:               Energy Optimization with respect to Coefficient Matrix (Natural Orbitals)
 
-                      = 0      Optimize Energy only by the occupations
+                      = 0      Optimize only with respect to Gamma variables that determine the occupation numbers
                       
-                      = 1      use the ID (SCF) method (DEFAULT)
+                      = 1      Optimize with respect to Gammas and Coefficient matrix (DEFAULT)
                       
-                      = 2      Optimize Energy only by the orbitals
+                      = 2      Optimize only by the orbitals keeping fixed the occupation numbers
                       
-                      = 3      Optimize Energy by all occupations and only core-fragment orbitals, the rest of fragment orbitals remain frozen
+                      = 3      Optimize by all occupations and core-fragment orbitals. The rest of fragment orbitals remain frozen
 
 IEINI:               Calculate only the initial energy
 
