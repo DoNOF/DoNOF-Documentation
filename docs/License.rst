@@ -17,7 +17,7 @@ By citing DoNOF you are encouraging development and exposing the software packag
 
 You will find a preprint corresponding to the publication about DoNOF in::
 
-    https://arxiv.org/abs/XXXX.XXXXX
+    https://arxiv.org/abs/2004.06142
 
 The latter should be cited only in case the following publication is not accepted yet::
 
