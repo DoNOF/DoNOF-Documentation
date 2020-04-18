@@ -117,6 +117,10 @@ NTHRESHEID          Convergence of the total energy, THRESHEID=10.0**(-NTHRESHEI
 MAXITID             Maximum number of external iterations
                      
                       = 30     (DEFAULT)
+                      
+KOOPMANS            Calculate IPs using Koopmans' Theorem
+
+                      = 0      (DEFAULT)
 
 PNOF Selection
 ^^^^^^^^^^^^^^
