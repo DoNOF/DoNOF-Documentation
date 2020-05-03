@@ -45,6 +45,6 @@ An example our simple makefile is given below::
     ########################################################################
 
 
-Note that we are using an INTEL compiler, which can be found in the official webpage https://software.intel.com. If we restrict to the GNU Fortran compiler, DoNOF can be used only in serial after compilation with gfortran.
+Note that we are using an INTEL compiler, which can be found in the official webpage https://software.intel.com. If we restrict to the GNU Fortran compiler, DoNOF can be used only in serial after compilation with gfortran. In our experience, DoNOF works much better with INTEL, so we strongly recommend the latter in order to improve the performance of DoNOF.
 
 In the near future, we would like to open the possibility to use GCC in order to compile DoNOF for parallel execution, so any collaboration to make this real will be appreciated.
