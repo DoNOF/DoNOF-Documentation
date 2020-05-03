@@ -9,16 +9,17 @@ it only remains necessary to put::
 
 An input for single-point energy calculation of Hydrogen atom with minimal basis set reads as::
 
-   &INPRUN RUNTYP=ENEGY MULT=1 ICHARG=0 /
+   &INPRUN RUNTYP='ENEGY' MULT=1 ICHARG=0
+   /
    $DATA
    H atom: STO-2G basis set calculation
    H  1.0  0.00 0.00 0.0000
    S   2
-   1         0.1309756377E+01       0.4301284983E+00
-   2         0.2331359749E+00       0.6789135305E+00
+     1         1.309756377       0.4301284983
+     2         0.2331359749       0.6789135305
 
    $END
-   &NOFINP /
+    &NOFINP /
 
 In each calculation many files are generated. Imagine the previous input corresponds to hydrogen.inp,
 then we will obtain after a single-point calculation:
@@ -32,7 +33,7 @@ hydrogen.wfn --> file containing wave-function info for AIMPAC program, among ot
 Running script
 ^^^^^^^^^^^^^^
 
-You can found in DoNOF GitHub repository the scripts we usually employ to run the program.
+You can found in DoNOF GitHub repository the scripts we usually employ to run the program, inluding those necessary after INTEL or GCC compilation.
 
 A very simple serial running script may read as::
 
@@ -42,7 +43,7 @@ A very simple serial running script may read as::
 
     if (-f $1.fra) mv -f $1.fra FRAG
 
-    nice +18 ~/Programs/DoNOF/DoNOF/exe/donof.x < $1.inp > $1.out
+    nice +18 $PATH-TO-EXECUTABLE/donof.x < $1.inp > $1.out
 
     if (-f WFN) mv -f WFN $1.wfn
 

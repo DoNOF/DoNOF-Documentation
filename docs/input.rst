@@ -2,7 +2,7 @@
 Input Options
 ############# 
 
-Use only capital letters in the input file, except for specific cases (see below). For instance, "RUNTYP=energy" will not work, but "RUNTYP=ENERGY" yes.
+Use only capital letters in the input file, except for specific cases (see below). For instance, RUNTYP='energy' will not work, but RUNTYP='ENERGY' yes.
 
 *********
 Basis Set
@@ -10,7 +10,7 @@ Basis Set
 
 At present, DoNOF requires to read the basis set for any calculation from the input file. 
 
-Regarding the format, for historical reasons we employ the format used in GAMESS US software package. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. You must choose the "GAMESS US" format in the "Download basis set" box. In addition, you can use "Advanced" options from the "Download basis set" box to activate different options and versions of the basis set in the "GAMESS US" format, for instance, the "Optimize General Contractions" option.
+For historical reasons, we employ the format used in GAMESS US software package. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. You must choose the "GAMESS US" format in the "Download basis set" box. In addition, you can use "Advanced" options from the "Download basis set" box to activate different options and versions of the basis set in the "GAMESS US" format, for instance, the "Optimize General Contractions" option.
 
 Many examples are shown in the "Examples" section.
 
@@ -22,11 +22,11 @@ The &INPRUN namelist specifies the run type, the atomic basis, and similar funda
 
 RUNTYP:    Specifies the run calculation
 
-    = ENERGY   single-point energy calculation (Default)
+    = 'ENERGY'   single-point energy calculation (Default)
 
-    = GRAD   energy + gradients with respect to nuclear coord.
+    = 'GRAD'   energy + gradients with respect to nuclear coord.
 
-    = OPTGEO  optimize the molecular geometry
+    = 'OPTGEO'  optimize the molecular geometry
     
 MULT:      Multiplicity of the electronic state
 
@@ -424,7 +424,7 @@ ICGMETHOD:           Define the conjugate gradient method in routines OCCOPTr, C
 Additional Notes
 ****************
 
-By default, DoNOF employs the conjugate gradient (CG) method implemented in the "SUMSL" open-source routine to perform the energy optimization with respect to the GAMMA variables (occupation numbers), and the nuclear coordinates if RUNTYP = OPTGEO. For more details on SUMSL, see the following references:
+By default, DoNOF employs the conjugate gradient (CG) method implemented in the "SUMSL" open-source routine to perform the energy optimization with respect to the GAMMA variables (occupation numbers), and the nuclear coordinates if RUNTYP='OPTGEO'. For more details on SUMSL, see the following references:
 
 J E Dennis, David Gay, and R E Welsch,
 An Adaptive Nonlinear Least-squares Algorithm,
@@ -452,17 +452,17 @@ Alternatively, we have also implemented the LBFGS algorithm written by J. Noceda
 Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^
 
-If RUNTYP=OPTGEO is set, DoNOF automatically sets HFID=F and OIMP2=F at the beginning of the calculation.
+If RUNTYP='OPTGEO' is set, DoNOF automatically sets HFID=F and OIMP2=F at the beginning of the calculation.
 
 It is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2 if you possess the NAG library. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in your system.
 
-RUNTYP=OPTGEO may be a computationally demanding task for any ICGMETHOD option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP=OPTGEO is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are two weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=2 in the RUNTYP=OPTGEO calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
+RUNTYP='OPTGEO' may be a computationally demanding task for any ICGMETHOD option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP='OPTGEO' is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are two weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=2 in the RUNTYP='OPTGEO' calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
 
-GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf" by our supplied run scripts. It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 or if RESTART=T in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP=OPTGEO). If that is the case, run a new calculation setting INPUTCXYZ=1 to converge the energy from the last obtained geometry.
+GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf" by our supplied run scripts. It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 or if RESTART=T in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP='OPTGEO'). If that is the case, run a new calculation setting INPUTCXYZ=1 to converge the energy from the last obtained geometry.
 
-Regarding number of initial zeroes at Fij matrix, NZEROSr, it is convenient to set NZEROSr=0 if RUNTYP=OPTGEO. In fact, the solution can change significantly after a displacement of nuclei, then we must let free the SCF procedure. On the contrary, if we restart a calculation that is almost converged, we can save some extra iterations by setting some initial value for NZEROSr, e.g. NZEROSr=2 or NZEROSr=3 depending on the system and how close from the solution is out starting point (in the GCF file).
+Regarding number of initial zeroes at Fij matrix, NZEROSr, it is convenient to set NZEROSr=0 if RUNTYP='OPTGEO'. In fact, the solution can change significantly after a displacement of nuclei, then we must let free the SCF procedure. On the contrary, if we restart a calculation that is almost converged, we can save some extra iterations by setting some initial value for NZEROSr, e.g. NZEROSr=2 or NZEROSr=3 depending on the system and how close from the solution is out starting point (in the GCF file).
 
-In geometry optimization calculations (RUNTYP=OPTGEO), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo" by our supplied run scripts. This file contains information about the geometry optimization procedure carried out by using the conjugate gradient method (set in the input file by ICGMETHOD), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
+In geometry optimization calculations (RUNTYP='OPTGEO'), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo" by our supplied run scripts. This file contains information about the geometry optimization procedure carried out by using the conjugate gradient method (set in the input file by ICGMETHOD), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
 
 You may notice in the $NOFINP section that a keyword FROZEN is used to fix nuclear coordinates during geometry optimization. This is done in cartesians, though it is recommended, for obvious reasons, doing it by using internal coordinates. For the moment this has not been implemented in DoNOF yet. Therefore, we recommend the user to employ FROZEN carefully.
 
@@ -471,7 +471,7 @@ New algorithms and numerical methods for carrying out these optimizations are we
 Dependencies
 ^^^^^^^^^^^^
 
-By setting ICGMETHOD=2 in the input file, DoNOF uses the Conjugate Gradient (CG) algorithm coded in NAG library for optimization of the GAMMA variables, as well as nuclear coordinates (if RUNTYP=OPTGEO). If the user prefers to use NAG subroutines (https://www.nag.co.uk/content/nag-library), you must uncomment all lines in the code preceded by 'cnag' and link DoNOF code with NAG library. Accordingly, the following routines are called by DoNOF: E04DGF, E04UEF, E04UCF, and F11JEF. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
+By setting ICGMETHOD=2 in the input file, DoNOF uses the Conjugate Gradient (CG) algorithm coded in NAG library for optimization of the GAMMA variables, as well as nuclear coordinates (if RUNTYP='OPTGEO'). If the user prefers to use NAG subroutines (https://www.nag.co.uk/content/nag-library), you must uncomment all lines in the code preceded by 'cnag' and link DoNOF code with NAG library. Accordingly, the following routines are called by DoNOF: E04DGF, E04UEF, E04UCF, and F11JEF. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
 
 Dissociation
 ^^^^^^^^^^^^

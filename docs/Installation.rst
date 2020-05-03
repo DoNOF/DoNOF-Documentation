@@ -4,111 +4,47 @@ Download and Installation
 
 DoNOF is open-source, so you can download the source files from GitHub: https://github.com/DoNOF. For trial or simple purposes, an executable of DoNOF can be also download from GitHub. The specific machine and compiler used to generate the latter are specified in the repo.
 
-In the following, we describe in detail the procedure to install DoNOF in your computer. First download the source files from GitHub, or simply clone this repository in your computer. Then, create the next directories:
+In the following, we describe in detail the procedure to install DoNOF in your computer. First download the source files from GitHub, or simply clone this repository in your computer. Then, enter the new directory and type "make" to create the executables for DoNOF. If you do not have INTEL compilers, type 'make serialg' in order to create a serial executable with gfortran.
 
-sources --> It should contain all source files, as well as the makefile
-
-objects --> It should contain two subdirectories, named 'serial' and 'mpi'
-
-exe --> It will contain the executable files created after the compilation
-
-Also, it is convenient (but not mandatory) to create the next directories:
-
-examples --> It sould contain examples of DoNOF calculations
-
-backup --> It will contain the backups of DoNOF
-
-scripts --> It should contain scripts to run DoNOF in serial and in many cores
-
-doc --> It should contain documentation for DoNOF, indeed you can generate a PDF file from this webpage to download and save in this directory
-
-An example of a simple makefile is given below::
+An example our simple makefile is given below::
 
     ########################################################################
     # Makefile for DoNOF program (Date: April 2020)
     ########################################################################
-    PROG=../
-    SOU=$(PROG)/sources
-    OBJ1=$(PROG)/objects/serial
-    OBJ2=$(PROG)/objects/mpi
-    EXC=$(PROG)/exe
-    BACKUP=$(PROG)/backup
-    SCR=$(PROG)/scripts
-    EXAMP=$(PROG)/examples
-    DOC=$(PROG)/doc/
-    Cln=/bin/rm -rf
-    #
-    SFLAGSO0 = -i8 -r8 -fpp -static -O0
-    SFLAGSw  = -i8 -r8 -fpp -static -O0 -warn all,nodeclarations
-    SFLAGSb  = -i8 -r8 -fpp -static -O0 -CB
-    SFLAGSO3 = -i8 -r8 -fpp -static -O3
-    SFLAGSO4 = -i8 -r8 -fpp -static -Ofast
-    F90      = ifort $(SFLAGSO4)
-    #
-    PFLAGSO0 = -DMPI -i8 -r8 -fpp -O0
-    PFLAGSw  = -DMPI -i8 -r8 -fpp -Ofast -warn all,nodeclarations
-    PFLAGSb  = -DMPI -i8 -r8 -fpp -Ofast -CB
-    PFLAGSO3 = -DMPI -i8 -r8 -fpp -O3
-    PFLAGSO4 = -DMPI -i8 -r8 -fpp -Ofast
-    MPIF90   = mpiifort $(PFLAGSO4)
-    #
+    
+    # Intel Fortran
+    F90 = ifort -i8 -r8 -fpp -static -Ofast
+    MPIF90 = mpiifort -DMPI -r8 -i8 -fpp -Ofast
+
+    # GNU Fortran
+    SFLAGS = -fdefault-integer-8 -fdefault-real-8 -cpp -O3 -ffpe-summary=none
+    F90g = gfortran $(SFLAGS)
+    
     ########################################################################
 
-    all: serial mpi
+    all: serial mpi serialg
 
     ########################################################################
 
     serial:
-            cd $(OBJ1)&& $(Cln) *.o *genmod*
-        
-            cd $(SOU) && $(F90) -c donof1.f donof2.f90 
-                
-            cd $(SOU) && $(F90) -o donof.x donof1.o donof2.o 
-        
-    # move exe and object files
-        
-            mv $(SOU)/donof.x  $(EXC)/donof.x
-        
-            make mvfiles1
-    # clean
-            cd $(SOU) && $(Cln) *genmod*
+
+        $(F90) -o donof.x donof1.f donof2.f90 
 
     ########################################################################
 
     mpi:
 
-            cd $(OBJ2)&& $(Cln) *.o *genmod*
-        
-            cd $(SOU) && $(MPIF90) -c donof1.f donof2.f90
-        
-            cd $(SOU) && $(MPIF90) -o donofmpi.x donof1.o donof2.o
-        
-    # move exe and object files
-        
-            mv $(SOU)/donofmpi.x  $(EXC)/donofmpi.x
-        
-            make mvfiles2
-        
-    # clean
-            cd $(SOU) && $(Cln) *genmod*
-    #
-    mvfiles1:
-            mv $(SOU)/donof1.o      $(OBJ1)/donof1.o
-            mv $(SOU)/donof2.o      $(OBJ1)/donof2.o
-    #
-    mvfiles2:
-            mv $(SOU)/donof1.o      $(OBJ2)/donof1.o
-            mv $(SOU)/donof2.o      $(OBJ2)/donof2.o
-        
-    ###############################################################################
-    #
-    tar:    
-            cd $(BACKUP)/ && tar -zPcvf DoNOF_2020.03.tar.gz               \
-                                        $(SOU) $(DOC) $(EXAMP) $(SCR)
-    #
-    ###############################################################################
+        $(MPIF90) -o donofmpi.x donof1.f donof2.f90
+
+    ########################################################################
+
+    serialg:
+
+        $(F90g) -o donofgnu.x donof1.f donof2.f90 
+
+    ########################################################################
 
 
-There is an example in the git repository too. Note that we are using an INTEL compiler, which can be found in the official webpage https://software.intel.com.
+Note that we are using an INTEL compiler, which can be found in the official webpage https://software.intel.com. If we restrict to the GNU Fortran compiler, DoNOF can be used only in serial after compilation with gfortran.
 
-In the near future, we would like to open the possibility to use GCC, the GNU compiler collection, so any collaboration to make this real will be appreciated.
+In the near future, we would like to open the possibility to use GCC in order to compile DoNOF for parallel execution, so any collaboration to make this real will be appreciated.

@@ -7,7 +7,8 @@ Single-point calculation
 
 PNOF5 single-point energy calculation of HF molecule with cc-pVDZ basis set starting from HCORE calculation::
 
-    &INPRUN RUNTYP=ENERGY MULT=1 ICHARG=0 /
+    &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0
+    /
     $DATA
     HF-Singlet: cc-pVDZ, Exp. Geom.
     H 1.0 0.00 0.00 0.0000
@@ -51,12 +52,13 @@ PNOF5 single-point energy calculation of HF molecule with cc-pVDZ basis set star
      1 1.6400000 1.0000000
 
     $END
-    &NOFINP HFID=F /
+     &NOFINP HFID=F /
 
 
 PNOF7 single-point energy calculation of the HF molecule at the experimental geometry optimizing only with respect to natural occupation numbers starting from Hartree-Fock calculation::
 
-    &INPRUN RUNTYP=ENERGY MULT=1 ICHARG=0 /
+    &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0
+    /
     $DATA
     HF-Singlet: cc-pVDZ / Exp. Geom.
     H 1.0 0.00 0.00 0.0000
@@ -100,12 +102,13 @@ PNOF7 single-point energy calculation of the HF molecule at the experimental geo
      1 1.6400000 1.0000000
 
     $END
-    &NOFINP IPNOF=7 ICOEF=0 HFID=T /
+     &NOFINP IPNOF=7 ICOEF=0 HFID=T /
 
     
 PNOF7 single-point energy calculation of the of Oxygen atom at its triplet state (S=1) with STO-3G basis set, optimizing only with respect to natural orbitals::
 
-    &INPRUN RUNTYP=ENERGY MULT=3 ICHARG=0 /
+    &INPRUN RUNTYP='ENERGY' MULT=3 ICHARG=0
+    /
     $DATA
     O-Triplet: STO-3G
     O 8.0 0.00 0.00 0.0000
@@ -119,7 +122,7 @@ PNOF7 single-point energy calculation of the of Oxygen atom at its triplet state
       3         0.3803889600E+00       0.7001154689E+00       0.3919573931E+00
     
     $END
-    &NOFINP IPNOF=7 ICOEF=2 /
+     &NOFINP IPNOF=7 ICOEF=2 /
     
     
 Perturbative correction
@@ -127,7 +130,8 @@ Perturbative correction
 
 NOF-MP2 single-point energy calculation of Oxygen atom at its singlet state (S=0) with STO-3G basis set::
 
-    &INPRUN RUNTYP=ENERGY MULT=1 ICHARG=0 /
+    &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0
+    /
     $DATA
     O-Singlet: STO-3G
     O 8.0 0.00 0.00 0.0000
@@ -141,7 +145,7 @@ NOF-MP2 single-point energy calculation of Oxygen atom at its singlet state (S=0
       3         0.3803889600E+00       0.7001154689E+00       0.3919573931E+00
     
     $END
-    &NOFINP IPNOF=7 Ista=1 OIMP2=T /
+     &NOFINP IPNOF=7 Ista=1 OIMP2=T /
 
 
 Geometry Optimization
@@ -149,7 +153,8 @@ Geometry Optimization
     
 Geometry Optimization of HF molecule by using cc-pVDZ basis set and NAG conjugate gradient algorithm::
 
-    &INPRUN RUNTYP=OPTGEO MULT=1 ICHARG=0 /
+    &INPRUN RUNTYP='OPTGEO' MULT=1 ICHARG=0
+    /
     $DATA
     HF-Singlet: CCD, starting from Exp. Geom. ( 0.90148 at HF/CCD level )
     H 1.0 0.00 0.00 0.0000
@@ -193,7 +198,7 @@ Geometry Optimization of HF molecule by using cc-pVDZ basis set and NAG conjugat
      1 1.6400000 1.0000000
 
     $END
-    &NOFINP ICGMETHOD=2 RESTART=T /
+     &NOFINP ICGMETHOD=2 RESTART=T /
 
 
 Convergence
@@ -201,7 +206,8 @@ Convergence
     
 PNOF5 single-point energy + Gradient calculation of Oxygen atom by using STO-3G basis set and convergence criteria of NTHRESHE=10**(-5) for total energy after both occupation and orbital optimization, NTHRESHEC=10**(-12) for energy after occupation optimization, and NTHRESHEN=10**(-16) for energy after orbital optimization. More importantly, set overall convergence of symmetry of matrix Fij as NTHRESHL=4 (usually that is enough, but NTHRESHL=5 is recommended for more accuracy)::
 
-    &INPRUN RUNTYP=GRAD MULT=1 ICHARG=0 /
+    &INPRUN RUNTYP='GRAD' MULT=1 ICHARG=0
+    /
     $DATA
     O-Singlet: STO-3G
     O 8.0 0.00 0.00 0.0000
@@ -215,6 +221,6 @@ PNOF5 single-point energy + Gradient calculation of Oxygen atom by using STO-3G 
       3         0.3803889600E+00       0.7001154689E+00       0.3919573931E+00
     
     $END
-    &NOFINP NTHRESHE=5 NTHRESHEC=12 NTHRESHEN=16 NTHRESHL=4 /
+     &NOFINP NTHRESHE=5 NTHRESHEC=12 NTHRESHEN=16 NTHRESHL=4 /
 
 
