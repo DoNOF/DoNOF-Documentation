@@ -41,7 +41,9 @@ ICHARG:    Molecular charge
     = 0  Neutral Molecule (Default)
     
 IECP       Effective Core Potentials 
-    = 0    (Default) All electron calculation 
+
+    = 0    (Default) All electron calculation
+    
     = 1    Read ECP potentials in the $ECP group
 
 IEMOM:     Calculation of electrostatic moments
