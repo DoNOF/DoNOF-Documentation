@@ -184,7 +184,7 @@ HFID:               Use the Iterative Diagonalization Method to generate the HF 
 
 NTHRESHEID          Convergence of the total energy, THRESHEID=10.0**(-NTHRESHEID)
                      
-                      = 8      (DEFAULT)
+                      = 6      (DEFAULT)
 
 MAXITID             Maximum number of external iterations
                      
@@ -234,15 +234,15 @@ NCWO:                Number of coupled weakly occupied MOs per strongly occupied
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more info see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
+For more info see section 3 in Comp. Phys. Comm. 259, 107651 (2021), Code Ocean Capsule; arXiv:2004.06142 [physics.comp-ph] by Piris and Mitxelena
 
 NTHRESHL:            Convergence of the Lagrange multipliers, THRESHL=10.0**(-NTHRESHL)
 
-                      = 4      (DEFAULT)
+                      = 3      (DEFAULT)
 
 NTHRESHE:            Convergence of the total energy, THRESHE=10.0**(-NTHRESHE)
 
-                      = 8      (DEFAULT)
+                      = 4      (DEFAULT)
 
 NTHRESHEC:           Convergence of the total energy (ORBOPT), THRESHEC=10.0**(-NTHRESHEC)
 
@@ -256,10 +256,6 @@ Options for the orbital optimization program (ID method)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For more info and computational details see section 3 in arXiv:2004.xxxxx [physics.chem-ph] by Piris and Mitxelena
-
-NOPTORB:             Number of the optimized orbitals
-
-                      = NBF    (DEFAULT)
 
 MAXLOOP:             Maximum Iteration Number for the SCF ITERATION cycle in each ITCALL
 
@@ -282,6 +278,12 @@ NZEROSm:             B = 10.0**(1-NZEROSm). Maximum number of zeros in Fij
 NZEROSr:             B = 10.0**(1-NZEROSr). Number of zeros in Fij to restart automatically the calculation
 
                       = 0      B = 10.0 (DEFAULT)
+                      
+AUTOZEROS           The code select automatically values for NZEROS, NZEROSm & NZEROSr. 
+
+                    Note: Override previously selected values
+                    
+                    = T      (Default)
 
 ITZITER:             Number of Iterations for constant scaling
 
@@ -406,6 +408,18 @@ IAIMPAC:             Write information into a WFN file (UNIT 7) for the AIMPAC p
                       = 0      Not do it
 
                       = 1      Do it (DEFAULT)
+                      
+ IFCHK               Write information into Formatted Checkpoint (FCHK) file for visualization software (UNIT 19)
+ 
+                      = 0      Don't write
+                      
+                      = 1      Write into FCHK file (Default)
+                      
+MOLDEN              Write information into MLD file for the MOLDEN PROGRAM (UNIT 17)
+
+                     = 0      Don't write
+
+                     = 1      Write into MLD file (Default)
 
 NOUTRDM:             Print option for atomic RDMs
 
