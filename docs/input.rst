@@ -74,49 +74,39 @@ ERITYP     Typ of ERIs used in calculations
     
     = RI     3c/2c ERIs for Resolution of the Identity (RI) App.
     
-    = MIX    3c/2c ERIs for Resolution of the Identity (RI) App.
-    
-             once converged change to 4c ERIs (FULL)
+    = MIX    3c/2c ERIs for Resolution of the Identity (RI) App. once converged change to 4c ERIs (FULL)
 
-GEN          Generative Auxiliary Basis to use in RI Approx.
-
-             if ERITYP = RI. Values: A2,A2*,A3,A3*,A4,A4* 
+GEN          Generative Auxiliary Basis to use in RI Approx. if ERITYP = RI. Values: A2,A2*,A3,A3*,A4,A4* 
              
     = A2*    (Default)
 
-SMCD         Symmetric Modified Cholesky Decomposition for the 
-    
-             G matrix in the RI Approximation
-                
-    = F      (Default)
-    
-HSSCAL       Compute Hessian from analytic gradients and carry
+SMCD         Symmetric Modified Cholesky Decomposition for the G matrix in the RI Approximation
 
-             out normal mode vibrational analysis at st. point 
+   = F      (Default)
+    
+HSSCAL       Compute Hessian from analytic gradients and carry out normal mode vibrational analysis at st. point if RUNTYP = OPTGEO (IRUNTYP=3)
 
-             if RUNTYP = OPTGEO (IRUNTYP=3)
-             
-    = T         (Default)
+   = T         (Default)
 
 PROJECT       Project Hessian to eliminate rot/vib contaminants
 
     = T       (Default)
 
-ISIGMA            Rotational symmetric number for thermochemistry
+ISIGMA          Rotational symmetric number for thermochemistry
 
     = 1         There is not a center of symmetry (Default)
-
+    
     = 2         There is a center of symmetry
-
+    
                 For more info see https://cccbdb.nist.gov/thermo.asp
 
 NATmax          Maximum Number of Atoms
 
-    = 100       (Default)
+   = 100       (Default)
 
 NSHELLmax       Maximum Number of Shells
 
-    = 500       (Default)
+   = 500       (Default)
 
 NPRIMImax       Maximum Number of Gaussian Functions
 
