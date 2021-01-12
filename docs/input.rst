@@ -158,6 +158,26 @@ NO1:                 MAX. index of NOs with Occupation equal to 1.0
 HARTREE-FOCK
 ^^^^^^^^^^^^
 
+ RHF                Restricted Hartree-Fock Calculation
+ 
+                    = T      (Default)
+
+NCONVRHF            RHF-SCF Density Convergence Criteria CONVRHFDM=10.0**(-NCONVRHF)
+
+                    = 5      (Default)
+    
+MAXITRHF            Maximum number of RHF-SCF iterations
+
+                    = 100    (Default)
+    
+HFDAMP              Damping of the Fock matrix
+
+                      = T      (Default)
+    
+HFEXTRAP            Extrapolation of the Fock matrix
+
+                      = T      (Default)
+
 HFID:               Use the Iterative Diagonalization Method to generate the HF Orbitals
 
                       = T      (DEFAULT)
