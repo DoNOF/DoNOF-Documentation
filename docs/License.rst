@@ -15,22 +15,24 @@ it without the express written permission of the author.
 
 By citing DoNOF you are encouraging development and exposing the software package.
 
-You will find a preprint corresponding to the publication about DoNOF in::
+Publication about DoNOF:
 
-    https://arxiv.org/abs/2004.06142
+M. Piris, I. Mitxelena, 
+“DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry”, 
+Comp. Phys. Comm. 259, 107651 (2021)
 
-The latter should be cited only in case the following publication is not accepted yet::
+It should be cited as:
 
-    @article{Piris2020,
+    @article{Piris2021,
     author = {Piris, Mario and Mitxelena, Ion},
-    doi = {10.1016/j.cpc.2020.XX.XXX},
-    issn = {X},
+    doi = {10.1016/j.cpc.2020.107651},
     journal = {Computer Physics Communications},
-    month = {X},
-    number = {X},
-    pages = {X--X},
+    pages = {107651},
     title = {{DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry}},
-    volume = {X},
-    year = {2020}
+    volume = {259},
+    year = {2021}
     }
 
+You will find a preprint corresponding to this publication in:
+
+    https://arxiv.org/abs/2004.06142 
