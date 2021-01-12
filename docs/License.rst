@@ -33,7 +33,7 @@ It should be cited as:
     
     pages = {107651},
     
-    title = {{DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry}},
+    title = {DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry},
     
     volume = {259},
     
