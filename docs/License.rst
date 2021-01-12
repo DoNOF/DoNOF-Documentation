@@ -24,13 +24,21 @@ Comp. Phys. Comm. 259, 107651 (2021)
 It should be cited as:
 
     @article{Piris2021,
+    
     author = {Piris, Mario and Mitxelena, Ion},
+    
     doi = {10.1016/j.cpc.2020.107651},
+    
     journal = {Computer Physics Communications},
+    
     pages = {107651},
+    
     title = {{DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry}},
+    
     volume = {259},
+    
     year = {2021}
+    
     }
 
 You will find a preprint corresponding to this publication in:
