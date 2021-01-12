@@ -9,10 +9,10 @@ it only remains necessary to put::
 
 An input for single-point energy calculation of Hydrogen atom with minimal basis set reads as::
 
-   &INPRUN RUNTYP='ENEGY' MULT=1 ICHARG=0
-   /
+   &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0 /
    $DATA
    H atom: STO-2G basis set calculation
+   
    H  1.0  0.00 0.00 0.0000
    S   2
      1         1.309756377       0.4301284983
@@ -44,6 +44,17 @@ A very simple serial running script may read as::
     if (-f $1.fra) mv -f $1.fra FRAG
 
     nice +18 $PATH-TO-EXECUTABLE/donof.x < $1.inp > $1.out
+    
+    if (-f FCHK) mv -f FCHK $1.fchk
+
+    if (-f MLD)then
+     cp -f MLD $1.mld
+     if (-f XYZ)then
+      cat MLD XYZ > $1.mld
+      rm -f XYZ
+     endif
+     rm -f MLD
+    endif
 
     if (-f WFN) mv -f WFN $1.wfn
 
