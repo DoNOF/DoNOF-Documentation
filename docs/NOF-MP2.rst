@@ -6,8 +6,9 @@ In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file)::
 
     $NOFINP OIMP2=T IPNOF=7 Ista=1 /
 
-Note that static PNOF7 (PNOF7s) is required to carry out NOF-MP2 calculations. The
-latter is specified by the Ista=1 keyword in the input file.
+Note that static PNOF7 (PNOF7s) is the best option to carry out NOF-MP2 calculations. 
+The latter is specified by the Ista=1 keyword in the input file. 
+Nevertheless, you can use PNOF7 or other functional to generate the reference orbitals.
 
 Current NOFs based on electron pairing take into account most of the
 non-dynamical effects, and also an important part of the dynamical
@@ -17,7 +18,7 @@ results that are in good agreement with accurate wavefunction-based
 methods for small systems, where electron correlation effects are
 almost entirely intrapair. When the number of pairs increases, NOF
 values deteriorate especially in those regions where dynamic correlation
-prevails. It is therefore mandatory to add the inter-space dynamic
+prevails. It is therefore mandatory to add the inter-pair dynamic
 electron correlation to improve calculations.
 
 The second-order Møller--Plesset (MP2) perturbation theory is the
