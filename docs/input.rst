@@ -8,9 +8,9 @@ Use only capital letters in the input file, except for specific cases (see below
 Basis Set
 *********
 
-At present, DoNOF requires to read the basis set for any calculation from the input file. 
+The basis set for any calculation can be read from 'basis-set-name.bas' (see examples in the basis folder of this repository) or introduced in the input file. For historical reasons, we employ the format used in GAMESS US software package. 
 
-For historical reasons, we employ the format used in GAMESS US software package. You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. You must choose the "GAMESS US" format in the "Download basis set" box. In addition, you can use "Advanced" options from the "Download basis set" box to activate different options and versions of the basis set in the "GAMESS US" format, for instance, the "Optimize General Contractions" option.
+You will find corresponding basis for any atomic element in https://www.basissetexchange.org/. You must choose the "GAMESS US" format in the "Download basis set" box. In addition, you can use "Advanced" options from the "Download basis set" box to activate different options and versions of the basis set in the "GAMESS US" format, for instance, the "Optimize General Contractions" option.
 
 Many examples are shown in the "Examples" section.
 
@@ -28,6 +28,8 @@ RUNTYP:    Specifies the run calculation
 
     = 'OPTGEO'  optimize the molecular geometry
     
+    = 'HESS'   compute numerical hessian from analytic gradients
+    
 MULT:      Multiplicity of the electronic state
 
     = 1      singlet (Default)
@@ -37,6 +39,10 @@ MULT:      Multiplicity of the electronic state
 ICHARG:    Molecular charge
 
     = 0  Neutral Molecule (Default)
+    
+IECP       Effective Core Potentials 
+    = 0    (Default) All electron calculation 
+    = 1    Read ECP potentials in the $ECP group
 
 IEMOM:     Calculation of electrostatic moments
 
@@ -59,6 +65,60 @@ EVEC:      An array of the three x,y,z components of the applied electric field,
 DONTW:     Do not write 2e- integrals on the disk (Unit=1)
 
     = T      (Default)
+    
+ERITYP     Typ of ERIs used in calculations
+
+    = FULL   4c ERIs (Default)
+    
+    = RI     3c/2c ERIs for Resolution of the Identity (RI) App.
+    
+    = MIX    3c/2c ERIs for Resolution of the Identity (RI) App.
+    
+             once converged change to 4c ERIs (FULL)
+
+GEN          Generative Auxiliary Basis to use in RI Approx.
+
+             if ERITYP = RI. Values: A2,A2*,A3,A3*,A4,A4* 
+             
+    = A2*    (Default)
+
+SMCD         Symmetric Modified Cholesky Decomposition for the 
+    
+             G matrix in the RI Approximation
+                
+    = F      (Default)
+    
+HSSCAL       Compute Hessian from analytic gradients and carry
+
+             out normal mode vibrational analysis at st. point 
+
+             if RUNTYP = OPTGEO (IRUNTYP=3)
+             
+    = T         (Default)
+
+PROJECT       Project Hessian to eliminate rot/vib contaminants
+
+    = T       (Default)
+
+ISIGMA            Rotational symmetric number for thermochemistry
+
+    = 1         There is not a center of symmetry (Default)
+
+    = 2         There is a center of symmetry
+
+                For more info see https://cccbdb.nist.gov/thermo.asp
+
+NATmax          Maximum Number of Atoms
+
+    = 100       (Default)
+
+NSHELLmax       Maximum Number of Shells
+
+    = 500       (Default)
+
+NPRIMImax       Maximum Number of Gaussian Functions
+
+    = 2000      (Default)
 
 *******
 &NOFINP
