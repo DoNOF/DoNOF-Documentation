@@ -105,7 +105,7 @@ Geometry Optimization of HF molecule by using cc-pVDZ basis set and NAG conjugat
 Convergence
 -----------
     
-PNOF7 single-point energy + Gradient calculation of Oxygen atom by using STO-3G basis set and convergence criteria of THRESHE=10**(-5) for total energy after both occupation and orbital optimization, THRESHEC=10**(-12) for energy after orbital optimization, and THRESHEN=10**(-16) for energy after occupation optimization. More importantly, set overall convergence of symmetry of matrix Fij as NTHRESHL=4 (usually that is enough, but NTHRESHL=5 is recommended for more accuracy):
+PNOF7 single-point energy + Gradient calculation of Oxygen atom by using STO-3G basis set and convergence criteria of THRESHE=10**(-5) for total energy after both occupation and orbital optimization, THRESHEC=10**(-12) for energy after orbital optimization, and THRESHEN=10**(-16) for energy after occupation optimization. More importantly, set overall convergence of symmetry of matrix Fij as NTHRESHL=4 (usually that is enough, but NTHRESHL=5 is recommended for more accuracy)::
 
     &INPRUN RUNTYP='GRAD' MULT=1 ICHARG=0 /
     $DATA
