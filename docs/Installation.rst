@@ -8,7 +8,7 @@ In the following, we describe in detail the procedure to install DoNOF in your c
 
 The program depends on the lapack library so you must also download the 'lapack.f' file from our repository. If you already have this library installed on your computer and prefer to use it, you don't need the 'lapack.f' file, but you do need to incorporate the necessary options into the Makefile for a successful DoNOF build.
 
-An example our simple Makefile is given below::
+An example of a simple Makefile is given below::
 
 ###############################################################################################
 #                      Makefile for DoNOF program (Date: January 2021)                        #
