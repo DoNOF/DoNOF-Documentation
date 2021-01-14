@@ -43,7 +43,7 @@ hydrogen.wfn --> file containing wave-function info for AIMPAC program, among ot
 Running script
 ^^^^^^^^^^^^^^
 
-You can found in DoNOF GitHub repository the scripts we usually employ to run the program, inluding those necessary after INTEL or GCC compilation.
+You can found in DoNOF GitHub repository the scripts we usually employ to run the program, inluding those necessary after Intel or GNU compilation.
 
 A very simple serial running script may read as::
 
@@ -53,7 +53,7 @@ A very simple serial running script may read as::
 
     if (-f $1.fra) mv -f $1.fra FRAG
 
-    nice +18 $PATH-TO-EXECUTABLE/donof.x < $1.inp > $1.out
+    nice +18 $PATH-TO-EXECUTABLE/DoNOF.x < $1.inp > $1.out
     
     if (-f FCHK) mv -f FCHK $1.fchk
 
