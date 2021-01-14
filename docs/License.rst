@@ -41,6 +41,6 @@ It should be cited as:
     
     }
 
-You will find a preprint corresponding to this publication in:
+You can find a preprint corresponding to this publication in:
 
     https://arxiv.org/abs/2004.06142 
