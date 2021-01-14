@@ -536,7 +536,7 @@ Volume 30, pages 796-811, 1976.
 
 Alternatively, we have also implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html). This method is activated by setting ICGMETHOD = 3. In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization.
 
-Finally, if you have the NAG library installed, you can use the corresponding surboutines to perform optimizations by setting ICGMETHOD = 2.
+Finally, if you have the NAG library installed, you can use the corresponding subroutines to perform optimizations by setting ICGMETHOD = 2.
 
 Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^
