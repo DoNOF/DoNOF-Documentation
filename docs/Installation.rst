@@ -2,7 +2,7 @@
 Download and Installation
 #########################
 
-DoNOF is open-source, so you can download the single source file from GitHub: https://github.com/DoNOF
+DoNOF is open-source, so you can download the single source file from GitHub: https://github.com/DoNOF/DoNOFsw/
 
 In the following, we describe in detail the procedure to install DoNOF in your computer. First download the source file (donof.f90) from GitHub, or simply clone this repository in your computer. Then, enter the new directory and type "make" to create the executables for DoNOF. Intel and GNU Fortran compilers can be used to create a serial and mpi executables.
 
