@@ -26,7 +26,7 @@ RUNTYP:    Specifies the run calculation
 
     = 'ENERGY'   single-point energy calculation (Default)
 
-    = 'GRAD'   energy + gradients with respect to nuclear coord.
+    = 'GRAD'   energy + gradients with respect to nuclear coordinates
 
     = 'OPTGEO'  optimize the molecular geometry
     
