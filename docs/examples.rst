@@ -122,6 +122,6 @@ PNOF7 single-point energy + Gradient calculation of Oxygen atom by using STO-3G 
       3         0.3803889600E+00       0.7001154689E+00       0.3919573931E+00 
      
     $END 
-     &NOFINP IPNOF=7 NTHRESHL=4 NTHRESHE=5 NTHRESHEC=12 NTHRESHEN=16 / 
+     &NOFINP IPNOF=7 AUTOZEROS=F NTHRESHL=4 NTHRESHE=5 NTHRESHEC=12 NTHRESHEN=16 / 
 
 
