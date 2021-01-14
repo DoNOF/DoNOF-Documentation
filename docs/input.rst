@@ -8,7 +8,7 @@ Use only capital letters in the input file, except for specific cases (see below
 Basis Set
 *********
 
-The basis set for any calculation can be read from 'basis-name.bas' (see examples in the basis folder https://github.com/DoNOF/DoNOFsw/tree/master/basis of this repository) or introduced in the input file (see example folder https://github.com/DoNOF/DoNOFsw/tree/master/examples of this repository). For historical reasons, we employ the format used in GAMESS US software package.
+The basis set for any calculation can be read from 'basis-name.bas' (see examples in folder https://github.com/DoNOF/DoNOFsw/tree/master/basis) or introduced in the input file (see examples in https://github.com/DoNOF/DoNOFsw/tree/master/examples). The basis set is specified in line 4 of the input file after the title. For historical reasons, we employ the format used in GAMESS US software package.
 
 The file containing the basis sets (basis-name.bas) can be located in the directory where the calculation is performed ($PWD), in $HOME/DoNOFsw/basis/, $HOME/DoNOF/basis/ directories, or you can specify the full path where it is located, that is, PATH/basis-name.bas.
 
@@ -18,7 +18,7 @@ You can find corresponding basis sets for any atomic element in https://www.basi
 &INPRUN
 *******
 
-The &INPRUN namelist specifies the run type, the atomic basis, and similar fundamental job options. These options are controlled by the following keywords:
+The &INPRUN namelist specifies the run type and other fundamental job options. These options are controlled by the following keywords:
 
 RUNTYP:    Specifies the run calculation
 
