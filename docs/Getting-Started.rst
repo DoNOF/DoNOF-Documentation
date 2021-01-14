@@ -13,13 +13,23 @@ An input for single-point energy calculation of Hydrogen atom with minimal basis
    $DATA
    H atom: STO-2G basis set calculation
    
-   H  1.0  0.00 0.00 0.0000
+   H  1.0  0.00 0.00 0.00
    S   2
      1         1.309756377       0.4301284983
-     2         0.2331359749       0.6789135305
+     2         0.2331359749      0.6789135305
 
    $END
-    &NOFINP /
+   &NOFINP /
+   
+or even simpler if the file containing the basis set (basis-name.bas) is in the directory where the calculation is performed ($PWD), in $HOME/DoNOFsw/basis/, $HOME/DoNOF/basis/ directories, or if you indicate the site where it is located, that is, PATH/basis-name.bas. In that case an input for single-point energy calculation of Hydrogen atom with sto-2g.bas basis-set file reads as::
+   
+   &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0 /
+   $DATA
+   H atom: STO-2G basis set calculation
+   sto-2g
+   H  1.0  0.00 0.00 0.00
+   $END
+   &NOFINP /
 
 In each calculation many files are generated. Imagine the previous input corresponds to hydrogen.inp,
 then we will obtain after a single-point calculation:
