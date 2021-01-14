@@ -8,7 +8,7 @@ Use only capital letters in the input file, except for specific cases (see below
 Basis Set
 *********
 
-The basis set for any calculation can be read from 'basis-name.bas' (see examples in the basis folder of this repository) or introduced in the input file (see example folder of this repository). For historical reasons, we employ the format used in GAMESS US software package.
+The basis set for any calculation can be read from 'basis-name.bas' (see examples in the basis folder https://github.com/DoNOF/DoNOFsw/tree/master/basis of this repository) or introduced in the input file (see example folder https://github.com/DoNOF/DoNOFsw/tree/master/examples of this repository). For historical reasons, we employ the format used in GAMESS US software package.
 
 The file containing the basis sets (basis-name.bas) can be located in the directory where the calculation is performed ($PWD), in $HOME/DoNOFsw/basis/, $HOME/DoNOF/basis/ directories, or you can specify the full path where it is located, that is, PATH/basis-name.bas.
 
