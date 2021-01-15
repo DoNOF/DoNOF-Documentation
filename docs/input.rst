@@ -182,7 +182,7 @@ HFEXTRAP:    Extrapolation of the Fock matrix
 
 HFID:        Use the Iterative Diagonalization Method to generate the HF Orbitals
 
-    = T      (DEFAULT)
+    = F      (DEFAULT)
 
 NTHRESHEID:  Convergence of the total energy, THRESHEID=10.0**(-NTHRESHEID)
                      
