@@ -203,7 +203,7 @@ denotes the subspace composed of orbitals below the level NII/2. The dynamic par
 
 .. math:: 
 
- n_p^d = n_p \cdot e^{-\left(\dfrac{h_{g}}{h_{c}}\right)^{2}},\quad p\in\Omega_{g}\ 
+ n_p^d = n_p \cdot e^{-\left( \dfrac{h_g}{h_c} \right)^{2}} , p\in\Omega_{g}\ 
  
  
 
