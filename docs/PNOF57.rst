@@ -155,11 +155,11 @@ The intra-pair component is formed by the sum of the energies of the pairs of el
 .. math::
 
     E^{intra} = {\displaystyle \sum\limits _{g=1}^{\mathrm{N}_{II} /2} E_g } 
-    +  {\displaystyle \sum\limits _{g=\mathrm{N}_{II} /2 + 1}^{\mathrm{N}_{\Omega}} H_{gg} }
+    +  {\displaystyle \sum\limits _{g=\mathrm{N}_{II} /2 + 1}^{\mathrm{N}_{\Omega}} \mathcal{H}_{gg} }
     
 .. math::
 
-    E_g = \sum\limits _{p\in\Omega_g} n_p (2H_{pp}+J_{pp}) + \sum\limits _{q,p\in\Omega_g,p\neq q} \Pi \left( n_q,n_p \right) L_{pq}
+    E_g = \sum\limits _{p\in\Omega_g} n_p (2 \mathcal{H}_{pp}+\mathcal{J}_{pp}) + \sum\limits _{q,p\in\Omega_g,p\neq q} \Pi \left( n_q,n_p \right) \mathcal{L}_{pq}
  
 where
  
@@ -173,13 +173,13 @@ The inter-pair Hartree-Fock (HF) term is
     
 .. math::
 
-    E _{HF}^{inter} = \sum\limits _{p,q=1}^{\mathrm{N}_B}\,'\, n_q n_p \left( 2J_{pq}-K_{pq} \right)
+    E _{HF}^{inter} = \sum\limits _{p,q=1}^{\mathrm{N}_B}\,'\, n_q n_p \left( 2\mathcal{J}_{pq}-\mathcal{K}_{pq} \right)
     
 where K are the exchange integrals. The prime in the summation indicates that only the inter-subspace terms are taking into account. NB represents the number of basis functions considered. The inter-pair static component is written as
 
 .. math::
 
- \begin{array}{c} E _{sta}^{inter} = -\left({ \displaystyle \sum _{p=1}^{\mathrm{N}_{\Omega}} \sum _{q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}} + \sum _{p=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}} \sum _{q=1}^{\mathrm{N}_{\Omega}}}\right. \left.{\displaystyle  + \sum _{p,q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}}}\right)' \Phi _{q} \Phi _{p} \\ \\ L _{pq} - \:\dfrac{1}{2}\left({\displaystyle \sum\limits _{p=1}^{\mathrm{N _{II}}/2} \sum _{q=\mathrm{N _{II}}/2+1}^{\mathrm{N}_{\Omega}} + \sum _{p=\mathrm{N _{II}}/2+1}^{\mathrm{N} _{\Omega}}\sum\limits _{q=1}^{\mathrm{N_{II}}/2}}\right)' \Phi_q \Phi_p L _{pq} \\ \\ {\displaystyle \:-\:\dfrac{1}{4} \sum _{p,q=\mathrm{N _{II}}/2+1}^{\mathrm{N}_{\Omega}}}K _{pq}\end{array}
+ \begin{array}{c} E _{sta}^{inter} = -\left({ \displaystyle \sum _{p=1}^{\mathrm{N}_{\Omega}} \sum _{q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}} + \sum _{p=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}} \sum _{q=1}^{\mathrm{N}_{\Omega}}}\right. \left.{\displaystyle  + \sum _{p,q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}}}\right)' \Phi _{q} \Phi _{p} \\ \\ \mathcal{L}_{pq} - \:\dfrac{1}{2}\left({\displaystyle \sum\limits _{p=1}^{\mathrm{N _{II}}/2} \sum _{q=\mathrm{N _{II}}/2+1}^{\mathrm{N}_{\Omega}} + \sum _{p=\mathrm{N _{II}}/2+1}^{\mathrm{N} _{\Omega}}\sum\limits _{q=1}^{\mathrm{N_{II}}/2}}\right)' \Phi_q \Phi_p \mathcal{L}_{pq} \\ \\ {\displaystyle \:-\:\dfrac{1}{4} \sum _{p,q=\mathrm{N _{II}}/2+1}^{\mathrm{N}_{\Omega}}} \mathcal{K}_{pq}\end{array}
  
 where
 
@@ -191,7 +191,7 @@ Finally, the inter-pair dynamic energy can be conveniently expressed as
 
 .. math:: 
 
- \begin{array}{c} E_{dyn}^{inter}=\sum\limits _{p,q=1}^{\mathrm{N}_{B}}\,'\, \left[n_{q}^{d}n_{p}^{d} +\;\Pi\left(n_{q}^{d},n_{p}^{d}\right)\right] \left(1-\delta_{q\Omega^{b}_{II}}\delta_{p\Omega^{b}_{II}}\right)L_{pq} \end{array}
+ \begin{array}{c} E_{dyn}^{inter}=\sum\limits _{p,q=1}^{\mathrm{N}_{B}}\,'\, \left[n_{q}^{d}n_{p}^{d} +\;\Pi\left(n_{q}^{d},n_{p}^{d}\right)\right] \left(1-\delta_{q\Omega^{b}_{II}}\delta_{p\Omega^{b}_{II}}\right)\mathcal{L}_{pq} \end{array}
 
 In this equation, Omega^b_II denotes the subspace composed of orbitals below the level NII/2. The dynamic part of the occupation number np is defined as
 
