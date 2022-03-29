@@ -118,8 +118,8 @@ USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB nameli
 
     = F     (Default)
     
-    &INPHUB
-    ^^^^^^^^
+&INPHUB
+^^^^^^^
 
 NSITE:      Number of sites in one dimension
     = 1     (Default)
