@@ -152,5 +152,6 @@ In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of
     
 .. math::
 
-    E^{intra} = {\displaystyle \sum\limits _{g=1}^{\mathrm{N}_II /2} E_g } + 
+    E^{intra} = {\displaystyle \sum\limits _{g=1}^{\mathrm{N}_{II} /2} E_g } 
+    +  {\displaystyle \sum\limits _{g=\mathrm{N}_{II} /2 + 1}^{\mathrm{N}_{\Omega}} H_{gg} }
 
