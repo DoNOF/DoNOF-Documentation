@@ -193,13 +193,7 @@ Finally, the inter-pair dynamic energy can be conveniently expressed as
 
  \begin{array}{c} E_{dyn}^{inter}=\sum\limits _{p,q=1}^{\mathrm{N}_{B}}\,'\, \left[n_{q}^{d}n_{p}^{d} +\;\Pi\left(n_{q}^{d},n_{p}^{d}\right)\right] \left(1-\delta_{q\Omega^{b}_{II}}\delta_{p\Omega^{b}_{II}}\right)L_{pq} \end{array}
 
-In this equation, 
-
-.. math:: 
-
- Omega^{b}_{II}
-
-denotes the subspace composed of orbitals below the level NII/2. The dynamic part of the occupation number np is defined as
+In this equation, Omega^b_II denotes the subspace composed of orbitals below the level NII/2. The dynamic part of the occupation number np is defined as
 
 .. math:: 
 
