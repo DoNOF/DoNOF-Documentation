@@ -138,8 +138,9 @@ So the resulting NOF, called static PNOF7 (PNOF7s), can be formulated analogousl
 
 Note real orbitals are assumed, so exchange (K) and time-inversion-exchange (L) integrals are equivalent.
 
- GNOF
-------
+
+GNOF
+----
 
 (PRL 127, 233001, 2021)
 
@@ -151,5 +152,6 @@ In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of
 
 .. math::
 
-E^{intra} = {\displaystyle \sum\limits _{g=1}^{\mathrm{{N}_{II}}/2} {E}_{g} + {\displaystyle \sum\limits _{g=\mathrm{{N}_{II}}/2+1}^{\mathrm{N}_{\Omega}}}{H}_{gg}
+E^{intra} = {\displaystyle \sum\limits _{g=1}^{\mathrm{N}_II/2} {E}_{g} 
++ {\displaystyle \sum\limits _{g=\mathrm{N}_II/2+1}^{\mathrm{N}_{\Omega}}}{H}_{gg}
 
