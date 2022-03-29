@@ -126,20 +126,22 @@ NSITE:      Number of sites in one dimension
 
     = 1     (Default)
 
-NSITE:      Number of sites in one dimension
-    = 1     (Default)
-    
 NELEC:      Number of electrons
+
     = 1     (Default)
 
 NDIMH:      Dimension considered in the Hubbard model
+
     = 1     (Default)
 
 THOP:       Near-neighbors hopping (t>0)
+
    = 1.0d0  (Default)
 
 UONS:       On-site energy = The site interaction parameter (U)
+
    = 1.0d0  (Default)
+   
 
 *******
 &NOFINP
