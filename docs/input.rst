@@ -65,6 +65,10 @@ UNITS:     Distance units (Any angles must be in degrees)
 EVEC:      An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*Bohr = 5.1422082(15)d+11 V/m)
 
     = 0.0D0  (Default)
+    
+USEHUB     Use Hubbard Model Hamiltonian (1D,2D)
+
+    = F      (Default)
 
 DONTW:     Do not write 2e- integrals on the disk (Unit=1)
 
