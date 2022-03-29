@@ -150,6 +150,8 @@ In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of
 
     E_{el}^{gnof} = E^{intra} + E_{HF}^{inter} + E_{sta}^{inter} + E_{dyn}^{inter}
     
+The intra-pair component is formed by the sum of the energies of the pairs of electrons with opposite spins and the single-electron energies of the unpaired electrons, namely    
+    
 .. math::
 
     E^{intra} = {\displaystyle \sum\limits _{g=1}^{\mathrm{N}_{II} /2} E_g } 
@@ -158,5 +160,13 @@ In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of
 .. math::
 
     E_g = \sum\limits _{p\in\Omega_g} n_p (2H_{pp}+J_{pp}) + \sum\limits _{q,p\in\Omega_g,p\neq q} \Pi \left( n_q,n_p \right) L_{pq}
+ 
+ where
+ 
+ .. math::
+
+    \Pi\left(n_q,n_p\right) = \sqrt{n_q n_p} \left(\delta_{q\Omega^{a}} \delta_{p\Omega^{a}} - \delta_{qg} - \delta_{pg} \right)
     
+    
+
 
