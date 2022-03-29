@@ -210,6 +210,8 @@ IPNOF:       Type of Natural Orbital Functional (see section "NOF approximations
     = 6      PNOF6
                       
     = 7      PNOF7 (DEFAULT)
+    
+    = 8      GNOF
                       
 Ista:        Use Static version of PNOF7
 
