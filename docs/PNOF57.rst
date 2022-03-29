@@ -197,7 +197,7 @@ In this equation, Omega^b_II denotes the subspace composed of orbitals below the
 
 .. math:: 
 
- n_p^d = n_p \cdot e^{-\left( \dfrac{h_g}{h_c} \right)^{2}} , p\in\Omega_{g}\ 
+ n_p^d = 
  
  
 
