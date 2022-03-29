@@ -181,10 +181,15 @@ where K are the exchange integrals. The prime in the summation indicates that on
 
  \begin{array}{c} E _{sta}^{inter} = -\left({ \displaystyle \sum _{p=1}^{\mathrm{N}_{\Omega}} \sum _{q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}} + \sum _{p=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}} \sum _{q=1}^{\mathrm{N}_{\Omega}}}\right. \left.{\displaystyle  + \sum _{p,q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}}}\right)' \Phi _{q} \Phi _{p} \\ \\ L _{pq} - \:\dfrac{1}{2}\left({\displaystyle \sum\limits _{p=1}^{\mathrm{N _{II}}/2} \sum _{q=\mathrm{N _{II}}/2+1}^{\mathrm{N}_{\Omega}} + \sum _{p=\mathrm{N _{II}}/2+1}^{\mathrm{N} _{\Omega}}\sum\limits _{q=1}^{\mathrm{N_{II}}/2}}\right)' \Phi_q \Phi_p L _{pq} \\ \\ {\displaystyle \:-\:\dfrac{1}{4} \sum _{p,q=\mathrm{N _{II}}/2+1}^{\mathrm{N}_{\Omega}}}K _{pq}\end{array}
  
-where 
-.. math:: \Phi _{p} = \sqrt{n _p h _{p}}\, , h_p = 1 -n_p. 
+where
+.. math:: 
+ 
+ \Phi _{p} = \sqrt{n _p h _{p}}\, , h_p = 1 -n_p. 
 
 Finally, the inter-pair dynamic energy can be conveniently expressed as 
 
+.. math:: 
+
+ \begin{array}{c} E_{dyn}^{inter}=\sum\limits _{p,q=1}^{\mathrm{N}_{B}}\,'\, \left[n_{q}^{d}n_{p}^{d} +\;\Pi\left(n_{q}^{d},n_{p}^{d}\right)\right] \left(1-\delta_{q\Omega^{b}_{II}}\delta_{p\Omega^{b}_{II}}\right)L_{pq} \end{array}
 
 
