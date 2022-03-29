@@ -161,12 +161,17 @@ The intra-pair component is formed by the sum of the energies of the pairs of el
 
     E_g = \sum\limits _{p\in\Omega_g} n_p (2H_{pp}+J_{pp}) + \sum\limits _{q,p\in\Omega_g,p\neq q} \Pi \left( n_q,n_p \right) L_{pq}
  
- where
+where
  
- .. math::
+.. math::
 
     \Pi\left(n_q,n_p\right) = \sqrt{n_q n_p} \left(\delta_{q\Omega^{a}} \delta_{p\Omega^{a}} - \delta_{qg} - \delta_{pg} \right)
     
+and H are the diagonal one-electron matrix elements of the kinetic energy and external potential operators. J and L are the Coulomb and exchange-time-inversion integrals, respectively. Omega^{a} denotes the subspace composed of orbitals above the level \mathrm{N}_{\Omega}. The inter-pair Hartree-Fock (HF) term is
+    
+.. math::
+
+    E _{HF}^{inter} = \sum\limits _{p,q=1}^{\mathrm{N}_B}\,'\, n_q n_p \left( 2J_{pq}-K_{pq} \right)
     
 
 
