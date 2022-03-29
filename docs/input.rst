@@ -119,7 +119,6 @@ NPRIMImax:   Maximum Number of Gaussian Functions
     = 2000   (Default)
     
 &INPHUB 
-^^^^^^^
 
 The &INPHUB namelist specifies the options fot the Hubbard Model
 
