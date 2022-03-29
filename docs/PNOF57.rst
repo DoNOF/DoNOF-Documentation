@@ -137,3 +137,49 @@ So the resulting NOF, called static PNOF7 (PNOF7s), can be formulated analogousl
     \Pi_{qp}^{\Phi}=-4\Phi^{2}_{q}\Phi^{2}_{p}
 
 Note real orbitals are assumed, so exchange (K) and time-inversion-exchange (L) integrals are equivalent.
+
+ GNOF
+------
+
+(PRL 127, 233001, 2021)
+
+In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of your input file.
+
+.. math::
+
+    E_{el}^{gnof} = E^{intra} + E_{HF}^{inter} + E_{sta}^{inter} + E_{dyn}^{inter}
+
+.. math::
+
+E^{intra}=\sum\limits _{g=1}^{\mathrm{N_{II}}/2}E_{g}+{\displaystyle \sum_{g=\mathrm{N_{II}}/2+1}^{\mathrm{N}_{\Omega}}}H_{gg}
+
+.. math::
+
+E_{g}=\sum\limits _{p\in\Omega_{g}}n_{p}(2H_{pp}+J_{pp}) + \sum\limits _{q,p\in\Omega_{g},p\neq q}\Pi \left(n_{q},n_{p} \right)L_{pq}
+
+.. math::
+
+\Pi\left(n_{q},n_{p}\right) = \sqrt{n_{q}n_{p}}\left(\delta_{q\Omega^{a}} \delta_{p\Omega^{a}}-\delta_{qg}-\delta_{pg}\right)
+
+.. math::
+
+E_{HF}^{inter}=\sum\limits _{p,q=1}^{\mathrm{N}_{B}}\,'\,n_{q}n_{p}\left(2J_{pq}-K_{pq}\right)
+
+.. math::
+
+E_{sta}^{inter}=-\left({\displaystyle \sum_{p=1}^{\mathrm{N}_{\Omega}}\sum_{q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}}+\sum_{p=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}}\sum_{q=1}^{\mathrm{N}_{\Omega}}}\right.
+\left.{\displaystyle +\sum_{p,q=\mathrm{N}_{\Omega}+1}^{\mathrm{N}_{B}}}\right)' 
+\Phi_{q}\Phi_{p} \\ \\ L_{pq} - \:\dfrac{1}{2}\left({\displaystyle \sum\limits _{p=1}^{\mathrm{N_{II}}/2}\sum_{q=\mathrm{N_{II}}/2+1}^{\mathrm{N}_{\Omega}}+\sum_{p=\mathrm{N_{II}}/2+1}^{\mathrm{N}_{\Omega}}\sum\limits _{q=1}^{\mathrm{N_{II}}/2}}\right)' \Phi_{q}\Phi_{p}L_{pq} \\ \\
+{\displaystyle \:-\:\dfrac{1}{4}\sum_{p,q=\mathrm{N_{II}}/2+1}^{\mathrm{N}_{\Omega}}}K_{pq}
+
+.. math::
+
+E_{dyn}^{inter}=\sum\limits _{p,q=1}^{\mathrm{N}_{B}}\,'\,
+\left[n_{q}^{d}n_{p}^{d} +\;\Pi\left(n_{q}^{d},n_{p}^{d}\right)\right]
+\left(1-\delta_{q\Omega^{b}_{II}}\delta_{p\Omega^{b}_{II}}\right)L_{pq} \label{edyn}
+
+.. math::
+
+n_{p}^{d}=n_{p}\cdot e^{-\left(\dfrac{h_{g}}{h_{c}}\right)^{2}},\quad p\in\Omega_{g}\
+
+h_{c} = 0.02 \sqrt{2}
