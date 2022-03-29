@@ -123,6 +123,8 @@ USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB nameli
 The &INPHUB namelist specifies the type of Hubbard calculation
 
 NSITE:      Number of sites in one dimension
+
+NSITE:      Number of sites in one dimension
     = 1     (Default)
     
 NELEC:      Number of electrons
