@@ -113,17 +113,18 @@ NSHELLmax:  Maximum Number of Shells
 NPRIMImax:  Maximum Number of Gaussian Functions
 
     = 2000  (Default)
-    
-&INPHUB
-^^^^^^^
 
 USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB namelist)
 
     = F     (Default)
     
+&INPHUB
+^^^^^^^
+The &INPHUB namelist specifies the type of Hubbard calculation
+
 NSITE:      Number of sites in one dimension
     = 1     (Default)
-
+    
 NELEC:      Number of electrons
     = 1     (Default)
 
