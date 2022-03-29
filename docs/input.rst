@@ -122,12 +122,6 @@ USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB nameli
 &INPHUB
 ^^^^^^^^
 
-The &INPRUN namelist specifies the run type and other fundamental job options. These options are controlled by the following keywords:
-
-RUNTYP:    Specifies the run calculation
-
-The &INPHUB namelist specifies the options fot the Hubbard Model:
-
 NSITE:      Number of sites in one dimension
     = 1     (Default)
 
