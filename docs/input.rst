@@ -66,10 +66,6 @@ EVEC:      An array of the three x,y,z components of the applied electric field,
 
     = 0.0D0  (Default)
     
-USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB namelist)
-
-    = F      (Default)
-
 DONTW:     Do not write 2e- integrals on the disk (Unit=1)
 
     = T      (Default)
@@ -110,32 +106,38 @@ NATmax:      Maximum Number of Atoms
 
    = 100     (Default)
 
-NSHELLmax:   Maximum Number of Shells
+NSHELLmax:  Maximum Number of Shells
 
-   = 500     (Default)
+   = 500    (Default)
 
-NPRIMImax:   Maximum Number of Gaussian Functions
+NPRIMImax:  Maximum Number of Gaussian Functions
 
-    = 2000   (Default)
+    = 2000  (Default)
     
-&INPHUB 
+USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB namelist)
+
+    = F     (Default)
+    
+
+&INPHUB
+^^^^^^^
 
 The &INPHUB namelist specifies the options fot the Hubbard Model
 
-NSITE:       Number of sites in one dimension
-    = 1      (Default)
+NSITE:      Number of sites in one dimension
+    = 1     (Default)
 
-NELEC:       Number of electrons
-    = 1      (Default)
+NELEC:      Number of electrons
+    = 1     (Default)
 
-NDIMH:       Dimension considered in the Hubbard model
-    = 1      (Default)
+NDIMH:      Dimension considered in the Hubbard model
+    = 1     (Default)
 
-THOP:        Near-neighbors hopping (t>0)
-   = 1.0d0   (Default)
+THOP:       Near-neighbors hopping (t>0)
+   = 1.0d0  (Default)
 
-UONS:        On-site energy = The site interaction parameter (U)
-   = 1.0d0   (Default)
+UONS:       On-site energy = The site interaction parameter (U)
+   = 1.0d0  (Default)
        
 *******
 &NOFINP
