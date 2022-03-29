@@ -167,7 +167,9 @@ where
 
     \Pi\left(n_q,n_p\right) = \sqrt{n_q n_p} \left(\delta_{q\Omega^{a}} \delta_{p\Omega^{a}} - \delta_{qg} - \delta_{pg} \right)
     
-and H are the diagonal one-electron matrix elements of the kinetic energy and external potential operators. J and L are the Coulomb and exchange-time-inversion integrals, respectively. Omega^{a} denotes the subspace composed of orbitals above the level \mathrm{N}_{\Omega}. The inter-pair Hartree-Fock (HF) term is
+and H are the diagonal one-electron matrix elements of the kinetic energy and external potential operators. J and L are the Coulomb and exchange-time-inversion integrals, respectively. Omega^a denotes the subspace composed of orbitals above the level N_Omega. 
+
+The inter-pair Hartree-Fock (HF) term is
     
 .. math::
 
