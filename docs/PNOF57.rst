@@ -154,4 +154,9 @@ In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of
 
     E^{intra} = {\displaystyle \sum\limits _{g=1}^{\mathrm{N}_{II} /2} E_g } 
     +  {\displaystyle \sum\limits _{g=\mathrm{N}_{II} /2 + 1}^{\mathrm{N}_{\Omega}} H_{gg} }
+    
+.. math::
+
+    E_g = \sum\limits _{p\in\Omega_g} n_p (2H_{pp}+J_{pp}) + \sum\limits _{q,p\in\Omega_g,p\neq q} \Pi \left( n_q,n_p \right) L_{pq}
+    
 
