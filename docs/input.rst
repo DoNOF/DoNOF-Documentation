@@ -114,6 +114,9 @@ NPRIMImax:  Maximum Number of Gaussian Functions
 
     = 2000  (Default)
     
+&INPHUB
+^^^^^^^
+
 USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB namelist)
 
     = F     (Default)
@@ -132,7 +135,7 @@ THOP:       Near-neighbors hopping (t>0)
 
 UONS:       On-site energy = The site interaction parameter (U)
    = 1.0d0  (Default)
-       
+
 *******
 &NOFINP
 *******
