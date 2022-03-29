@@ -197,7 +197,11 @@ In this equation, Omega^b_II denotes the subspace composed of orbitals below the
 
 .. math:: 
 
- n_p^d = n_p . e^{-\left( \dfrac{h_g}{h_c} \right)^{2}}, p\in\Omega_g
+   n_p^d = n_p . e^{-\left( \dfrac{h_g}{h_c} \right)^{2}}, p\in\Omega_g \,'\, h_c = 0.02 \sqrt{2}
+ 
+The maximum value of n_p^d is around 0.012 in accordance with the Pulay’s criterion that establishes an occupancy deviation of approximately 0.01 with respect to 1 or 0 for a natural orbital to contribute to the dynamic correlation. Clearly, GNOF does not take into account dynamic correlation of the single electrons. Considering real spatial orbitals (L=K) and n_p ~ n_p^d, it is not difficult to verify that the terms proportional to the product of the occupation numbers will cancel out, so that only those terms proportional to \Pi will contribute significantly to the energy.
+
+
  
  
 
