@@ -1,7 +1,7 @@
 # Table of contents
 
 format: jb-book
-root: Welcome
+root: intro
 parts:
 - caption: Overview
   chapters:
