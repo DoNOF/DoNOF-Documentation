@@ -1,4 +1,4 @@
-# Download and Installation :fire:
+# Download and Installation
 
 **Requisites.** You need a FORTRAN compiler, either gfortran or ifort. Optionally, you may want to install OpenMPI for parallel execution.
 
