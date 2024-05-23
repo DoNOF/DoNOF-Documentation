@@ -3,7 +3,15 @@
 format: jb-book
 root: intro
 parts:
-- caption: Overview
+  - caption: Overview
   chapters:
-  - file: Installation
-  - file: License
+    - file: docs/Installation
+    - file: License
+    - file: Contact
+    - caption: User Documentation
+  chapters:
+    - file: Getting-Started
+    - file: PNOF57
+    - file: NOF-MP2
+    - file: input
+    - file: examples
