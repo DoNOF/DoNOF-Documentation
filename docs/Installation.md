@@ -1,13 +1,5 @@
 # Download and Installation
 
-DoNOF is open-source, so you can download the single source file from GitHub: https://github.com/DoNOF/DoNOFsw/
-
-In the following, we describe in detail the procedure to install DoNOF in your computer. First download the source file (donof.f90) from GitHub, or simply clone this repository in your computer. Then, enter the new directory and type "make" to create the executables for DoNOF. Intel and GNU Fortran compilers can be used to create a serial and mpi executables.
-
-The program depends on the lapack library so you must also download the 'lapack.f' file from our repository. If you already have this library installed on your computer and prefer to use it, you don't need the 'lapack.f' file, but you do need to incorporate the necessary options into the Makefile for a successful DoNOF build.
-
-## Installation
-
 **Requisites.** You need a FORTRAN compiler, either gfortran or ifort. Optionally, you may want to install OpenMPI for parallel execution.
 
 1. Clone the code with
