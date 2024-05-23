@@ -1,10 +1,8 @@
-##############################################################
-DoNOF: Donostia Natural Orbital Functional open-source program
-##############################################################
+# DoNOF: Donostia Natural Orbital Functional open-source program
 
 DoNOF is an open-source implementation of natural-orbital-functional-based methods for quantum chemistry.
 
-.. image:: ./Logo-DoNOF.jpeg
+![DoNOF](./Logo-DoNOF.jpeg)
 
 The DoNOF computer program is designed to solve the energy
 minimization problem of a natural-orbital-functional (NOF)
