@@ -12,9 +12,12 @@ git clone https://github.com/DoNOF/DoNOFsw
 make serialg # gfortran serial -> /exe/DoNOFg.x
 ~~~
 
-```{note}
-Here is a note
-```
+:::{admonition} Upgrading from `sphinx-panels`
+Previous versions of Jupyter Book used `sphinx-panels` to define major UI elements.
+These now use [Sphinx Design instead](https://sphinx-design.readthedocs.io).
+Documentation for these UI elements is now in [](components.md).
+See [the migration guide](https://sphinx-design.readthedocs.io/en/latest/get_started.html#migrating-from-sphinx-panels) and [this migration discussion issue](https://github.com/executablebooks/sphinx-design/issues/51) for more information.
+:::
 
 
 Other options are:
