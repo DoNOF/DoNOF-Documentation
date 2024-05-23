@@ -52,6 +52,7 @@ $$
 $$
 E_{g}={\displaystyle \sum\limits _{p\in\Omega_{g}}}n_{p}\left(2\mathcal{H}_{pp}+\mathcal{J}_{pp}\right)+{\displaystyle \sum\limits _{q,p\in\Omega_{g},q\neq p}}\Pi_{qp}^{g}\mathcal{L}_{pq}    
 $$
+$$
 \begin{array}{c}\\\Pi_{qp}^{g}=\left\{ \begin{array}{cc}-\sqrt{n_{q}n_{p}}\,, & p=g\textrm{ or }q=g\\+\sqrt{n_{q}n_{p}}\,, & p,q>\mathrm{N}/2\end{array}\right.\;,\qquad\delta_{q\Omega_{g}}=\begin{cases}1, & q\in\Omega_{g}\\0, & q\notin\Omega_{g}\end{cases}\end{array}
 $$
 
