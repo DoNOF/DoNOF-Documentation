@@ -25,6 +25,7 @@ make mpi     # ifort mpi       -> /exe/DoNOFmpi.x
 ## Execution
 
 Several input files can be found inside /examples. A basic single point calculation with the GNOF functional looks like the following:
+:::{admonition} Example Input
 ~~~
  &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0 ERITYP='FULL' /
  $DATA
@@ -36,6 +37,7 @@ H  1.0  0.0000    -0.7572   -0.4692
  $END
  &NOFINP IPNOF=8 /
 ~~~
+:::
 
 If the input is placed in a file called filename.inp, it can be executed with
 ~~~
