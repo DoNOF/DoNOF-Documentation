@@ -6,7 +6,9 @@ $$E_{el}[\Gamma,D]=\sum_{ik}\Gamma_{ki}h_{ki}+\sum_{ijkl}D_{kl,ij}\langle kl|ij\
     
 where, if there is no any dependence on spin coordinates, then RDMs correspond to a mixed quantum state (ensemble) that allows all possible spin projections for a given total spin quantum number S.
 
-$$\Gamma_{ki}={\displaystyle \dfrac{1}{2S+1}{\textstyle {\displaystyle \sum_{M_{s}=-S}^{S}}}}\left\langle SM_{s}\right|\hat{a}_{k}^{\dagger}\hat{a}_{i}\left|SM_{s}\right\rangle$$
+$$
+\Gamma_{ki}={\displaystyle \dfrac{1}{2S+1}{\textstyle {\displaystyle \sum_{M_{s}=-S}^{S}}}}\left\langle SM_{s}\right|\hat{a}_{k}^{\dagger}\hat{a}_{i}\left|SM_{s}\right\rangle
+$$
 
 $$
 D_{kl,ij}={\displaystyle {\textstyle {\displaystyle \dfrac{1}{2\left(2S+1\right)}\sum_{M_{s}=-S}^{S}}}}\left\langle SM_{s}\right|\hat{a}_{k}^{\dagger}\hat{a}_{l}^{\dagger}\hat{a}_{j}\hat{a}_{i}\left|SM_{s}\right\rangle
