@@ -2,5 +2,7 @@
 
 format: jb-book
 root: intro
-chapters:
-- file: Installation
+parts:
+- caption: Overview
+  chapters:
+  - file: Installation
