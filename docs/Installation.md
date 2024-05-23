@@ -12,6 +12,11 @@ git clone https://github.com/DoNOF/DoNOFsw
 make serialg # gfortran serial -> /exe/DoNOFg.x
 ~~~
 
+```{note}
+Here is a note
+```
+
+
 Other options are:
 ~~~
 make mpig    # gfortran mpi    -> /exe/DoNOFmpig.x
