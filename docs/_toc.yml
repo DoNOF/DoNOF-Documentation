@@ -3,7 +3,7 @@
 format: jb-book
 root: intro
 parts:
-- caption: Overview
+- caption: Overview 🪄
   chapters:
   - file: Installation
   - file: License
