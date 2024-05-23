@@ -5,7 +5,7 @@ root: intro
 parts:
   - caption: Overview
   chapters:
-    - file: docs/Installation
+    - file: Installation
     - file: License
     - file: Contact
     - caption: User Documentation
