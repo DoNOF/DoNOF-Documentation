@@ -2,15 +2,16 @@
 
 format: jb-book
 root: index
-#parts:
-#- caption: Basic examples 🪄
-#  chapters:
-#  - file: markdown
-#  - file: notebooks
-#  - file: markdown-notebooks
-#- caption: Cool extensions 🕶️
-#  chapters:
-#  - file: intersphinx
-#  - file: sphinx-examples
-#  - file: sphinx-hoverxref
-#  - file: sphinx-proof
+parts:
+  - caption: Overview
+  chapters:
+    - file: Installation
+    - file: License
+    - file: Contact
+    - caption: User Documentation
+  chapters:
+    - file: Getting-Started
+    - file: PNOF57
+    - file: NOF-MP2
+    - file: input
+    - file: examples
