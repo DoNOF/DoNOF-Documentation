@@ -175,7 +175,7 @@ $$
  \begin{array}{c} E_{dyn}^{inter}=\sum\limits _{p,q=1}^{\mathrm{N}_{B}}\,'\, \left[n_{q}^{d}n_{p}^{d} +\;\Pi\left(n_{q}^{d},n_{p}^{d}\right)\right] \left(1-\delta_{q\Omega^{b}_{II}}\delta_{p\Omega^{b}_{II}}\right)\mathcal{L}_{pq} \end{array}
 $$
 
-In this equation, $Omega^b_II$ denotes the subspace composed of orbitals below the level $N_{II}/2$. The dynamic part of the occupation number $n_p$ is defined as
+In this equation, $\Omega^b_{II}$ denotes the subspace composed of orbitals below the level $N_{II}/2$. The dynamic part of the occupation number $n_p$ is defined as
 
 $$
    n_p^d = n_p . e^{-\left( \dfrac{h_g}{h_c} \right)^{2}}, \,\, p\in\Omega_g, \,\, h_c = 0.02 \sqrt{2}
