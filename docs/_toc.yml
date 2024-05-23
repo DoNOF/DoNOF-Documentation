@@ -6,3 +6,5 @@ parts:
 - caption: Overview
   chapters:
   - file: Installation
+  - file: License
+  - file: Contact
