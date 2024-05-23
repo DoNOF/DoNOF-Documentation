@@ -13,19 +13,11 @@ it without the express written permission of the author.
 
 By citing DoNOF you are encouraging development and exposing the software package.
 
-It should be cited as:
-
-
-:::{admonition} Upgrading from `sphinx-panels`
-Previous versions of Jupyter Book used `sphinx-panels` to define major UI elements.
-These now use [Sphinx Design instead](https://sphinx-design.readthedocs.io).
-Documentation for these UI elements is now in [](components.md).
-See [the migration guide](https://sphinx-design.readthedocs.io/en/latest/get_started.html#migrating-from-sphinx-panels) and [this migration discussion issue](https://github.com/executablebooks/sphinx-design/issues/51) for more information.
-:::
-
+:::{admonition} Citation
 [M. Piris, I. Mitxelena, 
 “DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry”, 
 Comp. Phys. Comm. 259, 107651 (2021)](https://www.sciencedirect.com/science/article/pii/S0010465520303167)
+:::
 
 You can also place the following in your bibtex file:
 ~~~
@@ -40,6 +32,8 @@ You can also place the following in your bibtex file:
     }
 ~~~
 
+```{note}
 You can find a preprint corresponding to this publication in:
 
     https://arxiv.org/abs/2004.06142 
+```
