@@ -32,8 +32,10 @@ You can also place the following in your bibtex file:
     }
 ~~~
 
+````{margin}
 ```{note}
 You can find a preprint corresponding to this publication in:
 
     https://arxiv.org/abs/2004.06142 
 ```
+````
