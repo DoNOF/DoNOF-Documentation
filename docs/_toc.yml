@@ -2,16 +2,6 @@
 
 format: jb-book
 root: index
-parts:
-  - caption: Overview
-  chapters:
-    - file: docs/Installation
-    - file: License
-    - file: Contact
-    - caption: User Documentation
-  chapters:
-    - file: Getting-Started
-    - file: PNOF57
-    - file: NOF-MP2
-    - file: input
-    - file: examples
+- caption: Overview
+- file: Installation
+- file: License
