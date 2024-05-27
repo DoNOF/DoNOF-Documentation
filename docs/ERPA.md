@@ -28,7 +28,7 @@ $$
 $$
 with a given excitation operator.
 
-ERPA0:
+### ERPA0
 
 The excitation operator is given by
 
@@ -60,7 +60,7 @@ $$
     \end{pmatrix}
 $$
 
-ERPA1:
+### ERPA1
 
 The excitation operator is given by
 
@@ -97,7 +97,7 @@ $$
     \end{pmatrix}
 $$
 
-ERPA2:
+### ERPA2
 
 The excitation operator is given by
 
