@@ -46,7 +46,13 @@ You can identify the following information inside the `$DATA` block of this exam
 You can identify the following information inside the `&NOFINP` directive:
 - `IPNOF`: 5 (PNOF5) | 7 (PNOF7) | 8 (GNOF)
 
-## Theory: Electron-pairing-based NOF for Multiplets
+## Theory
+
+### Electron-pairing-based NOF for Multiplets
+
+```{margin} Article
+[`Phys. Rev. A 100(3), 032508 (2019).`](https://doi.org/10.1103/PhysRevA.100.032508)
+```
 
 The non-relativistic electronic energy can be written as an explicit functional of the 1- and 2-order reduced density matrices (RDM)
 
