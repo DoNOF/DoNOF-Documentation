@@ -46,6 +46,11 @@ You can identify the following information inside the `$DATA` block of this exam
 You can identify the following information inside the `&NOFINP` directive:
 - `IPNOF`: 5 (PNOF5) | 7 (PNOF7) | 8 (GNOF)
 
+## Visualization
+
+By default the code will output a `file.mld` that you can visualize with MOLDEN, and a `file.fchk` that you can open with many softwares such as Avogadro and IQmol, allowing to visualize the natural orbitals.
+![Azine-ON](./Azine.jpg)
+
 ## Theory
 
 ### Electron-pairing-based NOF for Multiplets
