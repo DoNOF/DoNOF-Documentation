@@ -1,8 +1,8 @@
 # Single Point Energy
 
-You can run a single point energy calculation USING THE `RUNTYP='ENERGY'` in the `&INPRUN` as in the following example:
+You can run a single point energy calculation using the `RUNTYP='ENERGY'` in the `&INPRUN` as in the following example:
 
-~~~
+```{code-cell} fortran
  &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0 ERITYP='FULL' /
  $DATA
  Water (H2O)
@@ -12,7 +12,7 @@ H  1.0  0.0000     0.7572   -0.4692
 H  1.0  0.0000    -0.7572   -0.4692
  $END
  &NOFINP IPNOF=8 /
-~~~
+```
 
 :::{admonition} Tips and Tricks
 :class: tip, dropdown
