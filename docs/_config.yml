@@ -72,3 +72,6 @@ sphinx:
     - sphinx_proof
     - sphinx_examples
     - hoverxref.extension
+
+  myst_enable_extensions:
+    - amsmath
