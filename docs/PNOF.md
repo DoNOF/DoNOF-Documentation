@@ -18,7 +18,6 @@ H  1.0  0.0000    -0.7572   -0.4692
 ~~~
 :::
 
-
 :::{admonition} Tip
 :class: tip, dropdown
 Use `ERITYP='RI'` for $N^4$ aritmethic scaling and `IORBOPT=4` for experimental state of the art convergency. 
@@ -130,7 +129,7 @@ $$
 
 ### PNOF7 
 
-```{margin} Article
+```{margin} Articles
 [`Phys. Rev. Lett. 119(6), 063002 (2017).`](https://doi.org/10.1103/PhysRevLett.119.063002)
 
 [`Eur. Phys. J. B 91(6), 109 (2018).`](https://doi.org/10.1140/epjb/e2018-90078-8)
