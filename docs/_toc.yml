@@ -11,7 +11,9 @@ parts:
 - caption: User Documentation
   chapters:
     - file: Getting-Started
-    - file: PNOF
-    - file: NOF-MP2
+    - file: Single-Point-Energy
+    sections:
+      - file: PNOF
+      - file: NOF-MP2
     - file: input
     - file: examples
