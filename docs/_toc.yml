@@ -13,11 +13,11 @@ parts:
 - caption: Complete List of Options
   chapters:
     - file: input
-    - file: examples
 - caption: About
   chapters:
   - file: License
   - file: Contact
   - file: PythonandJulia
-    
+
+#  - file: examples
 #  - file: Getting-Started
