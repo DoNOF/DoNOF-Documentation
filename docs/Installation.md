@@ -39,11 +39,11 @@ H  1.0  0.0000    -0.7572   -0.4692
 ~~~
 :::
 
-If the input is placed in a file called filename.inp, it can be executed with
+If the input is placed in a file called `filename.inp`, it can be executed with
 ~~~
 ./run_donofg filename     # gfortran serial
 ~~~
-the output will be placed in filename.out.
+the output will be placed in `filename.out`.
 
 Other options for execution are:
 ~~~
@@ -54,9 +54,9 @@ Other options for execution are:
 
 ## Capabilities
 
-The &INPRUN and &NOFINP namelists specify the input and output, and the fundamental job options.
+The `&INPRUN` and `&NOFINP` namelists specify the input and output, and the fundamental job options.
 
-The functional is controlled through **IPNOF=N** in &NOFINP, with N the number of the functional. For example, INPOF=7 indicates to use PNOF7. GNOF is indicated with IPNOF=8.
+The functional is controlled through `IPNOF=N` in *&NOFINP*, with *N* the number of the functional. For example, `INPOF=7` indicates to use `PNOF7`. The most recent `GNOF` is indicated with `IPNOF=8`.
 
 Current capabilities include:
 - **RUNTYP = ENERGY** - Single-point Energy (Default)
@@ -65,4 +65,4 @@ Current capabilities include:
 - **RUNTYP = HESS** - Numerical Hessian
 - **RUNTYP = DYN** - Born-Oppenheimer on-the-fly molecular dynamics
 
-Other common options include excited states calculation (**ERPA=T**) and NOF-MBPT calculations (**MBPT=T**).
+Other common options include excited states calculation (`ERPA=T`) and NOF-MBPT calculations (`MBPT=T`).
