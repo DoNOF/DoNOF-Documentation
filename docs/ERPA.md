@@ -137,7 +137,7 @@ $$
 
 with $A_{rspq}=B_{rsqp}$ given by
 
-\begin{gather*}
+$$
     A_{rspq} = h_{sq} \delta_{pr} (n_p - n_s) + h_{pr} \delta_{sq} (n_q - n_r) \\
     + \sum_{tu} (\braket{qt}{su} - \braket{qt}{us}) \mathrm{D}_{ptru}^{\alpha\alpha\alpha\alpha}
     + \sum_{tu} (\braket{pt}{ru} - \braket{pt}{ur}) \mathrm{D}_{qtsu}^{\alpha\alpha\alpha\alpha} \\
@@ -147,7 +147,7 @@ with $A_{rspq}=B_{rsqp}$ given by
     + \sum_{tu} \braket{qr}{ut}\mathrm{D}_{pstu}^{\alpha\alpha\alpha\alpha} - \sum_{tu} \braket{qr}{tu}\mathrm{D}_{pstu}^{\alpha\beta\alpha\beta} \\
     + \delta_{qs} \sum_{tuv} \braket{pt}{vu}\mathrm{D}_{rtuv}^{\alpha\alpha\alpha\alpha} - \delta_{qs} \sum_{tuv} \braket{pt}{uv}\mathrm{D}_{rtuv}^{\alpha\beta\alpha\beta} \\
     + \delta_{pr} \sum_{tuv} \braket{qt}{vu}\mathrm{D}_{stuv}^{\alpha\alpha\alpha\alpha} - \delta_{pr} \sum_{tuv} \braket{qt}{uv}\mathrm{D}_{stuv}^{\alpha\beta\alpha\beta}
-\end{gather*}
+$$
 
 and
 
