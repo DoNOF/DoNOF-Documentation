@@ -1,4 +1,4 @@
-# Single Point Energy
+# Piris Natural Orbital Functionals
 
 ## Input
 
