@@ -16,5 +16,7 @@ parts:
 - caption: Excited Stated
   chapters:
     - file: PNOF-ERPA
-  - file: input
-  - file: examples
+- caption: General
+  chapters:
+    - file: input
+    - file: examples
