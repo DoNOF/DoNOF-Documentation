@@ -10,6 +10,7 @@ parts:
   - file: OptGeo
   - file: NOF-MP2
   - file: ERPA
+  - file: PythonandJulia
 - caption: Complete List of Options
   chapters:
     - file: input
@@ -17,7 +18,6 @@ parts:
   chapters:
   - file: License
   - file: Contact
-  - file: PythonandJulia
 
 #  - file: examples
 #  - file: Getting-Started
