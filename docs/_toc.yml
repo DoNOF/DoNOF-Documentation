@@ -9,17 +9,13 @@ parts:
   - file: Getting-Started
   - file: License
   - file: Contact
-- caption: Single Point Energy
+- caption: Basic Calculations
   chapters:
     - file: PNOF
     - file: NOF-MP2
-- caption: Excited States
-  chapters:
     - file: PNOF-ERPA
+    - file: PythonandJulia
 - caption: General
   chapters:
     - file: input
     - file: examples
-- caption: PythonandJulia
-  chapters:
-    - file: PythonandJulia
