@@ -20,3 +20,6 @@ parts:
   chapters:
     - file: input
     - file: examples
+- caption: PythonandJulia
+  chapters:
+    - file: PythonandJulia
