@@ -13,7 +13,7 @@ parts:
   chapters:
     - file: PNOF
     - file: NOF-MP2
-- caption: Excited Stated
+- caption: Excited States
   chapters:
     - file: PNOF-ERPA
 - caption: General
