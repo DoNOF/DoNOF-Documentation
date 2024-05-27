@@ -6,16 +6,17 @@ parts:
 - caption: Overview 🪄
   chapters:
   - file: Installation
-  - file: Getting-Started
-  - file: License
-  - file: Contact
-- caption: Basic Calculations
-  chapters:
-    - file: PNOF
-    - file: NOF-MP2
-    - file: PNOF-ERPA
-    - file: PythonandJulia
-- caption: General
+  - file: PNOF
+  - file: NOF-MP2
+  - file: PNOF-ERPA
+- caption: Complete List of Options
   chapters:
     - file: input
     - file: examples
+- caption: About
+  chapters:
+  - file: License
+  - file: Contact
+  - file: PythonandJulia
+    
+#  - file: Getting-Started
