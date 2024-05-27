@@ -8,11 +8,22 @@
 [`Phys. Rev. A 100(3), 032508 (2019).`](https://doi.org/10.1103/PhysRevA.100.032508)
 ```
 
-In order to activate the NOF-MP2 calculation in DoNOF, set (in the input file):
+You can apply a perturbative calculation (NOF-MP2) to a PNOF7s calculation using `OIMP2=T` in the `&NOFINP`
 
+:::{admonition} Example Input
 ~~~
-    $NOFINP OIMP2=T IPNOF=7 Ista=1 /
+ &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0 ERITYP='FULL' /
+ $DATA
+ Water (H2O)
+ cc-pVDZ
+O  8.0  0.0000     0.0000    0.1173
+H  1.0  0.0000     0.7572   -0.4692
+H  1.0  0.0000    -0.7572   -0.4692
+ $END
+ &NOFINP OIMP2=T IPNOF=7 Ista=1 /
 ~~~
+:::
+
 
 Note that static PNOF7 (PNOF7s) is the best option to carry out NOF-MP2 calculations. 
 The latter is specified by the Ista=1 keyword in the input file. 
