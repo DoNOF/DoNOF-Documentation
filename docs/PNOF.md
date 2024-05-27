@@ -88,9 +88,7 @@ DoNOF contains several approximations that lead to the NOFs named as PNOFi [i=3-
 ### PNOF5
 
 ```{margin} Article
-~~~
-[J. Chem. Phys. 134(16), 164102 (2011).](https://doi.org/10.1063/1.3582792)
-~~~
+[`J. Chem. Phys. 134(16), 164102 (2011).`](https://doi.org/10.1063/1.3582792)
 ```
 
 PNOF5 is an independent-pair model. It is a pure N-representable NOF, since it corresponds to an APSG wavefunction with fixed phases (see JCP 139, 234109, 2013).
