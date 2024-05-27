@@ -136,6 +136,7 @@ $$
 $$
 
 with $A_{rspq}=B_{rsqp}$ given by
+
 $$
     A_{rspq} &=& h_{sq} \delta_{pr} (n_p - n_s) + h_{pr} \delta_{sq} (n_q - n_r) \\
     &+& \sum_{tu} (\braket{qt}{su} - \braket{qt}{us}) \mathrm{D}_{ptru}^{\alpha\alpha\alpha\alpha}
