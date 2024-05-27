@@ -26,9 +26,18 @@ You can perform excited state calculations via the extended random phase approxi
 $$
     \bra{\psi_0}[\delta \mathcal{O}_\nu,[\hat{H},\mathcal{O}_\nu^\dagger]]\ket{\psi_0} = \omega_\nu \bra{\psi_0}[\delta \mathcal{O}_\nu,\mathcal{O}_\nu^\dagger]\ket{\psi_0}
 $$
-with a specific excitation operator.
+with a given excitation operator.
 
 ERPA0:
+
+The excitation operator is given by
+
+$$
+ \mathcal{O}^\dagger = \sum_{p>q}^{N/2} X_{pq} (a_{p_{\alpha}}^\dagger a_{q_{\alpha}} + a_{p_{\beta}}^\dagger a_{q_{\beta}})
++ \sum_{p>q}^{N/2} Y_{pq} (a_{q_{\alpha}}^\dagger a_{p_{\alpha}} + a_{q_{\beta}}^\dagger a_{p_{\beta}})
+$$
+
+and the equation to solve is
 
 $$
     \begin{pmatrix}
@@ -52,6 +61,16 @@ $$
 $$
 
 ERPA1:
+
+The excitation operator is given by
+
+$$
+ \mathcal{O}^\dagger = \sum_{p>q}^{N/2} X_{pq} (a_{p_{\alpha}}^\dagger a_{q_{\alpha}} + a_{p_{\beta}}^\dagger a_{q_{\beta}})
++ \sum_{p>q}^{N/2} Y_{pq} (a_{q_{\alpha}}^\dagger a_{p_{\alpha}} + a_{q_{\beta}}^\dagger a_{p_{\beta}})\\
++ \sum_{p}^{N/2} Z_{p} (a_{p_{\alpha}}^\dagger a_{p_{\alpha}} + a_{p_{\beta}}^\dagger a_{p_{\beta}})
+$$
+
+and the equation to solve is
 
 $$
     \begin{pmatrix}
@@ -79,6 +98,17 @@ $$
 $$
 
 ERPA2:
+
+The excitation operator is given by
+
+$$
+ \mathcal{O}^\dagger = \sum_{p>q}^{N/2} X_{pq} (a_{p_{\alpha}}^\dagger a_{q_{\alpha}} + a_{p_{\beta}}^\dagger a_{q_{\beta}})
++ \sum_{p>q}^{N/2} Y_{pq} (a_{q_{\alpha}}^\dagger a_{p_{\alpha}} + a_{q_{\beta}}^\dagger a_{p_{\beta}})\\
++ \sum_{p}^{N/2} Z_{p} (a_{p_{\alpha}}^\dagger a_{p_{\alpha}} + a_{p_{\beta}}^\dagger a_{p_{\beta}}) \\
++ \sum_{pq}^{N/2} D_{pq} a_{p_{\beta}}^\dagger a_{q_{\beta}} a_{p_{\alpha}}^\dagger a_{q_{\alpha}}
+$$
+
+and the equation to solve is
 
 $$
     \begin{pmatrix}
