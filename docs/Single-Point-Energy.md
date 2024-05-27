@@ -14,6 +14,12 @@ H  1.0  0.0000    -0.7572   -0.4692
  &NOFINP IPNOF=8 /
 ~~~
 
+:::{admonition} Tips and Tricks
+:class: tip, dropdown
+Use `ERITYP='RI'` for $N^4$ aritmethic scaling and `IORBOPT=4` for experimental state of the art convergency. 
+:::
+
+
 ## Input Sections
 
 ### `&INPRUN`
@@ -23,8 +29,8 @@ You can identify the following information inside the `&INPRUN` directive:
 - `MULT`: The spin multiplicity.
 - `ICHARG`: The charge of the system
 - `ERITYP`:
-  - `FULL`: For using four center integrals
-  - `RI`: For using the resolution of the identity approximation
+  - `FULL`: For using four center integrals. (Scaling: $N^5$)
+  - `RI`: For using the resolution of the identity approximation. (Scaling: $N^4$)
   - `MIX`: For automatically performin an RI calculation followed by a restart with FULL.  
 
 ### `$DATA`
