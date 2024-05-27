@@ -134,3 +134,24 @@ $$
         V_{p}
     \end{pmatrix}
 $$
+
+with $A_{rspq}=B_{rsqp}$ given by
+\begin{eqnarray*}
+    A_{rspq} &=& h_{sq} \delta_{pr} (n_p - n_s) + h_{pr} \delta_{sq} (n_q - n_r) \nonumber \\
+    &+& \sum_{tu} (\braket{qt}{su} - \braket{qt}{us}) \mathrm{D}_{ptru}^{\alpha\alpha\alpha\alpha}
+    + \sum_{tu} (\braket{pt}{ru} - \braket{pt}{ur}) \mathrm{D}_{qtsu}^{\alpha\alpha\alpha\alpha} \nonumber \\
+    &+& \sum_{tu} \braket{qt}{su} \mathrm{D}_{ptru}^{\alpha\beta\alpha\beta} + \sum_{tu} \braket{qt}{us} \mathrm{D}_{ptur}^{\alpha\beta\alpha\beta}
+    + \sum_{tu} \braket{pt}{ru} \mathrm{D}_{qtsu}^{\alpha\beta\alpha\beta} + \sum_{tu} \braket{pt}{ur} \mathrm{D}_{qtus}^{\alpha\beta\alpha\beta} \nonumber \\
+    &+& \sum_{tu} \braket{ps}{ut}\mathrm{D}_{qrtu}^{\alpha\alpha\alpha\alpha} - \sum_{tu} \braket{ps}{tu}\mathrm{D}_{qrtu}^{\alpha\beta\alpha\beta}
+    + \sum_{tu} \braket{qr}{ut}\mathrm{D}_{pstu}^{\alpha\alpha\alpha\alpha} - \sum_{tu} \braket{qr}{tu}\mathrm{D}_{pstu}^{\alpha\beta\alpha\beta} \nonumber \\
+    &+& \delta_{qs} \sum_{tuv} \braket{pt}{vu}\mathrm{D}_{rtuv}^{\alpha\alpha\alpha\alpha} - \delta_{qs} \sum_{tuv} \braket{pt}{uv}\mathrm{D}_{rtuv}^{\alpha\beta\alpha\beta} \nonumber \\
+    &+& \delta_{pr} \sum_{tuv} \braket{qt}{vu}\mathrm{D}_{stuv}^{\alpha\alpha\alpha\alpha} - \delta_{pr} \sum_{tuv} \braket{qt}{uv}\mathrm{D}_{stuv}^{\alpha\beta\alpha\beta}
+\end{eqnarray*}
+
+and
+
+$$
+c_p = \pm \sqrt{n_p}
+$$
+
+under the PNOF convention of a `+\sqrt{n_p}` for strongly occupied orbitals and `-\sqrt{n_p}` for weakly occupied orbitals.
