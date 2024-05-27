@@ -1,5 +1,7 @@
 # Single Point Energy
 
+## Input
+
 You can run a single point energy calculation using the `RUNTYP='ENERGY'` in the `&INPRUN` as in the following example:
 
 :::{admonition} Example Input
@@ -21,8 +23,6 @@ H  1.0  0.0000    -0.7572   -0.4692
 :class: tip, dropdown
 Use `ERITYP='RI'` for $N^4$ aritmethic scaling and `IORBOPT=4` for experimental state of the art convergency. 
 :::
-
-## Input Sections
 
 ### `&INPRUN`
 
@@ -85,7 +85,7 @@ $$
 
 DoNOF contains several approximations that lead to the NOFs named as PNOFi [i=3-7] (in the input file we choose one or another by setting IPNOF=i). For more info see IJQC 113, 620 (2013), and also the references given below.
 
-## PNOF5
+### PNOF5
 
 (JCP 134, 164102, 2011)
 
@@ -104,7 +104,7 @@ $$
 \begin{array}{c}\\\Pi_{qp}^{g}=\left\{ \begin{array}{cc}-\sqrt{n_{q}n_{p}}\,, & p=g\textrm{ or }q=g\\+\sqrt{n_{q}n_{p}}\,, & p,q>\mathrm{N}/2\end{array}\right.\;,\qquad\delta_{q\Omega_{g}}=\begin{cases}1, & q\in\Omega_{g}\\0, & q\notin\Omega_{g}\end{cases}\end{array}
 $$
 
-## PNOF6
+### PNOF6
 
 (JCP 141, 044107, 2014)
 
@@ -124,7 +124,7 @@ $$
 \begin{array}{c}\gamma_{p}=n_{p}h_{p}+\alpha_{p}^{2}-\alpha_{p}S_{\alpha}\\\alpha_{p}=\begin{cases}e^{-S}h_{p}\,, & p\leq F\\e^{-S}n_{p}\,, & p>F\end{cases}\\\Pi_{qp}^{\gamma}=\left(n_{q}h_{p}+{\displaystyle \frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}}\right)^{\frac{1}{2}}\left(h_{q}n_{p}+{\frac{\gamma_{q}\gamma_{p}}{S_{\gamma}}}\right)^{\frac{1}{2}}\\S={\displaystyle\sum_{q=F+1}^{F+FN_{c}}}n_{q},\quad S_{\alpha}={\sum_{q=F+1}^{F+FN_{c}}}\alpha_{q},\quad S_{\gamma}={\sum_{q=F+1}^{F+FN_{c}}}\gamma_{q}\end{array}
 $$
 
-## PNOF7 
+### PNOF7 
 
 (PRL 119, 063002, 2017; EPJB 91, 109, 2018)
 
@@ -146,7 +146,7 @@ $$
 where {n} is the set of natural orbital occupation numbers.
     
 
-## PNOF7s
+### PNOF7s
 
 (PRA 98, 022504, 2018)
 
@@ -171,7 +171,7 @@ $$
 Note real orbitals are assumed, so exchange (K) and time-inversion-exchange (L) integrals are equivalent.
 
 
-## GNOF
+### GNOF
 
 (PRL 127, 233001, 2021)
 
