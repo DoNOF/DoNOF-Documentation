@@ -9,7 +9,7 @@ parts:
   - file: PNOF
   - file: OptGeo
   - file: NOF-MP2
-  - file: PNOF-ERPA
+  - file: ERPA
 - caption: Complete List of Options
   chapters:
     - file: input
