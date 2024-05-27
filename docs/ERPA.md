@@ -21,7 +21,12 @@ H  1.0  0.0000     0.0000    0.7414
 ~~~
 :::
 
-You can perform excited state calculations via the extended random phase approximation (ERPA) by using the 2RDM provided by the PNOF5, PNOF7 and GNOF functionals, with the advantage of having a ground state with static and dynamic electron correlation. The equations to solve are:
+You can perform excited state calculations via the extended random phase approximation (ERPA) by using the 2RDM provided by the PNOF5, PNOF7 and GNOF functionals, with the advantage of having a ground state with static and dynamic electron correlation. The ERPA equations comes from solving the Rowe equation:
+
+$$
+    \bra{\psi_0}[\delta \mathcal{O}_\nu,[\hat{H},\mathcal{O}_\nu^\dagger]]\ket{\psi_0} = \omega_\nu \bra{\psi_0}[\delta \mathcal{O}_\nu,\mathcal{O}_\nu^\dagger]\ket{\psi_0}
+$$
+with a specific excitation operator.
 
 ERPA0:
 
