@@ -2,7 +2,9 @@
 
 ```{margin} Article
 [`Phys. Rev. Lett. 119(6), 063002 (2017).`](https://doi.org/10.1103/PhysRevLett.119.063002)
+
 [`Phys. Rev. A 98(2), 022504 (2018).`](https://doi.org/10.1103/PhysRevA.98.022504)
+
 [`Phys. Rev. A 100(3), 032508 (2019).`](https://doi.org/10.1103/PhysRevA.100.032508)
 ```
 
