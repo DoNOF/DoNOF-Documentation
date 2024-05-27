@@ -11,7 +11,6 @@ parts:
   - file: Contact
 - caption: Single Point Energy
   chapters:
-    - file: Single-Point-Energy
     - file: PNOF
     - file: NOF-MP2
     - file: input
