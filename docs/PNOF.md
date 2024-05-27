@@ -108,7 +108,9 @@ $$
 
 ### PNOF6
 
-(JCP 141, 044107, 2014)
+```{margin} Article
+[`M. Piris, J. Chem. Phys. 141(4), 044107 (2014).`](https://doi.org/10.1063/1.4890653)
+```
 
 In the case of PNOF6, the only difference with respect to PNOF5 relies on the interaction between electrons that belong to different electron pairs. For PNOF6 this interaction is defined as
 
@@ -128,7 +130,10 @@ $$
 
 ### PNOF7 
 
-(PRL 119, 063002, 2017; EPJB 91, 109, 2018)
+```{margin} Article
+[`Phys. Rev. Lett. 119(6), 063002 (2017).`](https://doi.org/10.1103/PhysRevLett.119.063002)
+[`Eur. Phys. J. B 91(6), 109 (2018).`](https://doi.org/10.1140/epjb/e2018-90078-8)
+```
 
 PNOF7 introduces correlation between pairs of electrons through a term that explicitly contains particle-hole symmetry.
 
@@ -150,7 +155,9 @@ where {n} is the set of natural orbital occupation numbers.
 
 ### PNOF7s
 
-(PRA 98, 022504, 2018)
+```{margin} Article
+[`Phys. Rev. A 98(2), 022504 (2018).`](https://doi.org/10.1103/PhysRevA.98.022504)
+```
 
 In order to choose PNOF7s in DoNOF, you must set IPNOF=7 Ista=1 in the $NOFINP section of your input file.
 
@@ -175,7 +182,9 @@ Note real orbitals are assumed, so exchange (K) and time-inversion-exchange (L) 
 
 ### GNOF
 
-(PRL 127, 233001, 2021)
+```{margin} Article
+[`Phys. Rev. Lett. 127(23), 233001 (2021).`](https://doi.org/10.1103/PhysRevLett.127.233001)
+```
 
 In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of your input file.
 
