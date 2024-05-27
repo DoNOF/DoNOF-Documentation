@@ -1,7 +1,7 @@
 # Excited States
 
 ```{margin} Article
-[J. Chem. Theory Comput. 20(5), 2140–2151 (2024).](https://doi.org/10.1021/acs.jctc.3c01194)
+[`J. Chem. Theory Comput. 20(5), 2140–2151 (2024).`](https://doi.org/10.1021/acs.jctc.3c01194)
 ```
 
 ## Input
