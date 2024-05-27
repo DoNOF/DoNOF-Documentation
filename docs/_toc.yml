@@ -7,6 +7,7 @@ parts:
   chapters:
   - file: Installation
   - file: PNOF
+  - file: OptGeo
   - file: NOF-MP2
   - file: PNOF-ERPA
 - caption: Complete List of Options
