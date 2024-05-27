@@ -22,7 +22,7 @@ Comp. Phys. Comm. 259, 107651 (2021) [DOI:10.1016/j.cpc.2020.107651](https://doi
 ```{margin} arXiv
 You can find a preprint corresponding to this publication in:
 ~~~
-    https://arxiv.org/abs/2004.06142 
+https://arxiv.org/abs/2004.06142 
 ~~~
 ```
 
