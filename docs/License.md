@@ -14,6 +14,7 @@ it without the express written permission of the author.
 By citing DoNOF you are encouraging development and exposing the software package.
 
 :::{admonition} Citation
+:class:tip
 M. Piris, I. Mitxelena, DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry”, 
 Comp. Phys. Comm. 259, 107651 (2021) [DOI:10.1016/j.cpc.2020.107651](https://doi.org/10.1016/j.cpc.2020.107651)
 :::
