@@ -48,6 +48,10 @@ You can identify the following information inside the `&NOFINP` directive:
 
 ## Visualization
 
+```{margin} Article
+[`Theor. Chem. Acc. 132(2), 1298 (2013).`](https://doi.org/10.1007/s00214-012-1298-4)
+```
+
 By default the code will output a `file.mld` that you can visualize with MOLDEN, and a `file.fchk` that you can open with many softwares such as Avogadro and IQmol, allowing to visualize the natural orbitals.
 ![Azine-ON](./Azine.jpg)
 
