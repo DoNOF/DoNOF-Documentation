@@ -19,13 +19,13 @@ M. Piris, I. Mitxelena, DoNOF: an open-source implementation of natural-orbital-
 Comp. Phys. Comm. 259, 107651 (2021) [DOI:10.1016/j.cpc.2020.107651](https://doi.org/10.1016/j.cpc.2020.107651)
 :::
 
-````{margin}
-```{note}
+```{margin} arXiv
 You can find a preprint corresponding to this publication in:
-
+~~~
     https://arxiv.org/abs/2004.06142 
+~~~
 ```
-````
+
 You can also place the following in your bibtex file:
 ~~~
     @article{Piris2021,
