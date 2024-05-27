@@ -6,12 +6,11 @@ parts:
 - caption: Overview 🪄
   chapters:
   - file: Installation
+  - file: Getting-Started
   - file: License
   - file: Contact
-- caption: User Documentation
-  chapters:
-    - file: Getting-Started
 - caption: Single Point Energy
+  chapters:
     - file: Single-Point-Energy
     - file: PNOF
     - file: NOF-MP2
