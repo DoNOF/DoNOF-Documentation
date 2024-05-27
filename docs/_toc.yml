@@ -13,5 +13,8 @@ parts:
   chapters:
     - file: PNOF
     - file: NOF-MP2
-    - file: input
-    - file: examples
+- caption: Excited Stated
+  chapters:
+    - file: PNOF-ERPA
+  - file: input
+  - file: examples
