@@ -3,7 +3,7 @@
 format: jb-book
 root: intro
 parts:
-- caption: Overview 🪄
+- caption: ⭐ Overview 
   chapters:
   - file: Installation
   - file: PNOF
@@ -11,10 +11,10 @@ parts:
   - file: NOF-MP2
   - file: ERPA
   - file: PythonandJulia
-- caption: Complete List of Options
+- caption: 📚 Complete List of Options
   chapters:
     - file: input
-- caption: About
+- caption: 💡 About
   chapters:
   - file: License
   - file: Contact
