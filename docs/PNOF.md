@@ -18,11 +18,6 @@ H  1.0  0.0000    -0.7572   -0.4692
 ~~~
 :::
 
-:::{admonition} Tip
-:class: tip, dropdown
-Use `ERITYP='RI'` for $N^4$ aritmethic scaling and `IORBOPT=4` for experimental state of the art convergency. 
-:::
-
 ### `&INPRUN`
 
 You can identify the following information inside the `&INPRUN` directive:
