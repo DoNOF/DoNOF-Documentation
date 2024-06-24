@@ -14,6 +14,7 @@ parts:
 - caption: 📚 Complete List of Options
   chapters:
     - file: input
+    - file: occupation-mapping
 - caption: 💡 About
   chapters:
   - file: License
