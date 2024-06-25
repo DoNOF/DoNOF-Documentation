@@ -49,20 +49,12 @@ The possible derivatives are:
 | 1 | 2 | 3 | 4 |
 |---|---|---|---|
 |$\frac{\partial \eta_g}{\partial \gamma_g} = -\frac{1}{2} \sin ( 2 \gamma_g)$ | | | |
-|$\frac{\partial \eta_{p_1}}{\partial \gamma_g} = - \frac{\partial \eta_g}{\partial \gamma_g} \sin^2(\gamma_{p_1})$ | 
-$\frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} = \eta_g \sin ( 2 \gamma_{p_1})$ | | |
-|$\frac{\partial \eta_{p_2}}{\partial \gamma_g} =  (- \frac{\partial \eta_g}{\partial \gamma_g} -\frac{\partial\eta_{p_1}}{\partial\gamma_g}) \sin^2(\gamma_{p_2})$ |
-$\frac{\partial \eta_{p_2}}{\partial \gamma_{p_1}} = - \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} \sin^2(\gamma_{p_2})$ | 
-$\frac{\partial \eta_{p_2}}{\partial \gamma_{p_2}} = (1-\eta_g-\eta_{p_1})\sin^2(2\gamma_{p_2})$ | |
+|$\frac{\partial \eta_{p_1}}{\partial \gamma_g} = - \frac{\partial \eta_g}{\partial \gamma_g} \sin^2(\gamma_{p_1})$ | $\frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} = \eta_g \sin ( 2 \gamma_{p_1})$ | | |
+|$\frac{\partial \eta_{p_2}}{\partial \gamma_g} =  (- \frac{\partial \eta_g}{\partial \gamma_g} -\frac{\partial\eta_{p_1}}{\partial\gamma_g}) \sin^2(\gamma_{p_2})$ | $\frac{\partial \eta_{p_2}}{\partial \gamma_{p_1}} = - \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} \sin^2(\gamma_{p_2})$ | $\frac{\partial \eta_{p_2}}{\partial \gamma_{p_2}} = (1-\eta_g-\eta_{p_1})\sin^2(2\gamma_{p_2})$ | |
 |$\frac{\partial \eta_{p_3}}{\partial \gamma_g} = (- \frac{\partial \eta_g}{\partial \gamma_g}-\frac{\partial\eta_{p_1}}{\partial\gamma_g}-\frac{\partial\eta_{p_2}}{\partial\gamma_g}) \sin^2(\gamma_{p_3})$ |
-$\frac{\partial \eta_{p_3}}{\partial \gamma_{p_1}} =  (- \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} -\frac{\partial\eta_{p_2}}{\partial\gamma_{p_1}} )\sin^2(\gamma_{p_3})$ |
-$\frac{\partial \eta_{p_3}}{\partial \gamma_{p_2}} = -\frac{\partial\eta_{p_2}}{\partial \gamma_{p_2}} \sin^2 (\gamma_{p_3})$ |
-$\frac{\partial \eta_{p_3}}{\partial \gamma_{p_3}} = (1-\eta_g-\eta_{p_1}-\eta_{p_2})\sin(2\gamma_{p_3})$ |
-|$\frac{\partial \eta_{p_4}}{\partial \gamma_g} = (- \frac{\partial \eta_g}{\partial \gamma_g}-\frac{\partial\eta_{p_1}}{\partial\gamma_g}-\frac{\partial\eta_{p_2}}{\partial\gamma_g}-\frac{\partial\eta_{p_3}}{\partial\gamma_g})$ |
-$\frac{\partial \eta_{p_4}}{\partial \gamma_{p_1}} = - \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}}- 
-\frac{\partial\eta_{p_2}}{\partial\gamma_{p_1}}-\frac{\partial\eta_{p_3}}{\partial\gamma_{p_1}}$ | 
-$\frac{\partial \eta_{p_4}}{\partial \gamma_{p_2}} = -\frac{\partial\eta_{p_2}}{\partial \gamma_{p_2}} -\frac{\partial\eta_{p_3}}{\partial\gamma_{p_2}}$ |
-$\frac{\partial \eta_{p_4}}{\partial \gamma_{p_3}} = -\frac{\partial\eta_{p_3}}{\partial \gamma_{p_3}}$ |
+$\frac{\partial \eta_{p_3}}{\partial \gamma_{p_1}} =  (- \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} -\frac{\partial\eta_{p_2}}{\partial\gamma_{p_1}} )\sin^2(\gamma_{p_3})$ | $\frac{\partial \eta_{p_3}}{\partial \gamma_{p_2}} = -\frac{\partial\eta_{p_2}}{\partial \gamma_{p_2}} \sin^2 (\gamma_{p_3})$ | $\frac{\partial \eta_{p_3}}{\partial \gamma_{p_3}} = (1-\eta_g-\eta_{p_1}-\eta_{p_2})\sin(2\gamma_{p_3})$ |
+|$\frac{\partial \eta_{p_4}}{\partial \gamma_g} = (- \frac{\partial \eta_g}{\partial \gamma_g}-\frac{\partial\eta_{p_1}}{\partial\gamma_g}-\frac{\partial\eta_{p_2}}{\partial\gamma_g}-\frac{\partial\eta_{p_3}}{\partial\gamma_g})$ | $\frac{\partial \eta_{p_4}}{\partial \gamma_{p_1}} = - \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}}- 
+\frac{\partial\eta_{p_2}}{\partial\gamma_{p_1}}-\frac{\partial\eta_{p_3}}{\partial\gamma_{p_1}}$ | $\frac{\partial \eta_{p_4}}{\partial \gamma_{p_2}} = -\frac{\partial\eta_{p_2}}{\partial \gamma_{p_2}} -\frac{\partial\eta_{p_3}}{\partial\gamma_{p_2}}$ | $\frac{\partial \eta_{p_4}}{\partial \gamma_{p_3}} = -\frac{\partial\eta_{p_3}}{\partial \gamma_{p_3}}$ |
 
 
  Generalizing:
