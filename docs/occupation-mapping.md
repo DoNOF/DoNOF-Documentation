@@ -46,23 +46,20 @@ ${\eta_{p_4} = {\color{brown}{h_g \cos^2 \gamma_{p_1} \cos^2 \gamma_{p_2} \cos^2
 
 The possible derivatives are:
 
-|   |   |   |   |
-|---|---|---|---|
-|$\frac{\partial \eta_g}{\partial \gamma_g} = -\frac{1}{2} \sin ( 2 \gamma_g)$ | | | |
-|$\frac{\partial \eta_{p_1}}{\partial \gamma_g} = - \frac{\partial \eta_g}{\partial \gamma_g} \sin^2(\gamma_{p_1})$ | $\frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} = \eta_g \sin ( 2 \gamma_{p_1})$ | | |
-|$\frac{\partial \eta_{p_2}}{\partial \gamma_g} =  (- \frac{\partial \eta_g}{\partial \gamma_g} -\frac{\partial\eta_{p_1}}{\partial\gamma_g}) \sin^2(\gamma_{p_2})$ | $\frac{\partial \eta_{p_2}}{\partial \gamma_{p_1}} = - \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} \sin^2(\gamma_{p_2})$ | $\frac{\partial \eta_{p_2}}{\partial \gamma_{p_2}} = (1-\eta_g-\eta_{p_1})\sin^2(2\gamma_{p_2})$ | |
-|$\frac{\partial \eta_{p_3}}{\partial \gamma_g} = (- \frac{\partial \eta_g}{\partial \gamma_g}-\frac{\partial\eta_{p_1}}{\partial\gamma_g}-\frac{\partial\eta_{p_2}}{\partial\gamma_g}) \sin^2(\gamma_{p_3})$ | $\frac{\partial \eta_{p_3}}{\partial \gamma_{p_1}} =  (- \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}} -\frac{\partial\eta_{p_2}}{\partial\gamma_{p_1}} )\sin^2(\gamma_{p_3})$ | $\frac{\partial \eta_{p_3}}{\partial \gamma_{p_2}} = -\frac{\partial\eta_{p_2}}{\partial \gamma_{p_2}} \sin^2 (\gamma_{p_3})$ | $\frac{\partial \eta_{p_3}}{\partial \gamma_{p_3}} = (1-\eta_g-\eta_{p_1}-\eta_{p_2})\sin(2\gamma_{p_3})$ |
-|$\frac{\partial \eta_{p_4}}{\partial \gamma_g} = (- \frac{\partial \eta_g}{\partial \gamma_g}-\frac{\partial\eta_{p_1}}{\partial\gamma_g}-\frac{\partial\eta_{p_2}}{\partial\gamma_g}-\frac{\partial\eta_{p_3}}{\partial\gamma_g})$ | $\frac{\partial \eta_{p_4}}{\partial \gamma_{p_1}} = - \frac{\partial \eta_{p_1}}{\partial \gamma_{p_1}}-\frac{\partial\eta_{p_2}}{\partial\gamma_{p_1}}-\frac{\partial\eta_{p_3}}{\partial\gamma_{p_1}}$ | $\frac{\partial \eta_{p_4}}{\partial \gamma_{p_2}} = -\frac{\partial\eta_{p_2}}{\partial \gamma_{p_2}} -\frac{\partial\eta_{p_3}}{\partial\gamma_{p_2}}$ | $\frac{\partial \eta_{p_4}}{\partial \gamma_{p_3}} = -\frac{\partial\eta_{p_3}}{\partial \gamma_{p_3}}$ |
+\begin{array}{llll}
+\frac{\partial \eta_{{\color{green}g}}}{\partial \gamma_{\color{green}g}} = -\frac{1}{2} \sin(2\gamma_g) & & & \\
+\\
+\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{\color{brown}g}} = -(\frac{\partial\eta_g}{\partial\gamma_g}+\sum_{k=1}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_g})\sin^2(\gamma_{p_i}) &
+\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{\color{brown}{j<i}}} = -(\sum_{k=j}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_{p_j}})\sin^2(\gamma_{p_i}) &
+\frac{\partial \eta_{p_{\color{blue}i}}}{\partial \gamma_{p_{\color{blue}{i}}}} = -(1-\eta_g-\sum_{k=1}^{i-1}\eta_{p_k})\sin^2(2\gamma_{p_i}) &
+\text{i} \ne N_g \\
+\\
+\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{\color{brown}g}} = -(\frac{\partial\eta_g}{\partial\gamma_g}+\sum_{k=1}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_g}) &
+\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{p{\color{brown}{j<i}}}} = -(\sum_{k=j}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_{p_j}}) & & 
+\text{i} \equiv N_g \\
+\end{array}
 
 
- Generalizing:
 
-|   |   |   |   |
-|---|---|---|---|
-|$\frac{\partial \eta_{{\color{green}g}}}{\partial \gamma_{\color{green}g}} = -\frac{1}{2} \sin(2\gamma_g)$ | | | |
-|$\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{\color{brown}g}} = -(\frac{\partial\eta_g}{\partial\gamma_g}+\sum_{k=1}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_g})\sin^2(\gamma_{p_i})$ | $\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{\color{brown}{j<i}}} = -(\sum_{k=j}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_{p_j}})\sin^2(\gamma_{p_i})$ | $\frac{\partial \eta_{p_{\color{blue}i}}}{\partial \gamma_{p_{\color{blue}{i}}}} = -(1-\eta_g-\sum_{k=1}^{i-1}\eta_{p_k})\sin^2(2\gamma_{p_i})$ |
-$\text{i} \ne N_g$ |
-|$\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{\color{brown}g}} = -(\frac{\partial\eta_g}{\partial\gamma_g}+\sum_{k=1}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_g})$ |
-$\frac{\partial \eta_{p_{\color{brown}i}}}{\partial \gamma_{p{\color{brown}{j<i}}}} = -(\sum_{k=j}^{i-1}\frac{\partial\eta_{p_k}}{\partial\gamma_{p_j}})$ | | $\text{i} \equiv N_g$ |
 
 
