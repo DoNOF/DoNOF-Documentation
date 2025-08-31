@@ -31,6 +31,8 @@ RUNTYP:    Specifies the run calculation
     = 'OPTGEO'  optimize the molecular geometry
     
     = 'HESS'   compute numerical hessian from analytic gradients
+
+    = DYN      run Born-Oppenheimer on-the-fly molecular dynamics
     
 MULT:      Multiplicity of the electronic state
 
@@ -65,6 +67,22 @@ UNITS:     Distance units (Any angles must be in degrees)
 EVEC:      An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*Bohr = 5.1422082(15)d+11 V/m)
 
     = 0.0D0  (Default)
+
+USELIB           Use LIBCINT open source library for ERI calculation
+
+      = F        HONDO Calculator
+
+      = T        LIBCINT (Default)
+
+GTYP             Type of Gaussian functions
+
+      = CART     Cartesian (Default)
+
+      = SPH      Spherical (only if LIBCINT)
+
+USEHUB           Use Hubbard Model
+
+      = F        (Default)
     
 DONTW:     Do not write 2e- integrals on the disk (Unit=1)
 
@@ -173,6 +191,28 @@ ICOEF:       Energy Optimization with respect to Coefficient Matrix (Natural Orb
                       
     = 3      Optimize by all occupations and core-fragment orbitals. The rest of fragment orbitals remain frozen
 
+ISOFTMAX     Use Softmax function for ON (Gamma) opt.
+
+    = 1      (Default)
+
+    = 0      Use Trigonometric functions
+
+IORBOPT             Select method for NO optimization
+
+    = 1      Iterative diagonalization (OrbOptFMIUGr)
+
+    = 2      By unitary tranformations (OrbOptRot)
+
+    = 3      Sequential Quadratic Program (OrbOptSQP)
+
+    = 4      Adaptative Momentum (ADAM) (Default)
+
+    = 5      ADABelief
+
+    = 6      YOGI
+
+    = 7      Decaying Momentum (DEMON)     
+
 IEINI:       Calculate only the initial energy
 
     = 0      (DEFAULT)
@@ -238,16 +278,21 @@ IPNOF:       Type of Natural Orbital Functional (see section "NOF approximations
                       
     = 6      PNOF6
                       
-    = 7      PNOF7 (DEFAULT)
+    = 7      PNOF7
     
-    = 8      GNOF
+    = 8      GNOFx (DEFAULT)
                       
 Ista:        Use Static version of PNOF7
 
     = 0      PNOF7 (DEFAULT)
                       
     = 1      PNOF7s
-                      
+
+lmod         Select versions of GNOFx
+    = 0      GNOF (Default)
+
+    = 1      GNOFm
+
 HighSpin:    Spin-uncompensated calculation type
 
     = F      (DEFAULT) Multiple state (Ms=0)
