@@ -10,15 +10,12 @@ parts:
   - file: Contact
 - caption: 📚 User Documentation
   chapters:
-    - file: input
-    - file: occupation-mapping
-  chapters:
   - file: Getting-Started
   - file: NOF
   - file: OptGeo
   - file: NOF-MP2
   - file: ERPA
   - file: PythonandJulia
-
-#  - file: examples
-#  - file: Getting-Started
+- caption: 📚 Input Options
+  chapters:
+    - file: input
