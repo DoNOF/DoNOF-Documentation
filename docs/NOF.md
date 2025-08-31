@@ -1,4 +1,4 @@
-# Piris Natural Orbital Functionals
+# Electron-pairing-based NOF for Multiplets
 
 ## Input
 
