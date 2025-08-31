@@ -13,6 +13,7 @@ parts:
     - file: input
     - file: occupation-mapping
   chapters:
+  - file: Getting-Started
   - file: PNOF
   - file: OptGeo
   - file: NOF-MP2
