@@ -68,19 +68,19 @@ EVEC:      An array of the three x,y,z components of the applied electric field,
 
     = 0.0D0  (Default)
 
-USELIB           Use LIBCINT open source library for ERI calculation
+USELIB:    Use LIBCINT open source library for ERI calculation
 
       = F        HONDO Calculator
 
       = T        LIBCINT (Default)
 
-GTYP             Type of Gaussian functions
+GTYP:      Type of Gaussian functions
 
       = CART     Cartesian (Default)
 
       = SPH      Spherical (only if LIBCINT)
 
-USEHUB           Use Hubbard Model
+USEHUB:    Use Hubbard Model
 
       = F        (Default)
     
@@ -191,13 +191,13 @@ ICOEF:       Energy Optimization with respect to Coefficient Matrix (Natural Orb
                       
     = 3      Optimize by all occupations and core-fragment orbitals. The rest of fragment orbitals remain frozen
 
-ISOFTMAX     Use Softmax function for ON (Gamma) opt.
+ISOFTMAX:    Use Softmax function for ON (Gamma) opt.
 
     = 1      (Default)
 
     = 0      Use Trigonometric functions
 
-IORBOPT             Select method for NO optimization
+IORBOPT:     Select method for NO optimization
 
     = 1      Iterative diagonalization (OrbOptFMIUGr)
 
@@ -288,7 +288,8 @@ Ista:        Use Static version of PNOF7
                       
     = 1      PNOF7s
 
-lmod         Select versions of GNOFx
+lmod:        Select versions of GNOFx
+
     = 0      GNOF (Default)
 
     = 1      GNOFm
