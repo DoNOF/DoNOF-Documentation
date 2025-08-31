@@ -8,7 +8,15 @@ build:
     pre_build:
       # Generate the Sphinx configuration for this Jupyter Book so it builds.
       - "jupyter-book config sphinx docs/"
-      
+
 python:
-   install:
-   - requirements: docs/requirements.txt
+  install:
+    - method: pip
+      path: .
+      extra_requirements:
+      - sphinx
+
+sphinx:
+  configuration: docs/conf.py
+  builder: html
+  fail_on_warning: true
