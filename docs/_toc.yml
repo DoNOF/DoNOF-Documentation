@@ -6,19 +6,18 @@ parts:
 - caption: ⭐ Overview 
   chapters:
   - file: Installation
+  - file: License
+  - file: Contact
+- caption: 📚 User Documentation
+  chapters:
+    - file: input
+    - file: occupation-mapping
+  chapters:
   - file: PNOF
   - file: OptGeo
   - file: NOF-MP2
   - file: ERPA
   - file: PythonandJulia
-- caption: 📚 Complete List of Options
-  chapters:
-    - file: input
-    - file: occupation-mapping
-- caption: 💡 About
-  chapters:
-  - file: License
-  - file: Contact
 
 #  - file: examples
 #  - file: Getting-Started
