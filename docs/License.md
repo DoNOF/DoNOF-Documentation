@@ -40,7 +40,3 @@ You can also place the following in your bibtex file:
     year = {2021}
     }
 ~~~
-
-You can find a preprint corresponding to this publication in:
-
-![https://arxiv.org/abs/2004.06142](https://arxiv.org/abs/2004.06142)
