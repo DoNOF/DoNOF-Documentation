@@ -288,7 +288,7 @@ Ista:        Use Static version of PNOF7
                       
     = 1      PNOF7s
 
-lmod:        Select versions of GNOFx
+Imod:        Select versions of GNOFx
 
     = 0      GNOF (Default)
 
