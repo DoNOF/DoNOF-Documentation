@@ -24,15 +24,15 @@ The &INPRUN namelist specifies the run type and other fundamental job options. T
 
 RUNTYP:    Specifies the run calculation
 
-    = 'ENERGY'   single-point energy calculation (Default)
+    = 'ENERGY'  single-point energy calculation (Default)
 
-    = 'GRAD'   energy + gradients with respect to nuclear coordinates
+    = 'GRAD'    energy + gradients with respect to nuclear coordinates
 
     = 'OPTGEO'  optimize the molecular geometry
     
-    = 'HESS'   compute numerical hessian from analytic gradients
+    = 'HESS'    compute numerical hessian from analytic gradients
 
-    = DYN      run Born-Oppenheimer on-the-fly molecular dynamics
+    = 'DYN'     run Born-Oppenheimer on-the-fly molecular dynamics
     
 MULT:      Multiplicity of the electronic state
 
@@ -52,13 +52,33 @@ IECP:      Effective Core Potentials
 
 IEMOM:     Calculation of electrostatic moments
 
-    = 1      calculate dipole moments (Default)
+    = 1    calculate dipole moments (Default)
 
-    = 2      also calculate quadrupole moments
+NLOP:      Non-Linear Optical Properties
+    =-1    calculate Alpha, Beta & Gamma
+    = 0    No calculation of NLOPs (Default)
+    = 1    calculate polarizability Alpha
+    = 2    calculate 1st-order hyperpolarizability Beta
+    = 3    calculate 2nd-order hyperpolarizability Gamma
 
-    = 3      also calculate octopole moments
+NPOINT:   Number of steps used in the dyadic scaling of
+          the electric field. It represents the total number
+          of fields that will be considered in the calculations
+    = 9   (Default)
 
-UNITS:     Distance units (Any angles must be in degrees)
+STEP:     Initial step size for the electric field. It defines
+          the base value of the field for the first step,
+          with subsequent values being scaled by powers of 2.
+    = 1.0d-04  (Default)
+
+ISOALPHA: Computes the diagonal components of the static
+          polarizability tensor (αxx, αyy, αzz) using the
+          dyadic Romberg–Richardson scheme looping the field
+          direction over x, y, z. Then reports the isotropic
+          average and the anisotropy (Raman convention)
+    = 0        (Default)
+
+UNITS:    Distance units (Any angles must be in degrees)
 
     = ANGS   Angstroms (Default)
 
@@ -80,10 +100,6 @@ GTYP:      Type of Gaussian functions
 
       = SPH      Spherical (only if LIBCINT)
 
-USEHUB:    Use Hubbard Model
-
-      = F        (Default)
-    
 DONTW:     Do not write 2e- integrals on the disk (Unit=1)
 
     = T      (Default)
@@ -95,6 +111,13 @@ ERITYP:    Typ of ERIs used in calculations
     = RI     3c/2c ERIs for Resolution of the Identity (RI) App.
     
     = MIX    3c/2c ERIs for Resolution of the Identity (RI) App. once converged change to 4c ERIs (FULL)
+
+CUTOFF:           The Schwarz screening cut off for NAT>5
+       = 1.0D-9   (Default)
+
+RITYP:            Typ of Auxiliary Basis
+       = JKFIT    Read from jkfit files (Default)
+       = GEN      Use Generative Auxiliary Basis
 
 GEN:         Generative Auxiliary Basis to use in RI Approx. if ERITYP = RI. Values: A2,A2*,A3,A3*,A4,A4* 
              
@@ -132,34 +155,6 @@ NPRIMImax:  Maximum Number of Gaussian Functions
 
     = 2000  (Default)
 
-USEHUB:     Use Hubbard Model Hamiltonian (1D,2D) (See Options in &INPHUB namelist)
-
-    = F     (Default)
-    
-&INPHUB
-^^^^^^^
-The &INPHUB namelist specifies the type of Hubbard calculation
-
-NSITE:      Number of sites in one dimension
-
-    = 1     (Default)
-
-NELEC:      Number of electrons
-
-    = 1     (Default)
-
-NDIMH:      Dimension considered in the Hubbard model
-
-    = 1     (Default)
-
-THOP:       Near-neighbors hopping (t>0)
-
-   = 1.0d0  (Default)
-
-UONS:       On-site energy = The site interaction parameter (U)
-
-   = 1.0d0  (Default)
-   
 
 *******
 &NOFINP
@@ -177,6 +172,10 @@ MAXIT:       Maximum number of OCC-SCF iterations
 
     = 1000   (DEFAULT)
 
+MAXIT21:     Maximum number of iterations for 
+             optimizing only by NOs keeping fixed ONs 
+             if ICOEF = 21 (first part of the Opt.)
+      = 3    (Default)
 
 Type of calculation
 ^^^^^^^^^^^^^^^^^^^
@@ -188,6 +187,7 @@ ICOEF:       Energy Optimization with respect to Coefficient Matrix (Natural Orb
     = 1      Optimize with respect to Gammas and Coefficient matrix (DEFAULT)
                       
     = 2      Optimize only by the orbitals keeping fixed the occupation numbers
+    = 21     ICOEF=2 & MAXIT21, then ICOEF=1
                       
     = 3      Optimize by all occupations and core-fragment orbitals. The rest of fragment orbitals remain frozen
 
@@ -201,17 +201,15 @@ IORBOPT:     Select method for NO optimization
 
     = 1      Iterative diagonalization (OrbOptFMIUGr)
 
-    = 2      By unitary tranformations (OrbOptRot)
+    = 2      Adaptative Momentum (ADAM) (Default)
 
-    = 3      Sequential Quadratic Program (OrbOptSQP)
+    = 3      ADABelief
 
-    = 4      Adaptative Momentum (ADAM) (Default)
+    = 4      YOGI 
 
-    = 5      ADABelief
+    = 5      Decaying Momentum (DEMON) 
 
-    = 6      YOGI
-
-    = 7      Decaying Momentum (DEMON)     
+    = 6      Sequential Quadratic Program (OrbOptSQP)     
 
 IEINI:       Calculate only the initial energy
 
@@ -229,9 +227,13 @@ NO1:         MAX. index of NOs with Occupation equal to 1.0
 HARTREE-FOCK
 ^^^^^^^^^^^^
 
- RHF:        Restricted Hartree-Fock Calculation
+IRHF:        Restricted Hartree-Fock Calculation
  
-    = T      (Default)
+    = 0      Not obtaining HF orbitals
+    = 1      Self Consistent Field (SCF) (Default)
+             (only works with EFIELDL=.FALSE.)
+    = 2      Orbital rotaions through ADAM
+    = 3      Iterative Diagonalization (ID) Method
 
 NCONVRHF:    RHF-SCF Density Convergence Criteria CONVRHFDM=10.0**(-NCONVRHF)
 
@@ -249,18 +251,10 @@ HFEXTRAP:    Extrapolation of the Fock matrix
 
     = T      (Default)
 
-HFID:        Use the Iterative Diagonalization Method to generate the HF Orbitals
+HFDIIS:      Direct Inversion in the Iterative 
+             Subspace in the RHF-SCF optimization
+             = T      (Default)
 
-    = F      (DEFAULT)
-
-NTHRESHEID:  Convergence of the total energy, THRESHEID=10.0**(-NTHRESHEID)
-                     
-    = 6      (DEFAULT)
-
-MAXITID:     Maximum number of external iterations
-                     
-    = 30     (DEFAULT)
-                      
 KOOPMANS:    Calculate IPs using Koopmans' Theorem
 
     = 0      (DEFAULT)
@@ -269,10 +263,6 @@ PNOF Selection
 ^^^^^^^^^^^^^^
 
 IPNOF:       Type of Natural Orbital Functional (see section "NOF approximations")
-
-    = 3      PNOF3 + pairing constraints
-
-    = 4      PNOF4 + pairing constraints
 
     = 5      PNOF5
                       
@@ -313,7 +303,7 @@ NCWO:        Number of coupled weakly occupied MOs per strongly occupied = Nc ->
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more info see section 3 in Comp. Phys. Comm. 259, 107651 (2021), Code Ocean Capsule; arXiv:2004.06142 [physics.comp-ph] by Piris and Mitxelena
+For more info see section 3 in Comp. Phys. Comm. 259, 107651 (2021), Code Ocean Capsule; arXiv:2004.06142 [physics.comp-ph] by Piris and Mitxelena, as well as Phys. Rev. Lett. 134, 206401 (2025) by Lew-Yee, del Campo and Piris.
 
 NTHRESHL:    Convergence of the Lagrange multipliers, THRESHL=10.0**(-NTHRESHL)
 
@@ -386,15 +376,46 @@ PERDIIS:     Periodic DIIS
                       
     = F      ; DIIS is always applied after NDIIS
 
+DAMPING:     Damping of the Gen. Fock matrix (FMIUG)
+    = F      (Default)
+
+EXTRAP:      Extrapolation of the Gen. Fock matrix
+    = F      (Default)
+
+Options for the Orbital Optimization Program (ADAM Method)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For more info and computational details see Phys. Rev. Lett. 134, 206401 (2025) by Lew-Yee, del Campo and Piris.
+
+LR:                 Initial Learning Rate
+           = 0.01   (Default)
+
+FACT:               Factor to multiply Learning Rate
+                    to reduce it after a failed ADAM     
+           = 0.4    (Default)
+
+BETA1:              BETA1 Memory for first momentum
+           = 0.7    (Default)
+
+BETA2:              BETA2 Memory for second momentum
+           = 0.9    (Default)
+
+
 Options for perturbative calculations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more info see [PRA 98, 022504 (2018)]
+For more info see Phys. Rev. A 98, 022504 (2018) by Piris and J. Chem. Theory Comput. 20, 2140-2151 (2024) by Lew-Yee, Bonfil-Rivera, Piris and del Campo.
+
+ERPA:        Extended Random Phase Approximation
+    = F      (Default)
 
 OIMP2:       NOF - Orbital Invariant MP2
 
-    = F       (DEFAULT)
-                     
+    = F      (DEFAULT)
+
+MBPT:        NOF - c - X (X=RPA, MP2, etc)
+    = F      (Default)
+
 NO1PT2:      Frozen MOs in perturbative calculations. Maximum index of NOs with Occupation = 1
 
    = -1      = NO1 (DEFAULT)
@@ -412,8 +433,10 @@ NEX:         Number of excluded coupled orbitals in the PNOF5-PT2 calculation
     = 0      ; All NOs are included (DEFAULT)
 
 
-Restart options for GAMMA, C, diagonal F, and nuclear coordinates
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Restart options for GAMMA, C and Diagonal F
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+                  --- Restart Options ---
 
 RESTART:     Restart from GCF file (DEFAULT=F)
 
@@ -474,11 +497,23 @@ MOLDEN:        Write information into MLD file for the MOLDEN PROGRAM (UNIT 17)
 
       = 1      ; Write into MLD file (Default)
 
+INICOND:       Create initial conditions file (UNIT 33)
+               according to normal modes with equil.
+               geometry & ZPE velocities in Ang/fs
+               for MOLDYN routine (IRUNTYP=3)
+      = 0      Don't create
+
+      = 1      Create ini.xyz file (Default)
+
 NOUTRDM:       Print option for atomic RDMs
 
       = 0      ; Not do it (DEFAULT)
 
       = 1      ; Print atomic RDMs in 1DM and 2DM files
+
+      = 2      Print atomic 2-RDM in 2DM file
+
+      = 3      Print atomic RDMs in 1DM and 2DM files
 
 NTHRESHDM:     THRESHDM = 10.0**(-NTHRESHDM)
 
@@ -585,6 +620,17 @@ ICGMETHOD:     Define the conjugate gradient method in routines OCCOPTr, CALTija
      = 2       ; Use NAG routines E04DGF in OPTCGNAG,CGOCUPNAGr; and F11JEF in SparseSymLinearSystem_NAG       
 
      = 3       ; Use LBFGS in OPTLBFGS, LBFGSOCUPr
+
+Options for Excited States
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+NESt:         Number of Excited States considered in
+              the ensemble NOFT W = (w1,w2,w3,...,wd)
+     = 0      (Default)
+
+OMEGA1:       Value for w1 in the ensemble
+     = 1.0    Only GS is considered (Default) 
+
 
 ****************
 Additional Notes

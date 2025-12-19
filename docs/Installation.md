@@ -66,3 +66,22 @@ Current capabilities include:
 - **RUNTYP = DYN** - Born-Oppenheimer on-the-fly molecular dynamics
 
 Other common options include excited states calculation (`ERPA=T`) and NOF-MBPT calculations (`MBPT=T`).
+
+## Python and Julia
+
+PyNOF is a version of DoNOF written in Python. You can install it with
+```{margin}
+![PyNOF](./PyNOF.png)
+```
+~~~
+pip install pynof
+~~~
+
+Similarly, DoNOF.jl is a version of DoNOF written in the Julia language. You can install DoNOF.jl form REPL with
+```{margin}
+![DoNOF.jl](./DoNOFjl.png)
+```
+~~~
+add DoNOF
+~~~
+
