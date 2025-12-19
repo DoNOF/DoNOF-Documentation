@@ -196,7 +196,7 @@ Note real orbitals are assumed, so exchange (K) and time-inversion-exchange (L) 
 [`Phys. Rev. Lett. 127(23), 233001 (2021).`](https://doi.org/10.1103/PhysRevLett.127.233001)
 ```
 
-In order to choose GNOF in DoNOF, you must set IPNOF=8 in the $NOFINP section of your input file.
+In order to choose GNOF in DoNOF, you must set IPNOF=8 and Imod=0 in the $NOFINP section of your input file.
 
 $$
     E_{el}^{gnof} = E^{intra} + E_{HF}^{inter} + E_{sta}^{inter} + E_{dyn}^{inter}
@@ -247,3 +247,22 @@ $$
 $$
 
 The maximum value of $n_p^d$ is around 0.012 in accordance with the Pulay’s criterion that establishes an occupancy deviation of approximately 0.01 with respect to 1 or 0 for a natural orbital to contribute to the dynamic correlation. Clearly, GNOF does not take into account dynamic correlation of the single electrons. Considering real spatial orbitals (L=K) and $n_p$ ~ $n_p^d$, it is not difficult to verify that the terms proportional to the product of the occupation numbers will cancel out, so that only those terms proportional to \Pi will contribute significantly to the energy.
+
+### GNOFm
+
+```{margin} Article
+[`Phys. Rev. Lett. 134(20), 206401 (2025).`](https://doi.org/10.1103/PhysRevLett.134.206401)
+```
+
+In order to choose GNOFm in DoNOF, you must set IPNOF=8 and Imod=1 in the $NOFINP section of your input file.
+
+$$
+    E_{el}^{gnofm} = E^{intra} + E_{HF}^{inter} + E_{sta}^{inter} + E_{dyn}^{inter}
+$$
+
+The modification of GNOFm with respect to its predecessor GNOF stands in the correlation energy term between different electron pairs
+
+$$
+    E _{sta}^{inter} = \sum\limits _{p,q}^{\mathrm{N}_B}\,'\, \mathcal{K}_{pq}
+$$ 
+
