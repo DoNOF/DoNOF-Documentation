@@ -14,10 +14,13 @@ make serialg # gfortran serial -> /exe/DoNOFg.x
 
 Other options are:
 ~~~
-make mpig    # gfortran mpi    -> /exe/DoNOFmpig.x
-make mping   # gfortran mpi (for recent linux versions)
-make serial  # ifort serial    -> /exe/DoNOF.x
-make mpi     # ifort mpi       -> /exe/DoNOFmpi.x
+make ompg    # gfortran OpenMP      -> /exe/DoNOFompg.x
+make mpig    # gfortran MPI         -> /exe/DoNOFmpig.x
+make hybridg # gfortran OpenMP+MPI  -> /exe/DoNOFhybridg.x
+make serial  # ifort Serial         -> /exe/DoNOF.x
+make omp     # ifort OpenMP         -> /exe/DoNOFomp.x
+make mpi     # ifort MPI            -> /exe/DoNOFmpi.x
+make hybrid  # ifort OpenMP+MPI     -> /exe/DoNOFhybrid.x
 ~~~
 
 3. The executable will be placed inside /exe
