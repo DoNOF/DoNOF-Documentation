@@ -20,7 +20,7 @@ occupation numbers and to the natural orbitals, separately.
 
 :::{admonition} PyNOF and DoNOF.jl
 :class: note
-There are also versions developed in Python (PyNOF) and Julia (DoNOF.jl), packages available for rapid prototyping and testing of novel developments.
+There are also versions in Python (PyNOF) and Julia (DoNOF.jl), available for rapid prototyping and testing of novel developments.
 
 Please click on the links next to the following images for more information.
 
