@@ -22,7 +22,7 @@ occupation numbers and to the natural orbitals, separately.
 :class: note
 There are also versions developed in Python (PyNOF) and Julia (DoNOF.jl), packages available for rapid prototyping and testing of novel developments.
 
-Please click on the following images for more information.
+Please click on the links next to the following images for more information.
 
 ![PyNOF](./PyNOFsmall.png)(https://github.com/DoNOF/PyNOF)
 
