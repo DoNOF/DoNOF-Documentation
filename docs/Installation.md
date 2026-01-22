@@ -2,6 +2,15 @@
 
 **Requisites.** You need a FORTRAN compiler, either gfortran or ifort. Optionally, you may want to install OpenMPI for parallel execution.
 
+0. Install ![libcint](https://github.com/sunqm/libcint). The following instructions are provided as example.
+~~~ bash
+git clone http://github.com/sunqm/libcint.git
+cd libcint
+mkdir build; cd build
+cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr/local/lib ..
+sudo make install
+~~~
+
 1. Clone the code with
 ~~~
 git clone https://github.com/DoNOF/DoNOFsw
