@@ -229,9 +229,13 @@ NO1:         MAX. index of NOs with Occupation equal to 1.0
 HARTREE-FOCK
 ^^^^^^^^^^^^
 
- RHF:        Restricted Hartree-Fock Calculation
- 
-    = T      (Default)
+IRHF:        Restricted Hartree-Fock Calculation
+
+    = 0      Not obtaining HF orbitals
+    = 1      Self Consistent Field (SCF) (Default)
+             (only works with EFIELDL=.FALSE.)
+    = 2      Orbital rotations through ADAM
+    = 3      Iterative Diagonalization (ID) Method
 
 NCONVRHF:    RHF-SCF Density Convergence Criteria CONVRHFDM=10.0**(-NCONVRHF)
 
