@@ -20,13 +20,4 @@ Comp. Phys. Comm. 259, 107651 (2021)
 [DOI:10.1016/j.cpc.2020.107651](https://doi.org/10.1016/j.cpc.2020.107651)
 :::
 
-:::{admonition} PyNOF and DoNOF.jl
-:class: note
-There are also versions developed in Python (PyNOF) and Julia (DoNOF.jl), packages available for rapid prototyping and testing of novel developments.
-
-You can click on the following images for more information.
-![PyNOF](./PyNOF.png)(https://github.com/DoNOF/PyNOF)
-![DoNOF.jl](./DoNOF.jl.png)(https://github.com/DoNOF/DoNOF.jl)
-:::
-
 ![FeP-PNOF7-mult=3-ncwo=4](./FeP.jpg)
