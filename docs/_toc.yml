@@ -15,6 +15,7 @@ parts:
   - file: OptGeo
   - file: NOF-MP2
   - file: ERPA
+  - file: PythonandJulia
 - caption: 🏁 Input Options
   chapters:
     - file: input
