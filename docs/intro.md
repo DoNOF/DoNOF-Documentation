@@ -24,9 +24,9 @@ There are also versions developed in Python (PyNOF) and Julia (DoNOF.jl), packag
 
 Please click on the following images for more information.
 
-![./PyNOFsmall.png](https://github.com/DoNOF/PyNOF)
+![PyNOF](./PyNOFsmall.png)(https://github.com/DoNOF/PyNOF)
 
-![./DoNOFjlsmall.png](https://github.com/DoNOF/DoNOF.jl)
+![DoNOF.jl](./DoNOFjlsmall.png)(https://github.com/DoNOF/DoNOF.jl)
 :::
 
 ![FeP-PNOF7-mult=3-ncwo=4](./FeP.jpg)
