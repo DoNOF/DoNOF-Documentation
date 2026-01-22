@@ -25,7 +25,9 @@ Comp. Phys. Comm. 259, 107651 (2021)
 There are also versions developed in Python (PyNOF) and Julia (DoNOF.jl), packages available for rapid prototyping and testing of novel developments.
 
 You can click on the following images for more information.
+
 ![PyNOF](./PyNOFsmall.png)(https://github.com/DoNOF/PyNOF)
+
 ![DoNOF.jl](./DoNOFjlsmall.png)(https://github.com/DoNOF/DoNOF.jl)
 :::
 
