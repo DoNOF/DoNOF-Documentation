@@ -46,7 +46,7 @@ ICHARG:    Molecular charge
     
 IECP:      Effective Core Potentials 
 
-    = 0    (Default) All electron calculation
+    = 0    All electron calculation (Default) 
     
     = 1    Read ECP potentials in the $ECP group
 
@@ -57,6 +57,38 @@ IEMOM:     Calculation of electrostatic moments
     = 2      also calculate quadrupole moments
 
     = 3      also calculate octopole moments
+
+NLOP:      Non-Linear Optical Properties
+
+       = -1  calculate Alpha, Beta & Gamma
+
+       =  0  No calculation of NLOPs (Default)
+
+       =  1  calculate polarizability Alpha
+
+       =  2  calculate 1st-order hyperpolarizability Beta
+
+       =  3  calculate 2nd-order hyperpolarizability Gamma
+
+NPOINT:    Number of steps used in the dyadic scaling of
+           the electric field. It represents the total number
+           of fields that will be considered in the calculations
+
+       = 9        (Default)
+
+STEP:       Initial step size for the electric field. It defines
+            the base value of the field for the first step,
+            with subsequent values being scaled by powers of 2.
+
+       = 1.0d-04  (Default)
+
+ISOALPHA:   Computes the diagonal components of the static
+            polarizability tensor (αxx, αyy, αzz) using the
+            dyadic Romberg–Richardson scheme looping the field
+            direction over x, y, z. Then reports the isotropic
+            average and the anisotropy (Raman convention)
+
+       = 0        (Default)
 
 UNITS:     Distance units (Any angles must be in degrees)
 
