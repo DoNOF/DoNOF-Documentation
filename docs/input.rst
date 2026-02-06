@@ -60,33 +60,25 @@ IEMOM:     Calculation of electrostatic moments
 
 NLOP:      Non-Linear Optical Properties
 
-       = -1  calculate Alpha, Beta & Gamma
+    = -1  calculate Alpha, Beta & Gamma
 
-       =  0  No calculation of NLOPs (Default)
+    =  0  No calculation of NLOPs (Default)
 
-       =  1  calculate polarizability Alpha
+    =  1  calculate polarizability Alpha
 
-       =  2  calculate 1st-order hyperpolarizability Beta
+    =  2  calculate 1st-order hyperpolarizability Beta
 
-       =  3  calculate 2nd-order hyperpolarizability Gamma
+    =  3  calculate 2nd-order hyperpolarizability Gamma
 
-NPOINT:    Number of steps used in the dyadic scaling of
-           the electric field. It represents the total number
-           of fields that will be considered in the calculations
+NPOINT:    Number of steps used in the dyadic scaling of the electric field. It represents the total number of fields that will be considered in the calculations
 
        = 9        (Default)
 
-STEP:       Initial step size for the electric field. It defines
-            the base value of the field for the first step,
-            with subsequent values being scaled by powers of 2.
+STEP:      Initial step size for the electric field. It defines the base value of the field for the first step, with subsequent values being scaled by powers of 2.
 
        = 1.0d-04  (Default)
 
-ISOALPHA:   Computes the diagonal components of the static
-            polarizability tensor (αxx, αyy, αzz) using the
-            dyadic Romberg–Richardson scheme looping the field
-            direction over x, y, z. Then reports the isotropic
-            average and the anisotropy (Raman convention)
+ISOALPHA:   Computes the diagonal components of the static polarizability tensor (αxx, αyy, αzz) using the dyadic Romberg–Richardson scheme looping the field direction over x, y, z. Then reports the isotropic average and the anisotropy (Raman convention)
 
        = 0        (Default)
 
