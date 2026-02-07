@@ -350,7 +350,7 @@ SCALING:     A variable factor scales Fki
 
 NZEROS:      Initial number of ZEROS in Fij [ B = 10.0**(1-NZEROS) ]
 
-             The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
+The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
 
     = 0      (Default)
 
@@ -362,11 +362,11 @@ NZEROSr:     Number of zeros in Fij to restart automatically the calculation [ B
 
     = 2      (Default)
                       
-AUTOZEROS:   The code select automatically values for NZEROS, NZEROSm & NZEROSr. 
-
-             Note: Override previously selected values
+AUTOZEROS:   The code select automatically values for NZEROS, NZEROSm & NZEROSr.
                    
     = T      (Default)
+
+Note: Override previously selected values
 
 ITZITER:      Number of Iterations for constant scaling
 
@@ -393,9 +393,7 @@ PERDIIS:     Periodic DIIS
 Options for perturbative calculations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more info see [PRA 98, 022504 (2018)]
-
-OIMP2:       NOF - Orbital Invariant MP2
+OIMP2:       NOF - Orbital Invariant MP2 [ For more info see PRA 98, 022504, 2018 ]
 
     = F       (Default)
                      
