@@ -92,12 +92,6 @@ EVEC:      An array of the three x,y,z components of the applied electric field,
 
     = 0.0D0  (Default)
 
-USELIB:    Use LIBCINT open source library for ERI calculation
-
-      = F        HONDO Calculator
-
-      = T        LIBCINT (Default)
-
 GTYP:      Type of Gaussian functions
 
       = CART     Cartesian (Default)
