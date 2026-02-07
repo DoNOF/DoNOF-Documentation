@@ -395,23 +395,25 @@ Options for perturbative calculations
 
 OIMP2:       Orbital Invariant MP2 [ For more info on NOF-MP2 see PRA 98, 022504, 2018 ]
 
-    = F       (Default)
+    = F      (Default)
                      
-NO1PT2:      Frozen MOs in perturbative calculations. Maximum index of NOs with Occupation = 1
+NO1PT2:      Frozen natural orbitals in OIMP2. Maximum index of NOs with Occupation = 1
 
    = -1      = NO1 (Default)
                       
-   = 0       ; All NOs are considered
+   = 0       All natural orbitals are considered
                       
-   = Value   User specifies how many NOs are frozen                   
+   = Value   The user specifies how many natural orbitals are frozen                   
 
-SC2MCPT:     SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. Two outputs: PNOF5-SC2-MCPT and PNOF5-PT2
+SC2MCPT:     SC2-MCPT perturbation theory is used to correct the PNOF5 Energy.
 
     = F      (Default)
 
+Note: Two outputs PNOF5-SC2-MCPT and PNOF5-PT2
+
 NEX:         Number of excluded coupled orbitals in the PNOF5-PT2 calculation
 
-    = 0      ; All NOs are included (Default)
+    = 0      All NOs are included (Default)
 
 
 Restart options for GAMMA, C, diagonal F, and nuclear coordinates
