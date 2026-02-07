@@ -24,15 +24,15 @@ The &INPRUN namelist specifies the run type and other fundamental job options. T
 
 RUNTYP:    Specifies the run calculation
 
-    = 'ENERGY', single-point energy calculation (Default)
+    = 'ENERGY'	single-point energy calculation (Default)
 
-    = 'GRAD'    energy + gradients with respect to nuclear coordinates
+    = 'GRAD'	energy + gradients with respect to nuclear coordinates
 
-    = 'OPTGEO'  optimize the molecular geometry
+    = 'OPTGEO'	optimize the molecular geometry
     
-    = 'HESS'   compute numerical hessian from analytic gradients
+    = 'HESS'	compute numerical hessian from analytic gradients
 
-    = DYN      run Born-Oppenheimer on-the-fly molecular dynamics
+    = DYN		run Born-Oppenheimer on-the-fly molecular dynamics
     
 MULT:      Multiplicity of the electronic state
 
