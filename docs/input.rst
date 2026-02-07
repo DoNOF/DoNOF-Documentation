@@ -567,20 +567,6 @@ CHKORTHO:       Check the orthonormality of the MOs
                       
       = T      Yes
 
-
-Options related to frozen coordinates in geometry optimization
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-See also "Additional notes" section
-
-FROZEN:         Is there any fixed coordinate
-
-     = F      (Default)
-
-IFROZEN:       By pairs, what coordinate of which atom, e.g. 2,5,1,1 means "y" coordinate of atom 5 and "x" coor of atom 1 to freeze. MAXIMUM of frozen coordinates = 10
-
-      = 0      (Default)
-
 ****************
 Additional Notes
 ****************
@@ -608,14 +594,10 @@ Factorized Variable Metric Methods for Unconstrained Optimization,
 Mathematics of Computation,                                       
 Volume 30, pages 796-811, 1976.
 
-Alternatively, we have also implemented the LBFGS algorithm written by J. Nocedal (see http://users.iems.northwestern.edu/~nocedal/lbfgs.html). This method is activated by setting ICGMETHOD = 3. In our experience, LBFGS works fine for occupation optimization, whereas it must be employed carefully for geometry optimization.
-
-Finally, if you have the NAG library installed, you can use the corresponding subroutines to perform optimizations by setting ICGMETHOD = 2.
-
 Geometry Optimization
 ^^^^^^^^^^^^^^^^^^^^^
 
-If RUNTYP='OPTGEO' is set, DoNOF automatically sets RHF=F, HFID=F and OIMP2=F at the beginning of the calculation.
+If RUNTYP='OPTGEO' is set, DoNOF automatically sets IRHF=0 and OIMP2=F at the beginning of the calculation.
 
 It is strongly recommended to set ICGMETHOD=1 (Default) or ICGMETHOD=2 if you possess the NAG library. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in your system.
 
