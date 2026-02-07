@@ -419,70 +419,70 @@ NEX:         Number of excluded coupled orbitals in the PNOF5-PT2 calculation
 Restart options for GAMMA, C, diagonal F, and nuclear coordinates
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-RESTART:     Restart from GCF file (DEFAULT=F)
+RESTART:     Restart from GCF file 
 
-    = F      ; corresponds to INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0,INPUTCXYZ=0
+    = F      corresponds to INPUTGAMMA=0,INPUTC=0,INPUTFMIUG=0,INPUTCXYZ=0 (Default)
                       
-    = T      ; corresponds to INPUTGAMMA=1,INPUTC=1,INPUTFMIUG=1,INPUTCXYZ=1
+    = T      corresponds to INPUTGAMMA=1,INPUTC=1,INPUTFMIUG=1,INPUTCXYZ=1
 
 INPUTGAMMA:   Guess for GAMMA variables (determine the Occupation Numbers)
 
-    = 0      ; Close Fermi-Dirac Distribution (Default)
+    = 0      Close Fermi-Dirac Distribution (Default)
                       
-    = 1      ; Input from GCF file
+    = 1      Input from GCF file
 
 INPUTC:      Guess for coefficient matrix (Natural Orbitals)
 
-     = 0     ; Use HCORE or HF Eigenvectors (Default)
+     = 0     Use HCORE or Hartree-Fock Eigenvectors (Default)
                       
-     = 1      ; Input from GCF file
+     = 1     Input from GCF file
 
 INPUTFMIUG:   Guess for diagonal elements of the symmetric F matrix (FMIUG0)
 
-     = 0      ; Use single diagonalization of Lagragian (Default)
+     = 0      Use single diagonalization of Lagragian (Default)
                       
-     = 1      ; Input from GCF file
+     = 1      Input from GCF file
 
 INPUTCXYZ:    Read nuclear coordinates (Cxyz)
 
-     = 0      ; From Input file
+     = 0       From Input file
                       
-     = 1      ; From GCF file
+     = 1      From GCF file
                       
 Output options
 ^^^^^^^^^^^^^^
 
 NPRINT:       Output option
 
-      = 0     ; Short Printing (Default)
+      = 0     Short Printing (Default)
                       
-      = 1     ; Output at initial and final iterations
+      = 1     Output at initial and final iterations
                       
-      = 2     ; Output everything at each iteration
+      = 2     Output everything at each iteration
       
 IAIMPAC:       Write information into a WFN file (UNIT 7) for the AIMPAC program
 
-      = 0      ; Not do it
+      = 0      Not do it
 
-      = 1      ; Do it (Default)
+      = 1      Do it (Default)
                       
 IFCHK:         Write information into Formatted Checkpoint (FCHK) file for visualization software (UNIT 19)
  
-      = 0      ; Don't write
+      = 0      Don't write
                       
-      = 1      ; Write into FCHK file (Default)
+      = 1      Write into FCHK file (Default)
                       
 MOLDEN:        Write information into MLD file for the MOLDEN PROGRAM (UNIT 17)
 
-      = 0      ; Don't write
+      = 0      Don't write
 
-      = 1      ; Write into MLD file (Default)
+      = 1      Write into MLD file (Default)
 
 NOUTRDM:       Print option for atomic RDMs
 
-      = 0      ; Not do it (Default)
+      = 0      Not do it (Default)
 
-      = 1      ; Print atomic RDMs in 1DM and 2DM files
+      = 1      Print atomic RDMs in 1DM and 2DM files
 
 NTHRESHDM:     THRESHDM = 10.0**(-NTHRESHDM)
 
@@ -490,15 +490,15 @@ NTHRESHDM:     THRESHDM = 10.0**(-NTHRESHDM)
 
 NSQT:          Print OPTION for 2DM file
 
-      = 0      ; Formatted file
+      = 0      Formatted file
 
-      = 1      ; Unformatted file (Default)
+      = 1      Unformatted file (Default)
 
 NOUTCJK:       Print option for CJ12 and CK12
 
-      = 0      ; No output (Default)
+      = 0      No output (Default)
 
-      = 1      ; Print CJ12 and CK12 in file 'CJK'
+      = 1      Print CJ12 and CK12 in file 'CJK'
 
 NTHRESHCJK:    THRESHCJK = 10.0**(-NTHRESHCJK)
 
@@ -506,9 +506,9 @@ NTHRESHCJK:    THRESHCJK = 10.0**(-NTHRESHCJK)
 
 NOUTTijab:     Print option for Tijab
 
-      = 0      ; No output (Default)
+      = 0      No output (Default)
 
-      = 1      ; Print Tijab in file 'Tijab'
+      = 1      Print Tijab in file 'Tijab'
 
 NTHRESHTijab:   THRESHTijab=10.0**(-NTHRESHTijab)
 
@@ -516,7 +516,7 @@ NTHRESHTijab:   THRESHTijab=10.0**(-NTHRESHTijab)
 
 APSG:           Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
 
-      = F      ; No output (Default)
+      = F      No output (Default)
 
 NTHAPSG:        Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
 
@@ -526,44 +526,44 @@ Note: the following options require NPRINT > 0 to take effect
 
 IWRITEC:      Output option for the coefficient matrix
 
-      = 0     ;  Not do it (Default)
+      = 0      Not do it (Default)
                       
-      = 1     ;  Do it
+      = 1      Do it
 
 IMULPOP:       Mulliken population analysis
 
-      = 0      ; Not do it (Default)
+      = 0      Not do it (Default)
                       
-      = 1      ; Do it
+      = 1      Do it
 
 PRINTLAG:      Output option for the lagrange multipliers
 
-      = F      ; Not do it (Default)
+      = F      Not do it (Default)
 
 DIAGLAG:       Diagonalize Lagrange multipliers. Print new 1e- Energies, Canonical MOs, and new diagonal elements of the 1RDM
 
-      = F      ; Not do it (Default)
+      = F      Not do it (Default)
 
 IEKT:          Calculate the Ionization Potentials using the Extended Koopmans' Theorem (EKT)
 
-      = 0      ; Not do it (Default)
+      = 0      Not do it (Default)
 
-      = 1      ; Do it
+      = 1      Do it
 
 Options related to orthonormality of Natural Orbitals
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ORTHO:         Orthogonalize the initial orbitals
 
-      = F      ; No 
+      = F      No 
                       
-      = T      ; Yes (Default)
+      = T      Yes (Default)
 
 CHKORTHO:       Check the orthonormality of the MOs
 
-      = F      ; No (Default)
+      = F      No (Default)
                       
-      = T      ; Yes
+      = T      Yes
 
 
 Options related to frozen coordinates in geometry optimization
@@ -578,17 +578,6 @@ FROZEN:         Is there any fixed coordinate
 IFROZEN:       By pairs, what coordinate of which atom, e.g. 2,5,1,1 means "y" coordinate of atom 5 and "x" coor of atom 1 to freeze. MAXIMUM of frozen coordinates = 10
 
       = 0      (Default)
-                      
-Options for optimization program
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-ICGMETHOD:     Define the conjugate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
-
-     = 1       ; Use SUMSL in CGOCUPSUMSLr,OPTSUMSL, SparseSymLinearSystem_CG (Default)
-
-     = 2       ; Use NAG routines E04DGF in OPTCGNAG,CGOCUPNAGr; and F11JEF in SparseSymLinearSystem_NAG       
-
-     = 3       ; Use LBFGS in OPTLBFGS, LBFGSOCUPr
 
 ****************
 Additional Notes
