@@ -269,22 +269,10 @@ HFDAMP:      Damping of the Fock matrix
 HFEXTRAP:    Extrapolation of the Fock matrix
 
     = T      (Default)
-
-HFID:        Use the Iterative Diagonalization Method to generate the HF Orbitals
-
-    = F      (DEFAULT)
-
-NTHRESHEID:  Convergence of the total energy, THRESHEID=10.0**(-NTHRESHEID)
-                     
-    = 6      (DEFAULT)
-
-MAXITID:     Maximum number of external iterations
-                     
-    = 30     (DEFAULT)
                       
-KOOPMANS:    Calculate IPs using Koopmans' Theorem
+KOOPMANS:    Calculate ionization potentials using Koopmans' Theorem
 
-    = 0      (DEFAULT)
+    = 0      (Default)
 
 PNOF Selection
 ^^^^^^^^^^^^^^
@@ -301,15 +289,15 @@ IPNOF:       Type of Natural Orbital Functional (see section "NOF approximations
                       
     = 7      PNOF7
     
-    = 8      GNOFx (DEFAULT)
+    = 8      GNOF (DEFAULT)
                       
 Ista:        Use Static version of PNOF7
 
-    = 0      PNOF7 (DEFAULT)
+    = 0      PNOF7 (Default)
                       
     = 1      PNOF7s
 
-Imod:        Select versions of GNOFx
+Imod:        Select versions of GNOF
 
     = 0      GNOF (Default)
 
@@ -317,19 +305,17 @@ Imod:        Select versions of GNOFx
 
 HighSpin:    Spin-uncompensated calculation type
 
-    = F      (DEFAULT) Multiple state (Ms=0)
+    = F      Spin-Multiplet state (Ms=0) (Default)
 
     = T      High-spin uncompensated state (Ms=S)                      
                       
-NCWO:        Number of coupled weakly occupied MOs per strongly occupied = Nc -> PNOFi(Nc)
+NCWO:        Number of coupled weakly occupied NOs per strongly occupied = Nc -> PNOFi(Nc)
 
-    = 1      (DEFAULT)
+    = 1,2,3,...
                       
-    = 2,3,...
-                      
-    =-1      NCWO = NVIR/NDOC where
-             NVIR: Number of HF virtual MOs (OCC=0), 
-             NDOC: Number of strongly occupied MOs
+    =-1      NCWO = NVIR/NDOC (Default)
+             NVIR: Number of Hartre-Fock virtual molecular orbitals, now weakly occupied
+             NDOC: Number of strongly occupied molecular orbitals
 
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
