@@ -36,13 +36,13 @@ RUNTYP:    Specifies the run calculation
     
 MULT:      Multiplicity of the electronic state
 
-    = 1      singlet (Default)
+    = 1       singlet (Default)
 
     = 2,3,... doublet, triplet, and so on
 
 ICHARG:    Molecular charge
 
-    = 0  Neutral Molecule (Default)
+    = 0    Neutral Molecule (Default)
     
 IECP:      Effective Core Potentials 
 
@@ -52,67 +52,73 @@ IECP:      Effective Core Potentials
 
 IEMOM:     Calculation of electrostatic moments
 
-    = 1      calculate dipole moments (Default)
+    = 1    calculate dipole moments (Default)
 
-    = 2      also calculate quadrupole moments
+    = 2    also calculate quadrupole moments
 
-    = 3      also calculate octopole moments
+    = 3    also calculate octopole moments
 
 NLOP:      Non-Linear Optical Properties
 
-    = -1  calculate Alpha, Beta & Gamma
+    = -1   calculate Alpha, Beta & Gamma
 
-    =  0  No calculation of NLOPs (Default)
+    =  0   No calculation of NLOPs (Default)
 
-    =  1  calculate polarizability Alpha
+    =  1   calculate polarizability Alpha
 
-    =  2  calculate 1st-order hyperpolarizability Beta
+    =  2   calculate 1st-order hyperpolarizability Beta
 
-    =  3  calculate 2nd-order hyperpolarizability Gamma
+    =  3   calculate 2nd-order hyperpolarizability Gamma
 
 NPOINT:    Number of steps used in the dyadic scaling of the electric field. It represents the total number of fields that will be considered in the calculations
 
-       = 9        (Default)
+    = 9   (Default)
 
 STEP:      Initial step size for the electric field. It defines the base value of the field for the first step, with subsequent values being scaled by powers of 2.
 
-       = 1.0d-04  (Default)
+    = 1.0d-04 (Default)
 
 ISOALPHA:   Computes the diagonal components of the static polarizability tensor (αxx, αyy, αzz) using the dyadic Romberg–Richardson scheme looping the field direction over x, y, z. Then reports the isotropic average and the anisotropy (Raman convention)
 
-       = 0        (Default)
+     = 0    (Default)
 
-UNITS:     Distance units (Any angles must be in degrees)
+UNITS:       Distance units (Any angles must be in degrees)
 
     = ANGS   Angstroms (Default)
 
     = BOHR   Bohr atomic units
 
-EVEC:      An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*Bohr = 5.1422082(15)d+11 V/m)
+EVEC:        An array of the three x,y,z components of the applied electric field, in a.u. (1 a.u. = 1 Hartree/e*Bohr = 5.1422082(15)d+11 V/m)
 
     = 0.0D0  (Default)
 
-GTYP:      Type of Gaussian functions
+GTYP:        Type of Gaussian functions
 
-      = CART     Cartesian 
+      = CART Cartesian 
 
-      = SPH      Spherical (Default)
-
-USEHUB:    Use Hubbard Model
-
-      = F        (Default)
+      = SPH  Spherical (Default)
     
-DONTW:     Do not write 2e- integrals on the disk (Unit=1)
+DONTW:       Do not write 2e- integrals on the disk (Unit=1)
 
     = T      (Default)
     
-ERITYP:    Typ of ERIs used in calculations
+ERITYP:      Typ of ERIs used in calculations
 
     = FULL   4c ERIs (Default)
     
     = RI     3c/2c ERIs for Resolution of the Identity (RI) App.
     
     = MIX    3c/2c ERIs for Resolution of the Identity (RI) App. once converged change to 4c ERIs (FULL)
+
+CUTOFF       The Schwarz screening cut off for NAT>5
+
+    = 1.0D-9 (Default)
+
+RITYP        Typ of Auxiliary Basis
+
+    = JKFIT  Read from jkfit files (Default)
+
+    = GEN    Use Generative Auxiliary Basis
 
 GEN:         Generative Auxiliary Basis to use in RI Approx. if ERITYP = RI. Values: A2,A2*,A3,A3*,A4,A4* 
              
