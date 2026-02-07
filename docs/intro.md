@@ -2,7 +2,7 @@
 
 DoNOF is an open-source implementation of natural-orbital-functional-based methods for quantum chemistry.
 
-![DoNOF](./Logo-DoNOF.jpeg)
+![DoNOF](./Logo-DoNOF.jpeg) (https://github.com/DoNOF/DoNOFsw)
 
 The DoNOF computer program is designed to solve the energy
 minimization problem of a natural orbital functional (NOF)
