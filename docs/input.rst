@@ -328,12 +328,17 @@ NTHRESHE:    Convergence of the total energy, THRESHE=10.0**(-NTHRESHE)
 
     = 8      (Default)
 
-Options for the orbital optimization program (ID method)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Options for the orbital optimization
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 MAXLOOP:     Maximum Iteration Number for the SCF ITERATION cycle in each ITCALL
 
     = 10     (Default)
+
+Note: In the case of IORBOPT=1 (iterative diagonalizations), MAXLOOP is fixed, while if IORBOPT=2 (orbital rotations) MAXLOOP changes during optimization to decrease the energy in each outer iteration.
+
+Specific Options for IORBOPT=1
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
     The straightforward iterative scheme fails to converge very often due to the values of some off-diagonal elements Fki. The latters must be suffciently small and of the same order of magnitude. A variable factor scales Fki. We establish an upper bound B, in such a way that when the absolute value of the matrix element Fki is greater than B, it is scaled by a factor Cki (F'ki = Cki*Fki ), as to satisfy ABS(Fki) <= B.
 
@@ -341,17 +346,19 @@ SCALING:     A variable factor scales Fki
 
     = T      (Default)
 
-NZEROS:      B = 10.0**(1-NZEROS). Initial number of ZEROS in Fij. The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
+NZEROS:      Initial number of ZEROS in Fij [ B = 10.0**(1-NZEROS) ]
 
-    = 0      ; B = 10.0 (Default)
+             The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
 
-NZEROSm:     B = 10.0**(1-NZEROSm). Maximum number of zeros in Fij
+    = 0      (Default)
 
-    = 5      ; B = 10.0 (Default)
+NZEROSm:     Maximum number of zeros in Fij [ B = 10.0**(1-NZEROSm) ]
 
-NZEROSr:     B = 10.0**(1-NZEROSr). Number of zeros in Fij to restart automatically the calculation
+    = 5      (Default)
 
-    = 2      ; B = 10.0 (Default)
+NZEROSr:     Number of zeros in Fij to restart automatically the calculation [ B = 10.0**(1-NZEROSr) ]
+
+    = 2      (Default)
                       
 AUTOZEROS:   The code select automatically values for NZEROS, NZEROSm & NZEROSr. 
 
@@ -367,9 +374,9 @@ DIIS:        Direct Inversion in the Iterative Subspace in the orbital optimizat
 
     = T      (Default)
 
-NTHDIIS:     Energy threshold to begin DIIS
+NTHDIIS:     Energy threshold to begin DIIS [ THDIIS = 10.0**(-NTHDIIS) ]
 
-    = 3      ; THDIIS = 10.0**(-NTHDIIS) (Default)
+    = 3      (Default)
 
 NDIIS:       Number of considered loops to interpolate the generalized Fock matrix in the DIIS
 
@@ -377,9 +384,9 @@ NDIIS:       Number of considered loops to interpolate the generalized Fock matr
 
 PERDIIS:     Periodic DIIS
 
-    = T      ; Apply DIIS every NDIIS (Default)
+    = T      Apply DIIS every NDIIS (Default)
                       
-    = F      ; DIIS is always applied after NDIIS
+    = F      DIIS is always applied after NDIIS
 
 Options for perturbative calculations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
