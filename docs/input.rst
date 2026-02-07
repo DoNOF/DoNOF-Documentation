@@ -94,9 +94,9 @@ EVEC:      An array of the three x,y,z components of the applied electric field,
 
 GTYP:      Type of Gaussian functions
 
-      = CART     Cartesian (Default)
+      = CART     Cartesian 
 
-      = SPH      Spherical (only if LIBCINT)
+      = SPH      Spherical (Default)
 
 USEHUB:    Use Hubbard Model
 
