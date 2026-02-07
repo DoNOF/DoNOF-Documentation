@@ -433,7 +433,7 @@ INPUTGAMMA:   Guess for GAMMA variables (determine the Occupation Numbers)
 
 INPUTC:      Guess for coefficient matrix (Natural Orbitals)
 
-     = 0     Use HCORE or Hartree-Fock Eigenvectors (Default)
+     = 0     Use Hcore or Hartree-Fock Eigenvectors (Default)
                       
      = 1     Input from GCF file
 
@@ -443,9 +443,9 @@ INPUTFMIUG:   Guess for diagonal elements of the symmetric F matrix (FMIUG0)
                       
      = 1      Input from GCF file
 
-INPUTCXYZ:    Read nuclear coordinates (Cxyz)
+INPUTCXYZ:    Read nuclear coordinates
 
-     = 0       From Input file
+     = 0      From the input file
                       
      = 1      From GCF file
                       
@@ -460,11 +460,11 @@ NPRINT:       Output option
                       
       = 2     Output everything at each iteration
       
-IAIMPAC:       Write information into a WFN file (UNIT 7) for the AIMPAC program
+IAIMPAC:       Write information into a WFN file for the AIMPAC program
 
-      = 0      Not do it
+      = 0      Don't write (Default)
 
-      = 1      Do it (Default)
+      = 1      Write into WFN file 
                       
 IFCHK:         Write information into Formatted Checkpoint (FCHK) file for visualization software (UNIT 19)
  
@@ -480,7 +480,7 @@ MOLDEN:        Write information into MLD file for the MOLDEN PROGRAM (UNIT 17)
 
 NOUTRDM:       Print option for atomic RDMs
 
-      = 0      Not do it (Default)
+      = 0      Don't print (Default)
 
       = 1      Print atomic RDMs in 1DM and 2DM files
 
@@ -510,19 +510,19 @@ NOUTTijab:     Print option for Tijab
 
       = 1      Print Tijab in file 'Tijab'
 
-NTHRESHTijab:   THRESHTijab=10.0**(-NTHRESHTijab)
+NTHRESHTijab:  THRESHTijab=10.0**(-NTHRESHTijab)
 
       = 6      (Default)
 
-APSG:           Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
+APSG:          Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
 
       = F      No output (Default)
 
-NTHAPSG:        Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
+NTHAPSG:       Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
 
       = 10     (Default)
 
-Note: the following options require NPRINT > 0 to take effect      
+<b>Note: the following options require NPRINT > 0 to take effect  </b>    
 
 IWRITEC:      Output option for the coefficient matrix
 
