@@ -221,9 +221,9 @@ ISOFTMAX:    Parameterization type for the occupation numbers
 
     = 1      Softmax function (Default)
 
-IORBOPT:     Select method for NO optimization
+IORBOPT:     Select method for natural orbital optimization
 
-    = 1      Iterative diagonalization (OrbOptFMIUGr)
+    = 1      Iterative diagonalization
 
     = 2      Adaptative Momentum (ADAM) (Default)
 
@@ -231,14 +231,15 @@ IEINI:       Calculate only the initial energy
 
     = 0      (DEFAULT)
 
-NO1:         MAX. index of NOs with Occupation equal to 1.0
+NO1:         Maximum index of natural orbitals with occupation numbers equal to 1.0
 
-    = -1     Consider Core NOs (DEFAULT)
+    = -1     Consider core natural orbitals 
                       
-    = 0      All NOs are considered
+    = 0      All natural orbitals are considered (Default)
                       
-    = Value  User specifies how many NOs have OCC equal to 1.0
+    = Value  User specifies how many natural orbitals have OCC equal to 1.0
 
+Note: Use this option with caution, as orbitals may rearrange during optimization.
 
 HARTREE-FOCK
 ^^^^^^^^^^^^
