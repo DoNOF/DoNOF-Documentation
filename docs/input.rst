@@ -587,7 +587,7 @@ ngcf:      number of GCF files to use in calculation
 
     = 1    (Default)
 
-Vxyz:      Initial velocities per atom     
+Vxyz:      An array (1:3,1:nat) of the initial velocities per atom     
 
     = 0.0  
 
