@@ -314,7 +314,9 @@ NCWO:        Number of coupled weakly occupied NOs per strongly occupied = Nc ->
     = 1,2,3,...
                       
     =-1      NCWO = NVIR/NDOC (Default)
+
              NVIR: Number of Hartre-Fock virtual molecular orbitals, now weakly occupied
+
              NDOC: Number of strongly occupied molecular orbitals
 
 Convergence criteria in NOF calculation
