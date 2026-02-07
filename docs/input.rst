@@ -24,7 +24,7 @@ The &INPRUN namelist specifies the run type and other fundamental job options. T
 
 RUNTYP:    Specifies the run calculation
 
-    = 'ENERGY'		single-point energy calculation (Default)
+    = 'ENERGY'  single-point energy calculation (Default)
 
     = 'GRAD'    energy + gradients with respect to nuclear coordinates
 
