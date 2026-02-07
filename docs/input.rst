@@ -215,11 +215,11 @@ ICOEF:       Energy Optimization with respect to Coefficient Matrix (Natural Orb
                       
     = 3      Optimize by all occupations and core-fragment orbitals. The rest of fragment orbitals remain frozen
 
-ISOFTMAX:    Use Softmax function for ON (Gamma) opt.
+ISOFTMAX:    Parameterization type for the occupation numbers
 
-    = 1      (Default)
+    = 0      Trigonometric
 
-    = 0      Use Trigonometric functions
+    = 1      Softmax function (Default)
 
 IORBOPT:     Select method for NO optimization
 
