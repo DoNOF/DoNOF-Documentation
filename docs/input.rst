@@ -393,7 +393,7 @@ PERDIIS:     Periodic DIIS
 Options for perturbative calculations
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-OIMP2:       NOF - Orbital Invariant MP2 [ For more info see PRA 98, 022504, 2018 ]
+OIMP2:       Orbital Invariant MP2 [ For more info on NOF-MP2 see PRA 98, 022504, 2018 ]
 
     = F       (Default)
                      
