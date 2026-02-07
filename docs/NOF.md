@@ -89,7 +89,7 @@ E_{g}=2\sum\limits _{p\in\Omega_{g}}n_{p}\mathcal{H}_{pp}+\sum\limits _{q,p\in\O
 $$
 
 $$
-E_{fg}^{HF}=\sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}\left[n_{q}n_{p}\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)]
+E_{fg}^{HF}=\sum\limits _{p\in\Omega_{f}}\sum\limits _{q\in\Omega_{g}}\left[n_{q}n_{p}\left(2\mathcal{J}_{pq}-\mathcal{K}_{pq}\right)\right]
 $$
 
 DoNOF contains several approximations that lead to the NOFs named as PNOFi [i=3-7] (in the input file we choose one or another by setting IPNOF=i). For more info see IJQC 113, 620 (2013), and also the references given below.
