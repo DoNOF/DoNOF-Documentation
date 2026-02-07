@@ -599,46 +599,14 @@ Geometry Optimization
 
 If RUNTYP='OPTGEO' is set, DoNOF automatically sets IRHF=0 and OIMP2=F at the beginning of the calculation.
 
-It is strongly recommended to set ICGMETHOD=1 (Default) or ICGMETHOD=2 if you possess the NAG library. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in your system.
-
-RUNTYP='OPTGEO' may be a computationally demanding task for any ICGMETHOD option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP='OPTGEO' is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are three weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=3 in the RUNTYP='OPTGEO' calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
-
 GCF: All information required to restart any calculation is printed in a file called GCF during the iterative procedure. At the end of the calculation this file is renamed to "name-of-the-molecule.gcf" by our supplied run scripts. It is worth noting that at the end of the GCF the nuclear coordinates are printed. The latter are read at the beginning of the calculation (so the ones from the .inp file are ignored) only if explicitly required by the user, by setting INPUTCXYZ=1 or if RESTART=T in $NOFINP. This option is particularly useful if the calculation stops unexpectedly during the geometry optimization procedure (RUNTYP='OPTGEO'). If that is the case, run a new calculation setting INPUTCXYZ=1 to converge the energy from the last obtained geometry.
 
-In geometry optimization calculations (RUNTYP='OPTGEO'), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo" by our supplied run scripts. This file contains information about the geometry optimization procedure carried out by using the conjugate gradient method (set in the input file by ICGMETHOD), as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients (see details at I. Mitxelena et al. Adv Quant. Chem. ISSN 0065-3276 (2019)), so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
-
-You may notice in the $NOFINP section that a keyword FROZEN is used to fix nuclear coordinates during geometry optimization. This is done in cartesians, though it is recommended, for obvious reasons, doing it by using internal coordinates. For the moment this has not been implemented in DoNOF yet. Therefore, we recommend the user to employ FROZEN carefully.
-
-New algorithms and numerical methods for carrying out these optimizations are welcome, so we encourage new collaborations to work on this task.
-
-Dependencies
-^^^^^^^^^^^^
-
-By setting ICGMETHOD=2 in the input file, DoNOF uses the Conjugate Gradient (CG) algorithm coded in NAG library for optimization of the GAMMA variables, as well as nuclear coordinates (if RUNTYP='OPTGEO'). If the user prefers to use NAG subroutines (https://www.nag.co.uk/content/nag-library), you must uncomment all lines in the code preceded by '!nag' and link DoNOF code with NAG library. Accordingly, the following routines are called by DoNOF: E04DGF, E04UEF, E04UCF, and F11JEF. The latter is required for perturbative calculations, while the other routines are required for optimization processes.
-
-Dissociation
-^^^^^^^^^^^^
-
-Molecular dissociation is considered the main still unresolved problem of DFT, but of fundamental interest for quantum chemistry. PNOF methods are able to reproduce benchmark potential energy curves of molecular bond dissociation. Nevertheless, this calculation is tricky and must be carried out carefully. In fact, different solutions may arise during the dissociation process depending on the electron correlation present in your system. Computationally it is convenient to converge a single-point calculation, and then start the dissociation process manually by setting: RESTART=F INPUTGAMMA=1 INPUTC=1 INPUTFMIUG=1 ORTHO=T. The restart option allows to use the previous solution, however, we have to avoid reading nuclear geometry from previous point. Since RESTART=T automatically fixes INPUTCXYZ=1, we must employ RESTART=F and specify what we want to read from GCF file, e.g. occupations (INPUTGAMMA=1), orbital coefficients (INPUTC=1), and diagonal elements of pseudofockian (INPUTFMIUG=1).
+In geometry optimization calculations (RUNTYP='OPTGEO'), you will note that a file named CGGRAD is created during the calculation. Once the calculation ends it is renamed to "name-of-the-molecule.cgo" by our supplied run scripts. This file contains information about the geometry optimization procedure carried out by using the conjugate gradient method, as well as the Hessian and harmonic vibrational frequencies at the solution point. Recall that the Hessian is computed by numerical differentiation of the analytic energy gradients, so numerical precision of reported harmonic vibrational frequencies is limited and, apriori, they should be taken only qualitatively.
 
 Symmetry
 ^^^^^^^^
 
 In DoNOF point-group symmetry is not employed, so C1 symmetry is assumed for any molecular system.
 
-WFN file
-^^^^^^^^
-
-The WFN file contains the necessary info to study the output data by using external programs, such as AIMPAC. Note that in this WFN file the energy is referred to as "HF energy", but it really corresponds to the PNOF energy.
-
-MLD file
-^^^^^^^^
-
-The MLD file contains the necessary info to study the output data by using the MOLDEN post processing program of molecular and electronic structure (https://www3.cmbi.umcn.nl/molden/)
-
-Numerical Precision
-^^^^^^^^^^^^^^^^^^^
-
-You may notice that different numerical precision is shown for each quantity (orbitals, energy, occupancies, etc) in the output file. The latter is done according to the trustworthy precision inherent to NOF methods. On the contrary, for other purposes is more convenient to employ as much digits as possible.
 
 
