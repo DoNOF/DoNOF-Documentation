@@ -567,6 +567,38 @@ CHKORTHO:       Check the orthonormality of the MOs
                       
       = T      Yes
 
+*******
+&INPDYN
+*******
+
+velflag:   Flag to make constant velocity dynamics
+
+    = F    (Default)
+
+dt:        Time step in fs
+
+    = 1    (Default)
+
+tmax:      Propagation time in fs
+
+    = 100  (Default)
+                          
+ngcf:      number of GCF files to use in calculation
+
+    = 1    (Default)
+
+Vxyz:      Initial velocities per atom     
+
+    = 0.0  
+
+resflag:   Restart MD calculation
+
+    = F    (Default)
+
+snapshot   Save MLD file in snapshot-t.mld
+
+    = F    (Default)
+
 ****************
 Additional Notes
 ****************
