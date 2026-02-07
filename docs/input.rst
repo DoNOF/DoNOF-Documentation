@@ -289,13 +289,13 @@ IPNOF:       Type of Natural Orbital Functional (see section "NOF approximations
                       
     = 7      PNOF7
     
-    = 8      GNOF (DEFAULT)
+    = 8      GNOF (Default)
                       
-Ista:        Use Static version of PNOF7
+Ista:        Use Static version of PNOF7 if IPNOF=7
 
     = 0      PNOF7 (Default)
                       
-    = 1      PNOF7s
+    = 1      PNOF7s (useful in perturbative calculations with the NOF-MP2 method)
 
 Imod:        Select versions of GNOF
 
