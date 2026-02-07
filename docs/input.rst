@@ -522,7 +522,9 @@ NTHAPSG:       Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPS
 
       = 10     (Default)
 
-Note: the following options require NPRINT > 0 to take effect   
+*******
+Note: the following options require NPRINT > 0 to take effect
+*******
 
 IWRITEC:      Output option for the coefficient matrix
 
