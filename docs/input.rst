@@ -591,7 +591,7 @@ Vxyz:      An array (1:3,1:nat) of the initial velocities per atom
 
     = 0.0  
 
-resflag:   Restart MD calculation from the file DYNl.xyz
+resflag:   Restart MD calculation from a file DYNl.xyz
 
     = F    (Default)
 
