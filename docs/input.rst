@@ -237,7 +237,7 @@ NO1:         Maximum index of natural orbitals with occupation numbers equal to 
                       
     = 0      All natural orbitals are considered (Default)
                       
-    = Value  User specifies how many natural orbitals have OCC equal to 1.0
+    = Value  The user specifies how many natural orbitals have occupations equal to 1.0
 
 Note: Use this option with caution, as orbitals may rearrange during optimization.
 
@@ -249,7 +249,6 @@ IRHF:        Restricted Hartree-Fock Calculation
     = 0      Not obtaining HF orbitals
 
     = 1      Self Consistent Field (SCF) (Default)
-             (only works with EFIELDL=.FALSE.)
 
     = 2      Orbital rotations through ADAM
 
