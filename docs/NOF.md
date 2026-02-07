@@ -1,4 +1,4 @@
-# Electron-pairing-based NOF for Multiplets
+# Electron-pairing-based NOFs
 
 ## Input
 
