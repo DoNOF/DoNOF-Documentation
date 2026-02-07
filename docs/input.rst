@@ -199,7 +199,7 @@ Number of total iterations
 
 MAXIT:       Maximum number of OCC-SCF iterations 
 
-    = 1000   (DEFAULT)
+    = 1000   (Default)
 
 
 Type of calculation
@@ -209,7 +209,7 @@ ICOEF:       Energy Optimization with respect to Coefficient Matrix (Natural Orb
 
     = 0      Optimize only with respect to Gamma variables that determine the occupation numbers
                       
-    = 1      Optimize with respect to Gammas and Coefficient matrix (DEFAULT)
+    = 1      Optimize with respect to Gammas and Coefficient matrix (Default)
                       
     = 2      Optimize only by the orbitals keeping fixed the occupation numbers
                       
