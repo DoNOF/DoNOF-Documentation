@@ -229,7 +229,7 @@ IORBOPT:     Select method for natural orbital optimization
 
 IEINI:       Calculate only the initial energy
 
-    = 0      (DEFAULT)
+    = 0      (Default)
 
 NO1:         Maximum index of natural orbitals with occupation numbers equal to 1.0
 
@@ -320,50 +320,38 @@ NCWO:        Number of coupled weakly occupied NOs per strongly occupied = Nc ->
 Convergence criteria in NOF calculation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more info see section 3 in Comp. Phys. Comm. 259, 107651 (2021), Code Ocean Capsule; arXiv:2004.06142 [physics.comp-ph] by Piris and Mitxelena
-
 NTHRESHL:    Convergence of the Lagrange multipliers, THRESHL=10.0**(-NTHRESHL)
 
-    = 3      (DEFAULT)
+    = 4      (Default)
 
 NTHRESHE:    Convergence of the total energy, THRESHE=10.0**(-NTHRESHE)
 
-    = 4      (DEFAULT)
-
-NTHRESHEC:   Convergence of the total energy (ORBOPT), THRESHEC=10.0**(-NTHRESHEC)
-
-    = 10     (DEFAULT)
-
-NTHRESHEN:   Convergence of the total energy (OCCOPT), THRESHEN=10.0**(-NTHRESHEN)
-
-    = 10     (DEFAULT)
+    = 8      (Default)
 
 Options for the orbital optimization program (ID method)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For more info and computational details see section 3 in arXiv:004.06142 [physics.chem-ph] by Piris and Mitxelena
-
 MAXLOOP:     Maximum Iteration Number for the SCF ITERATION cycle in each ITCALL
 
-    = 30     (DEFAULT)
+    = 10     (Default)
 
     The straightforward iterative scheme fails to converge very often due to the values of some off-diagonal elements Fki. The latters must be suffciently small and of the same order of magnitude. A variable factor scales Fki. We establish an upper bound B, in such a way that when the absolute value of the matrix element Fki is greater than B, it is scaled by a factor Cki (F'ki = Cki*Fki ), as to satisfy ABS(Fki) <= B.
 
 SCALING:     A variable factor scales Fki
 
-    = T      (DEFAULT)
+    = T      (Default)
 
 NZEROS:      B = 10.0**(1-NZEROS). Initial number of ZEROS in Fij. The scaling factor varies until the number of ZEROS (.000##) is equal for all elements Fij
 
-    = 0      ; B = 10.0 (DEFAULT)
+    = 0      ; B = 10.0 (Default)
 
 NZEROSm:     B = 10.0**(1-NZEROSm). Maximum number of zeros in Fij
 
-    = 5      ; B = 10.0 (DEFAULT)
+    = 5      ; B = 10.0 (Default)
 
 NZEROSr:     B = 10.0**(1-NZEROSr). Number of zeros in Fij to restart automatically the calculation
 
-    = 2      ; B = 10.0 (DEFAULT)
+    = 2      ; B = 10.0 (Default)
                       
 AUTOZEROS:   The code select automatically values for NZEROS, NZEROSm & NZEROSr. 
 
@@ -373,23 +361,23 @@ AUTOZEROS:   The code select automatically values for NZEROS, NZEROSm & NZEROSr.
 
 ITZITER:      Number of Iterations for constant scaling
 
-    = 10     (DEFAULT)
+    = 10     (Default)
 
 DIIS:        Direct Inversion in the Iterative Subspace in the orbital optimization if DUMEL < THDIIS every NDIIS loops
 
-    = T      (DEFAULT)
+    = T      (Default)
 
 NTHDIIS:     Energy threshold to begin DIIS
 
-    = 3      ; THDIIS = 10.0**(-NTHDIIS) (DEFAULT)
+    = 3      ; THDIIS = 10.0**(-NTHDIIS) (Default)
 
 NDIIS:       Number of considered loops to interpolate the generalized Fock matrix in the DIIS
 
-    = 5      (DEFAULT)
+    = 5      (Default)
 
 PERDIIS:     Periodic DIIS
 
-    = T      ; Apply DIIS every NDIIS (DEFAULT)
+    = T      ; Apply DIIS every NDIIS (Default)
                       
     = F      ; DIIS is always applied after NDIIS
 
@@ -400,11 +388,11 @@ For more info see [PRA 98, 022504 (2018)]
 
 OIMP2:       NOF - Orbital Invariant MP2
 
-    = F       (DEFAULT)
+    = F       (Default)
                      
 NO1PT2:      Frozen MOs in perturbative calculations. Maximum index of NOs with Occupation = 1
 
-   = -1      = NO1 (DEFAULT)
+   = -1      = NO1 (Default)
                       
    = 0       ; All NOs are considered
                       
@@ -412,11 +400,11 @@ NO1PT2:      Frozen MOs in perturbative calculations. Maximum index of NOs with 
 
 SC2MCPT:     SC2-MCPT perturbation theory is used to correct the PNOF5 Energy. Two outputs: PNOF5-SC2-MCPT and PNOF5-PT2
 
-    = F      (DEFAULT)
+    = F      (Default)
 
 NEX:         Number of excluded coupled orbitals in the PNOF5-PT2 calculation
 
-    = 0      ; All NOs are included (DEFAULT)
+    = 0      ; All NOs are included (Default)
 
 
 Restart options for GAMMA, C, diagonal F, and nuclear coordinates
@@ -430,19 +418,19 @@ RESTART:     Restart from GCF file (DEFAULT=F)
 
 INPUTGAMMA:   Guess for GAMMA variables (determine the Occupation Numbers)
 
-    = 0      ; Close Fermi-Dirac Distribution (DEFAULT)
+    = 0      ; Close Fermi-Dirac Distribution (Default)
                       
     = 1      ; Input from GCF file
 
 INPUTC:      Guess for coefficient matrix (Natural Orbitals)
 
-     = 0     ; Use HCORE or HF Eigenvectors (DEFAULT)
+     = 0     ; Use HCORE or HF Eigenvectors (Default)
                       
      = 1      ; Input from GCF file
 
 INPUTFMIUG:   Guess for diagonal elements of the symmetric F matrix (FMIUG0)
 
-     = 0      ; Use single diagonalization of Lagragian (DEFAULT)
+     = 0      ; Use single diagonalization of Lagragian (Default)
                       
      = 1      ; Input from GCF file
 
@@ -457,7 +445,7 @@ Output options
 
 NPRINT:       Output option
 
-      = 0     ; Short Printing (DEFAULT)
+      = 0     ; Short Printing (Default)
                       
       = 1     ; Output at initial and final iterations
                       
@@ -467,7 +455,7 @@ IAIMPAC:       Write information into a WFN file (UNIT 7) for the AIMPAC program
 
       = 0      ; Not do it
 
-      = 1      ; Do it (DEFAULT)
+      = 1      ; Do it (Default)
                       
 IFCHK:         Write information into Formatted Checkpoint (FCHK) file for visualization software (UNIT 19)
  
@@ -483,73 +471,73 @@ MOLDEN:        Write information into MLD file for the MOLDEN PROGRAM (UNIT 17)
 
 NOUTRDM:       Print option for atomic RDMs
 
-      = 0      ; Not do it (DEFAULT)
+      = 0      ; Not do it (Default)
 
       = 1      ; Print atomic RDMs in 1DM and 2DM files
 
 NTHRESHDM:     THRESHDM = 10.0**(-NTHRESHDM)
 
-      = 6      (DEFAULT)
+      = 6      (Default)
 
 NSQT:          Print OPTION for 2DM file
 
       = 0      ; Formatted file
 
-      = 1      ; Unformatted file (DEFAULT)
+      = 1      ; Unformatted file (Default)
 
 NOUTCJK:       Print option for CJ12 and CK12
 
-      = 0      ; No output (DEFAULT)
+      = 0      ; No output (Default)
 
       = 1      ; Print CJ12 and CK12 in file 'CJK'
 
 NTHRESHCJK:    THRESHCJK = 10.0**(-NTHRESHCJK)
 
-      = 6      (DEFAULT)
+      = 6      (Default)
 
 NOUTTijab:     Print option for Tijab
 
-      = 0      ; No output (DEFAULT)
+      = 0      ; No output (Default)
 
       = 1      ; Print Tijab in file 'Tijab'
 
 NTHRESHTijab:   THRESHTijab=10.0**(-NTHRESHTijab)
 
-      = 6      (DEFAULT)
+      = 6      (Default)
 
 APSG:           Open an APSG file for printing the coefficient matrix ($VEC-$END) and the expansion coefficients of the APSG generating wavefunction.
 
-      = F      ; No output (DEFAULT)
+      = F      ; No output (Default)
 
 NTHAPSG:        Threshold for APSG expansion coefficients THAPSG = 10.0**(-NTHAPSG)
 
-      = 10     (DEFAULT)
+      = 10     (Default)
 
 Note: the following options require NPRINT > 0 to take effect      
 
 IWRITEC:      Output option for the coefficient matrix
 
-      = 0     ;  Not do it (DEFAULT)
+      = 0     ;  Not do it (Default)
                       
       = 1     ;  Do it
 
 IMULPOP:       Mulliken population analysis
 
-      = 0      ; Not do it (DEFAULT)
+      = 0      ; Not do it (Default)
                       
       = 1      ; Do it
 
 PRINTLAG:      Output option for the lagrange multipliers
 
-      = F      ; Not do it (DEFAULT)
+      = F      ; Not do it (Default)
 
 DIAGLAG:       Diagonalize Lagrange multipliers. Print new 1e- Energies, Canonical MOs, and new diagonal elements of the 1RDM
 
-      = F      ; Not do it (DEFAULT)
+      = F      ; Not do it (Default)
 
 IEKT:          Calculate the Ionization Potentials using the Extended Koopmans' Theorem (EKT)
 
-      = 0      ; Not do it (DEFAULT)
+      = 0      ; Not do it (Default)
 
       = 1      ; Do it
 
@@ -560,11 +548,11 @@ ORTHO:         Orthogonalize the initial orbitals
 
       = F      ; No 
                       
-      = T      ; Yes (DEFAULT)
+      = T      ; Yes (Default)
 
 CHKORTHO:       Check the orthonormality of the MOs
 
-      = F      ; No (DEFAULT)
+      = F      ; No (Default)
                       
       = T      ; Yes
 
@@ -576,18 +564,18 @@ See also "Additional notes" section
 
 FROZEN:         Is there any fixed coordinate
 
-     = F      (DEFAULT)
+     = F      (Default)
 
 IFROZEN:       By pairs, what coordinate of which atom, e.g. 2,5,1,1 means "y" coordinate of atom 5 and "x" coor of atom 1 to freeze. MAXIMUM of frozen coordinates = 10
 
-      = 0      (DEFAULT)
+      = 0      (Default)
                       
 Options for optimization program
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ICGMETHOD:     Define the conjugate gradient method in routines OCCOPTr, CALTijabIsym and OPTIMIZE
 
-     = 1       ; Use SUMSL in CGOCUPSUMSLr,OPTSUMSL, SparseSymLinearSystem_CG (DEFAULT)
+     = 1       ; Use SUMSL in CGOCUPSUMSLr,OPTSUMSL, SparseSymLinearSystem_CG (Default)
 
      = 2       ; Use NAG routines E04DGF in OPTCGNAG,CGOCUPNAGr; and F11JEF in SparseSymLinearSystem_NAG       
 
@@ -629,7 +617,7 @@ Geometry Optimization
 
 If RUNTYP='OPTGEO' is set, DoNOF automatically sets RHF=F, HFID=F and OIMP2=F at the beginning of the calculation.
 
-It is strongly recommended to set ICGMETHOD=1 (DEFAULT) or ICGMETHOD=2 if you possess the NAG library. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in your system.
+It is strongly recommended to set ICGMETHOD=1 (Default) or ICGMETHOD=2 if you possess the NAG library. In fact, the latter has proven to be much more accurate than LBFGS for this task. The LBFGS algorithm has been employed before in quantum chemistry programs to optimize the geometry (see http://openmopac.net/Manual/lbfgs.html). Since LBFGS employs very low memory it is recommended only if a large number of variables is to be optimized. Nevertheless, LBFGS may not work accurately if low-energy interactions are significant in your system.
 
 RUNTYP='OPTGEO' may be a computationally demanding task for any ICGMETHOD option. Nevertheless, we have demonstrated (JCP 146, 014102 (2017)) that PNOF approximations produce similar equilibrium geometries for perfect pairing or larger coupling options (i.e. NCWO>1). Therefore, for RUNTYP='OPTGEO' is recommended to employ the minimum value of NCWO, that is, run a single-point calculation and check in the output how many weakly-occupied-orbitals have significant occupancies in each subspace. For example, if there are three weakly-occupied-orbitals with non-negligible occupations in each subspace, it will be enough to set NCWO=3 in the RUNTYP='OPTGEO' calculation. This can save a large amount of computational time and produce similar equilibrium geometries to those that would be obtained by considering all orbitals correlated with a large basis set.
 
