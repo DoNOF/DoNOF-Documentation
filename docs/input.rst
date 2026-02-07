@@ -561,7 +561,7 @@ ORTHO:         Orthogonalize the initial orbitals
                       
       = T      Yes (Default)
 
-CHKORTHO:       Check the orthonormality of the MOs
+CHKORTHO:       Check the orthonormality of the natural orbitals
 
       = F      No (Default)
                       
@@ -591,7 +591,7 @@ Vxyz:      An array (1:3,1:nat) of the initial velocities per atom
 
     = 0.0  
 
-resflag:   Restart MD calculation from a file XYZ
+resflag:   Restart MD calculation from the file DYNl.xyz
 
     = F    (Default)
 
