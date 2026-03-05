@@ -104,9 +104,9 @@ DONTW:       Do not write 2e- integrals on the disk (Unit=1)
     
 ERITYP:      Typ of ERIs used in calculations
 
-    = FULL   4c ERIs (Default)
+    = FULL   4c ERIs 
     
-    = RI     3c/2c ERIs for Resolution of the Identity (RI) App.
+    = RI     3c/2c ERIs for Resolution of the Identity (RI) App. (Default)
     
     = MIX    3c/2c ERIs for Resolution of the Identity (RI) App. once converged change to 4c ERIs (FULL)
 
