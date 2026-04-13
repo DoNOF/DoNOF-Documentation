@@ -4,7 +4,7 @@
 
 0. Install ![libcint](https://github.com/sunqm/libcint). The following instructions are provided as example.
 ~~~ bash
-git clone http://github.com/sunqm/libcint.git
+git clone https://github.com/sunqm/libcint.git
 cd libcint
 mkdir build; cd build
 cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr/local/lib ..
