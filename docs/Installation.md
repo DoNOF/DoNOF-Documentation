@@ -1,80 +1,56 @@
 # Download and Installation
 
-**Requisites.** You need a FORTRAN compiler, either gfortran or ifort. Optionally, you may want to install OpenMPI for parallel execution.
+## Requirements
 
-0. Install ![libcint](https://github.com/sunqm/libcint). The following instructions are provided as example.
-~~~ bash
+- A Fortran compiler compatible with the project `Makefile` (currently `gfortran`)
+- `libcint`
+- `OpenMPI` (only if MPI execution is needed)
+- BLAS and LAPACK libraries
+
+Install `libcint` (example):
+
+```bash
 git clone https://github.com/sunqm/libcint.git
 cd libcint
-mkdir build; cd build
+mkdir build && cd build
 cmake -DCMAKE_INSTALL_PREFIX:PATH=/usr/local/lib ..
 sudo make install
-~~~
+```
 
-1. Clone the code with
-~~~
+## Clone and Build
+
+```bash
 git clone https://github.com/DoNOF/DoNOFsw
-~~~
+cd DoNOFsw
+```
 
-2. Go inside the DoNOFsw folder (`cd DoNOFsw`) and compile with `make [option]`. For example:
-~~~
-make serialg # gfortran serial -> /exe/DoNOFg.x
-~~~
+Build targets currently available:
 
-Other options are:
-~~~
-make ompg    # gfortran OpenMP      -> /exe/DoNOFompg.x
-make mpig    # gfortran MPI         -> /exe/DoNOFmpig.x
-make hybridg # gfortran OpenMP+MPI  -> /exe/DoNOFhybridg.x
-make serial  # ifort Serial         -> /exe/DoNOF.x
-make omp     # ifort OpenMP         -> /exe/DoNOFomp.x
-make mpi     # ifort MPI            -> /exe/DoNOFmpi.x
-make hybrid  # ifort OpenMP+MPI     -> /exe/DoNOFhybrid.x
-~~~
-
-3. The executable will be placed inside /exe
+```bash
+make serialg   # exe/DoNOFg.x
+make ompg      # exe/DoNOFompg.x
+make mpig      # exe/DoNOFmpig.x
+```
 
 ## Execution
 
-Several input files can be found inside /examples. A basic single point calculation with the GNOF functional looks like the following:
-:::{admonition} Example Input
-~~~
- &INPRUN RUNTYP='ENERGY' MULT=1 ICHARG=0 ERITYP='FULL' /
- $DATA
- Water (H2O)
- cc-pVDZ
-O  8.0  0.0000     0.0000    0.1173
-H  1.0  0.0000     0.7572   -0.4692
-H  1.0  0.0000    -0.7572   -0.4692
- $END
- &NOFINP IPNOF=8 /
-~~~
-:::
+Input examples are provided in `examples/`.
 
-If the input is placed in a file called `filename.inp`, it can be executed with
-~~~
-./run_donofg filename     # gfortran serial
-~~~
-the output will be placed in `filename.out`.
+If the input is `filename.inp`, run with:
 
-Other options for execution are:
-~~~
-./run_donofmpig filename  # gfortran mpi
-./run_donof     filename  # ifort serial
-./run_donofmpi  filename  # ifort mpi
-~~~
+```bash
+./run_donofg filename
+./run_donofompg filename
+./run_donofmpig filename
+./run_donofg_dyn filename
+./run_donofompg_dyn filename
+./run_donofmpig_dyn filename
+```
 
-## Capabilities
+The output is written to `filename.out`.
 
-The `&INPRUN` and `&NOFINP` namelists specify the input and output, and the fundamental job options.
+## Notes
 
-The functional is controlled through `IPNOF=N` in *&NOFINP*, with *N* the number of the functional. For example, `INPOF=7` indicates to use `PNOF7`. The most recent `GNOF` is indicated with `IPNOF=8`.
-
-Current capabilities include:
-- **RUNTYP = ENERGY** - Single-point Energy (Default)
-- **RUNTYP = GRAD** - Energy + Gradients with respect to nuclear coord
-- **RUNTYP = OPTGEO** - Geometry Optimization
-- **RUNTYP = HESS** - Numerical Hessian
-- **RUNTYP = DYN** - Born-Oppenheimer on-the-fly molecular dynamics
-
-Other common options include excited states calculation (`ERPA=T`) and NOF-MBPT calculations (`MBPT=T`).
+- Main input control is provided by `&INPRUN` and `&NOFINP`.
+- Molecular dynamics (`RUNTYP='DYN'`) additionally uses `&INPDYN`.
+- Current defaults include `IPNOF=8` (GNOF), `ERITYP='RI'`, `USELIB=.TRUE.`, and `GTYP='SPH'`.
