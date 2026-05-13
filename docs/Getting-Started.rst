@@ -1,5 +1,5 @@
 Getting Started
-=====
+===============
 
 All PNOF options have default values (see "Input Options" section),
 so for a given system defined in the $INPRUN part of the input,
@@ -59,4 +59,3 @@ For molecular dynamics jobs::
 
 The wrappers handle the standard output and restart files (for example ``filename.out`` and
 ``filename.gcf``).
-
