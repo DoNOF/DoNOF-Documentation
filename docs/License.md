@@ -35,6 +35,17 @@ https://arxiv.org/abs/2004.06142
 
 You can also place the following in your bibtex file:
 ~~~
+    @article{LewYee2026,
+    author = {Lew-Yee, J. F. H. and Mitxelena, Ion and del Campo, J. M. and Piris, Mario},
+    doi = {10.1063/5.0316927},
+    journal = {The Journal of Chemical Physics},
+    number = {7},
+    pages = {072501},
+    title = {DoNOF 2.0: A modern open-source electronic structure program for natural orbital functionals},
+    volume = {164},
+    year = {2026}
+    }
+
     @article{Piris2021,
     author = {Piris, Mario and Mitxelena, Ion},
     doi = {10.1016/j.cpc.2020.107651},
