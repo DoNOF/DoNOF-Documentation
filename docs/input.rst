@@ -229,14 +229,6 @@ IORBOPT:     Select method for natural orbital optimization
 
     = 2      Adaptative Momentum (ADAM) (Default)
 
-    = 3      AdaBelief
-
-    = 4      YOGI
-
-    = 5      DEMON
-
-    = 6      SQP (OrbOptSQP)
-
 IEINI:       Calculate only the initial energy
 
     = 0      (Default)
@@ -649,4 +641,3 @@ Symmetry
 ^^^^^^^^
 
 In DoNOF point-group symmetry is not employed, so C1 symmetry is assumed for any molecular system.
-
