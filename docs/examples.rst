@@ -63,7 +63,7 @@ PNOF7 single-point energy calculation of the HF molecule at the experimental geo
      1 1.6400000 1.0000000
 
     $END
-     &NOFINP IPNOF=7 ICOEF=0 RHF=T /
+     &NOFINP IPNOF=7 ICOEF=0 IRHF=1 /
 
 PNOF7 single-point energy calculation of the of Oxygen atom at its triplet state (S=1) with STO-3G basis set, optimizing only with respect to natural orbitals::
 
