@@ -11,7 +11,9 @@ parts:
 - caption: 📚 User Documentation
   chapters:
   - file: Getting-Started
+  - file: examples
   - file: NOF
+  - file: occupation-mapping
   - file: OptGeo
   - file: NOF-MP2
   - file: ERPA
