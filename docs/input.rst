@@ -104,7 +104,7 @@ DONTW:       Do not write 2e- integrals on the disk (Unit=1)
 
     = T      (Default)
     
-ERITYP:      Typ of ERIs used in calculations
+ERITYP:      Type of ERIs used in calculations
 
     = FULL   4c ERIs 
     
@@ -116,7 +116,7 @@ CUTOFF       The Schwarz screening cut off for NAT>5
 
     = 1.0D-9 (Default)
 
-RITYP        Typ of Auxiliary Basis
+RITYP        Type of Auxiliary Basis
 
     = JKFIT  Read from jkfit files (Default)
 
@@ -130,7 +130,7 @@ SMCD:        Symmetric Modified Cholesky Decomposition for the G matrix in the R
 
    = F       (Default)
     
-HSSCAL:      Compute Hessian from analytic gradients and carry out normal mode vibrational analysis at st. point if RUNTYP = OPTGEO (IRUNTYP=3)
+HSSCAL:      Compute Hessian from analytic gradients and carry out normal mode vibrational analysis at stationary point if RUNTYP = OPTGEO (IRUNTYP=3)
 
    = T       (Default)
 
@@ -256,7 +256,7 @@ HARTREE-FOCK
 
 IRHF:        Restricted Hartree-Fock Calculation
 
-    = 0      Not obtaining HF orbitals
+    = 0      Do not obtain HF orbitals
 
     = 1      Self Consistent Field (SCF) (Default)
 
@@ -538,27 +538,27 @@ The following options require NPRINT > 0 to take effect
 
 IWRITEC:      Output option for the coefficient matrix
 
-      = 0      Not do it (Default)
+      = 0      Do not do it (Default)
                       
       = 1      Do it
 
 IMULPOP:       Mulliken population analysis
 
-      = 0      Not do it (Default)
+      = 0      Do not do it (Default)
                       
       = 1      Do it
 
 PRINTLAG:      Output option for the lagrange multipliers
 
-      = F      Not do it (Default)
+      = F      Do not do it (Default)
 
 DIAGLAG:       Diagonalize Lagrange multipliers. Print new 1e- Energies, Canonical MOs, and new diagonal elements of the 1RDM
 
-      = F      Not do it (Default)
+      = F      Do not do it (Default)
 
 IEKT:          Calculate the Ionization Potentials using the Extended Koopmans' Theorem (EKT)
 
-      = 0      Not do it (Default)
+      = 0      Do not do it (Default)
 
       = 1      Do it
 
@@ -649,5 +649,4 @@ Symmetry
 ^^^^^^^^
 
 In DoNOF point-group symmetry is not employed, so C1 symmetry is assumed for any molecular system.
-
 

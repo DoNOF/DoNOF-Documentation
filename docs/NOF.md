@@ -27,7 +27,7 @@ You can identify the following information inside the `&INPRUN` directive:
 - `ERITYP`:
   - `FULL`: For using four center integrals. (Scaling: $N^5$)
   - `RI`: For using the resolution of the identity approximation. (Scaling: $N^4$)
-  - `MIX`: For automatically performin an RI calculation followed by a restart with FULL.  
+  - `MIX`: For automatically performing an RI calculation followed by a restart with FULL.  
 
 ### `$DATA`
 
@@ -62,7 +62,7 @@ The non-relativistic electronic energy can be written as an explicit functional 
 
 $$E_{el}[\Gamma,D]=\sum_{ik}\Gamma_{ki}h_{ki}+\sum_{ijkl}D_{kl,ij}\langle kl|ij\rangle$$
     
-where, if there is no any dependence on spin coordinates, then RDMs correspond to a mixed quantum state (ensemble) that allows all possible spin projections for a given total spin quantum number S.
+where, if there is no dependence on spin coordinates, then RDMs correspond to a mixed quantum state (ensemble) that allows all possible spin projections for a given total spin quantum number S.
 
 $$
 \Gamma_{ki}={\displaystyle \dfrac{1}{2S+1}{\textstyle {\displaystyle \sum_{M_{s}=-S}^{S}}}}\left\langle SM_{s}\right|\hat{a}_{k}^{\dagger}\hat{a}_{i}\left|SM_{s}\right\rangle
@@ -78,7 +78,7 @@ $$
 E_{el}[\left\{ n_{i},\phi_{i}\right\}]=\sum\limits _{i}n_{i}\mathcal{H}_{ii}+\sum\limits _{ijkl}D[n_{i},n_{j},n_{k},n_{l}]\left\langle kl|ij\right\rangle
 $$
 
-In our electron-pair-based NOF the orbital space is divided into disjoint orbital subspaces. This allows us to conserve correct spin symmetry, both total spin and spin projection. Also, since the spin-restricted formalism can be employed even for S>0, the formula to compute energy gradients holds. Then it is straighforward to compute equilibrium geometries of non-singlet systems. See details at PRA 100, 032508 (2019) and "Analytic gradients for spin multiplets in natural orbital functional theory" (available also in arXiv:2005.02333 [physics.chem-ph]). In general, the NOF for spin-multiplets can be written as
+In our electron-pair-based NOF the orbital space is divided into disjoint orbital subspaces. This allows us to conserve correct spin symmetry, both total spin and spin projection. Also, since the spin-restricted formalism can be employed even for S>0, the formula to compute energy gradients holds. Then it is straightforward to compute equilibrium geometries of non-singlet systems. See details at PRA 100, 032508 (2019) and "Analytic gradients for spin multiplets in natural orbital functional theory" (available also in arXiv:2005.02333 [physics.chem-ph]). In general, the NOF for spin-multiplets can be written as
 
 $$
 E=\sum\limits _{g=1}^{\frac{\mathrm{N_{II}}}{2}}E_{g}+\sum_{g=\frac{\mathrm{N_{II}}}{2}+1}^{\mathrm{N}_{\Omega}}\mathcal{H}_{gg}+\sum\limits _{f,g=1;f\neq g}^{\mathrm{N}_{\Omega}}E_{fg}^{HF}+ E_{sta}^{inter} + E_{dyn}^{inter}

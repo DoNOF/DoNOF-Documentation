@@ -69,7 +69,7 @@ The functional is controlled through `IPNOF=N` in *&NOFINP*, with *N* the number
 
 Current capabilities include:
 - **RUNTYP = ENERGY** - Single-point Energy (Default)
-- **RUNTYP = GRAD** - Energy + Gradients with respect to nuclear coord
+- **RUNTYP = GRAD** - Energy + Gradients with respect to nuclear coordinates
 - **RUNTYP = OPTGEO** - Geometry Optimization
 - **RUNTYP = HESS** - Numerical Hessian
 - **RUNTYP = TSOPT** - Transition-state optimization

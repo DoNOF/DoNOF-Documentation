@@ -17,7 +17,7 @@ You can run an excited state calculation using the `ERPA='T'` in the `&NOFINP` a
 H  1.0  0.0000     0.0000    0.0000
 H  1.0  0.0000     0.0000    0.7414
  $END
- &NOFINP IPNOF=8 IORBOPT=4 ERPA="T"/
+ &NOFINP IPNOF=8 IORBOPT=4 ERPA=.TRUE./
 ~~~
 :::
 
