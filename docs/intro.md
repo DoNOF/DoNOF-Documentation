@@ -14,7 +14,7 @@ occupation numbers and to the natural orbitals, separately.
 
 :::{admonition} Citation
 :class: tip
-- J.F.H. Lew-Yee, I. Mitxelena, J.M. del Campo, and M. Piris, **DoNOF 2.0: A modern open-source electronic structure program for natural orbital functionals**, arXiv [Physics.Chem-Ph], (2025). [DOI:10.48550/arXiv.2512.13550](https://doi.org/10.48550/arXiv.2512.13550)
+- J.F.H. Lew-Yee, I. Mitxelena, J.M. del Campo, and M. Piris, **DoNOF 2.0: A modern open-source electronic structure program for natural orbital functionals**, J. Chem. Phys. 164, 072501 (2026) [DOI:10.1063/5.0316927](https://doi.org/10.1063/5.0316927), preprint: [arXiv:2512.13550](https://arxiv.org/abs/2512.13550)
 - M. Piris, I. Mitxelena, **DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry**, Comp. Phys. Comm. 259, 107651 (2021) [DOI:10.1016/j.cpc.2020.107651](https://doi.org/10.1016/j.cpc.2020.107651)
 :::
 

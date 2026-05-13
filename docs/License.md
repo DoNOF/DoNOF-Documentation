@@ -15,21 +15,32 @@ By citing DoNOF you are encouraging development and exposing the software packag
 
 :::{admonition} Citation
 :class: tip
-M. Piris, I. Mitxelena, DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry, 
-Comp. Phys. Comm. 259, 107651 (2021)
-
-[DOI:10.1016/j.cpc.2020.107651](https://doi.org/10.1016/j.cpc.2020.107651)
+- J.F.H. Lew-Yee, I. Mitxelena, J.M. del Campo, and M. Piris, **DoNOF 2.0: A modern open-source electronic structure program for natural orbital functionals**, J. Chem. Phys. 164, 072501 (2026) [DOI:10.1063/5.0316927](https://doi.org/10.1063/5.0316927)
+- J.F.H. Lew-Yee, I. Mitxelena, J.M. del Campo, and M. Piris, **DoNOF 2.0: A modern open-source electronic structure program for natural orbital functionals**, arXiv [Physics.Chem-Ph], (2025). [DOI:10.48550/arXiv.2512.13550](https://doi.org/10.48550/arXiv.2512.13550)
+- M. Piris, I. Mitxelena, **DoNOF: an open-source implementation of natural-orbital-functional-based methods for quantum chemistry**, Comp. Phys. Comm. 259, 107651 (2021) [DOI:10.1016/j.cpc.2020.107651](https://doi.org/10.1016/j.cpc.2020.107651)
 :::
 
 ```{margin} arXiv
-You can find a preprint corresponding to this publication in:
+You can find preprints corresponding to DoNOF publications in:
 ~~~
+https://arxiv.org/abs/2512.13550
 https://arxiv.org/abs/2004.06142 
 ~~~
 ```
 
 You can also place the following in your bibtex file:
 ~~~
+    @article{LewYee2026,
+    author = {Lew-Yee, J. F. H. and Mitxelena, Ion and del Campo, J. M. and Piris, Mario},
+    doi = {10.1063/5.0316927},
+    journal = {The Journal of Chemical Physics},
+    number = {7},
+    pages = {072501},
+    title = {DoNOF 2.0: A modern open-source electronic structure program for natural orbital functionals},
+    volume = {164},
+    year = {2026}
+    }
+
     @article{Piris2021,
     author = {Piris, Mario and Mitxelena, Ion},
     doi = {10.1016/j.cpc.2020.107651},

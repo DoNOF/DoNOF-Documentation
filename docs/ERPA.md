@@ -17,7 +17,7 @@ You can run an excited state calculation using the `ERPA='T'` in the `&NOFINP` a
 H  1.0  0.0000     0.0000    0.0000
 H  1.0  0.0000     0.0000    0.7414
  $END
- &NOFINP IPNOF=8 IORBOPT=4 ERPA="T"/
+ &NOFINP IPNOF=8 IORBOPT=4 ERPA=.TRUE./
 ~~~
 :::
 
@@ -155,4 +155,4 @@ $$
 c_p = \pm \sqrt{n_p}
 $$
 
-under the PNOF convention of a `+\sqrt{n_p}` for strongly occupied orbitals and `-\sqrt{n_p}` for weakly occupied orbitals.
+under the PNOF convention of a $+\sqrt{n_p}$ for strongly occupied orbitals and $-\sqrt{n_p}$ for weakly occupied orbitals.

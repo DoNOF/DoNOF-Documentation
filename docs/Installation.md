@@ -1,6 +1,6 @@
 # Download and Installation
 
-**Requisites.** You need a FORTRAN compiler, either gfortran or ifort. Optionally, you may want to install OpenMPI for parallel execution.
+**Requisites.** You need a FORTRAN compiler (currently gfortran). Optionally, you may want to install OpenMPI for parallel execution.
 
 0. Install ![libcint](https://github.com/sunqm/libcint). The following instructions are provided as example.
 ~~~ bash
@@ -25,11 +25,6 @@ Other options are:
 ~~~
 make ompg    # gfortran OpenMP      -> /exe/DoNOFompg.x
 make mpig    # gfortran MPI         -> /exe/DoNOFmpig.x
-make hybridg # gfortran OpenMP+MPI  -> /exe/DoNOFhybridg.x
-make serial  # ifort Serial         -> /exe/DoNOF.x
-make omp     # ifort OpenMP         -> /exe/DoNOFomp.x
-make mpi     # ifort MPI            -> /exe/DoNOFmpi.x
-make hybrid  # ifort OpenMP+MPI     -> /exe/DoNOFhybrid.x
 ~~~
 
 3. The executable will be placed inside /exe
@@ -59,9 +54,11 @@ the output will be placed in `filename.out`.
 
 Other options for execution are:
 ~~~
+./run_donofompg filename  # gfortran OpenMP
 ./run_donofmpig filename  # gfortran mpi
-./run_donof     filename  # ifort serial
-./run_donofmpi  filename  # ifort mpi
+./run_donofg_dyn filename     # gfortran serial dynamics
+./run_donofompg_dyn filename  # gfortran OpenMP dynamics
+./run_donofmpig_dyn filename  # gfortran MPI dynamics
 ~~~
 
 ## Capabilities
@@ -72,9 +69,10 @@ The functional is controlled through `IPNOF=N` in *&NOFINP*, with *N* the number
 
 Current capabilities include:
 - **RUNTYP = ENERGY** - Single-point Energy (Default)
-- **RUNTYP = GRAD** - Energy + Gradients with respect to nuclear coord
+- **RUNTYP = GRAD** - Energy + Gradients with respect to nuclear coordinates
 - **RUNTYP = OPTGEO** - Geometry Optimization
 - **RUNTYP = HESS** - Numerical Hessian
+- **RUNTYP = TSOPT** - Transition-state optimization
 - **RUNTYP = DYN** - Born-Oppenheimer on-the-fly molecular dynamics
 
 Other common options include excited states calculation (`ERPA=T`) and NOF-MBPT calculations (`MBPT=T`).
