@@ -14,7 +14,7 @@ PNOF5 single-point energy calculation of HF molecule with cc-pVDZ basis set star
     H 1.0 0.00 0.00 0.0000
     F 9.0 0.00 0.00 0.9168
     $END
-    &NOFINP IPNOF=5 RHF=T /
+    &NOFINP IPNOF=5 IRHF=2 /
 
 PNOF7 single-point energy calculation of the HF molecule at the experimental geometry optimizing only with respect to natural occupation numbers starting from Hartree-Fock calculation::
 
