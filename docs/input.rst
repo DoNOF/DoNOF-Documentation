@@ -271,6 +271,10 @@ HFDAMP:      Damping of the Fock matrix
 HFEXTRAP:    Extrapolation of the Fock matrix
 
     = T      (Default)
+
+HFDIIS:      Direct Inversion in the Iterative Subspace in the RHF-SCF optimization
+
+    = T      (Default)
                       
 KOOPMANS:    Calculate ionization potentials using Koopmans' Theorem
 
@@ -398,6 +402,10 @@ Options for perturbative calculations
 OIMP2:       Orbital Invariant MP2 [ For more info on NOF-MP2 see PRA 98, 022504, 2018 ]
 
     = F      (Default)
+
+MBPT:        Activate post-NOF perturbative correction module
+
+    = F      (Default)
                      
 NO1PT2:      Frozen natural orbitals in OIMP2. Maximum index of NOs with Occupation = 1
 
@@ -479,6 +487,18 @@ MOLDEN:        Write information into MLD file for the MOLDEN PROGRAM (UNIT 17)
       = 0      Don't write
 
       = 1      Write into MLD file (Default)
+
+MOLDENGEO:     Save one Molden snapshot per geometry
+
+      = 0      No (Default)
+
+      = 1      Yes
+
+INICOND:       Create initial conditions file (UNIT 33)
+
+      = 1      Yes (Default)
+
+      = 0      No
 
 NOUTRDM:       Print option for atomic RDMs
 
@@ -569,6 +589,50 @@ CHKORTHO:       Check the orthonormality of the natural orbitals
                       
       = T      Yes
 
+Options for geometry constraints and optimization method
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+FROZEN:        Is there any fixed coordinate
+
+      = F      (Default)
+
+IFROZEN:       By pairs, what coordinate of which atom to freeze
+
+      = 0      (Default)
+
+ICGMETHOD:     Define the Conjugate Gradient Method in OCC optimization
+
+      = 1      SUMSL (Default)
+      = 2      NAG subroutines
+      = 3      LBFGS
+
+Options for excited states and ADAM parameters
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+NESt:          Number of excited states considered in the ensemble
+
+      = 0      (Default)
+
+OMEGA1:        Value for w1 in the ensemble
+
+      = 1.0    (Default)
+
+LR:            Learning rate for ADAM-based orbital optimization
+
+      = 0.01   (Default)
+
+FACT:          Scaling factor used in ADAM orbital optimization
+
+      = 0.2    (Default)
+
+BETA1:         Exponential decay rate for first-moment estimate in ADAM
+
+      = 0.7    (Default)
+
+BETA2:         Exponential decay rate for second-moment estimate in ADAM
+
+      = 0.9    (Default)
+
 *******
 &INPDYN
 *******
@@ -584,10 +648,6 @@ dt:        Time step in fs
 tmax:      Propagation time in fs
 
     = 100  (Default)
-                          
-ngcf:      number of GCF files to use in calculation
-
-    = 1    (Default)
 
 Vxyz:      An array (1:3,1:nat) of the initial velocities per atom     
 
@@ -600,6 +660,20 @@ resflag:   Restart MD calculation from a file DYNl.xyz
 snapshot   Save MLD file in snapshot-t.mld
 
     = F    (Default)
+
+jumptol:   Minimum potential-energy jump treated as a real event requiring velocity rescaling
+
+    = 1.0d-4    (Default)
+
+energybound:   Enable velocity rescaling / event guard
+
+    = T    (Default)
+    = F
+
+integrator:   Integrator used in BO-MD propagation
+
+    = BEEVER    (Default)
+    = VERLET
 
 ****************
 Additional Notes
