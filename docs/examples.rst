@@ -100,7 +100,7 @@ Geometry Optimization of HF molecule by using cc-pVDZ basis set and NAG conjugat
     H 1.0 0.00 0.00 0.0000
     F 9.0 0.00 0.00 0.9168
     $END
-    &NOFINP ICGMETHOD=2 RESTART=T /
+    &NOFINP RESTART=T /
 
 Convergence
 -----------
