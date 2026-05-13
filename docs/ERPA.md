@@ -155,4 +155,4 @@ $$
 c_p = \pm \sqrt{n_p}
 $$
 
-under the PNOF convention of a `+\sqrt{n_p}` for strongly occupied orbitals and `-\sqrt{n_p}` for weakly occupied orbitals.
+under the PNOF convention of a $+\sqrt{n_p}$ for strongly occupied orbitals and $-\sqrt{n_p}$ for weakly occupied orbitals.
