@@ -43,7 +43,7 @@ hydrogen.wfn --> file containing wave-function info for AIMPAC program, among ot
 Running script
 ^^^^^^^^^^^^^^
 
-You can found in DoNOF GitHub repository the scripts we usually employ to run the program.
+In the DoNOF GitHub repository you can find the scripts we usually use to run the program.
 
 A common usage pattern is::
 
@@ -59,5 +59,4 @@ For molecular dynamics jobs::
 
 The wrappers handle the standard output and restart files (for example ``filename.out`` and
 ``filename.gcf``).
-
 
