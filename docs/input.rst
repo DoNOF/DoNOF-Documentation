@@ -603,8 +603,10 @@ IFROZEN:       By pairs, what coordinate of which atom to freeze
 ICGMETHOD:     Define the Conjugate Gradient Method in OCC optimization
 
       = 1      SUMSL (Default)
+
       = 2      NAG subroutines
-      = 3      LBFGS
+
+Note: To use the NAG library you must uncomment the calls to the relevant routines.
 
 Options for excited states and ADAM parameters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
