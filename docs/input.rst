@@ -32,6 +32,8 @@ RUNTYP:    Specifies the run calculation
     
     = 'HESS' compute numerical hessian from analytic gradients
 
+    = 'TSOPT' optimize a first-order saddle point (transition state)
+
     = DYN run Born-Oppenheimer on-the-fly molecular dynamics
     
 MULT:      Multiplicity of the electronic state
@@ -226,6 +228,14 @@ IORBOPT:     Select method for natural orbital optimization
     = 1      Iterative diagonalization
 
     = 2      Adaptative Momentum (ADAM) (Default)
+
+    = 3      AdaBelief
+
+    = 4      YOGI
+
+    = 5      DEMON
+
+    = 6      SQP (OrbOptSQP)
 
 IEINI:       Calculate only the initial energy
 
@@ -639,6 +649,5 @@ Symmetry
 ^^^^^^^^
 
 In DoNOF point-group symmetry is not employed, so C1 symmetry is assumed for any molecular system.
-
 
 
