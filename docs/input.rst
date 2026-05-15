@@ -670,11 +670,11 @@ jumptol:   Minimum potential-energy jump treated as a real event requiring veloc
 energybound:   Enable velocity rescaling / event guard
 
     = T    (Default)
-    = F
 
 integrator:   Integrator used in BO-MD propagation
 
     = BEEVER    (Default)
+
     = VERLET
 
 ****************
